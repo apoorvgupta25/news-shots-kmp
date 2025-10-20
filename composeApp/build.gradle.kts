@@ -66,11 +66,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.apoorvgupta.bookkmp"
+    namespace = "com.apoorvgupta.newsshotskmp"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.apoorvgupta.bookkmp"
+        applicationId = "com.apoorvgupta.newsshotskmp"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = libs.versions.version.code.get().toInt()
