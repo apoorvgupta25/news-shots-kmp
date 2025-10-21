@@ -12,6 +12,9 @@ kotlin {
         namespace = "com.apoorvgupta.newsshotskmp.capabilities"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
+
+        // to share Resources across module
+        androidResources.enable = true
     }
 
     val xcfName = "capabilitiesKit"
