@@ -36,6 +36,10 @@ kotlin {
             implementation(libs.ktor.client.okhttp)
         }
         commonMain.dependencies {
+            // Projects
+            implementation(projects.core)
+            implementation(projects.capabilities)
+
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
@@ -57,10 +61,6 @@ kotlin {
 
             // Coil
             implementation(libs.bundles.coil)
-
-            // Projects
-            implementation(projects.core)
-            implementation(projects.capabilities)
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)
