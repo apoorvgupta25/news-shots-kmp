@@ -41,7 +41,6 @@ kotlin {
             implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
@@ -58,6 +57,10 @@ kotlin {
 
             // Coil
             implementation(libs.bundles.coil)
+
+            // Projects
+            implementation(projects.core)
+            implementation(projects.capabilities)
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)

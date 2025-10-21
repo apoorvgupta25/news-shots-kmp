@@ -29,3 +29,8 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
+include(":feature-home")
+include(":capabilities")
+include(":core")
+include(":feature-bookmark")
+include(":feature-search")
