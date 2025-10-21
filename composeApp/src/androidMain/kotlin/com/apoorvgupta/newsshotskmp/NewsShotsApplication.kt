@@ -2,6 +2,8 @@ package com.apoorvgupta.newsshotskmp
 
 import android.app.Application
 import com.apoorvgupta.newsshotskmp.core.logger.AppLogger
+import com.apoorvgupta.newsshotskmp.di.initKoin
+import org.koin.android.ext.koin.androidContext
 
 /**
  * @author Apoorv Gupta
@@ -11,5 +13,9 @@ class NewsShotsApplication: Application() {
         super.onCreate()
 
         AppLogger.enableLogging()
+
+        initKoin {
+            androidContext(this@NewsShotsApplication)
+        }
     }
 }

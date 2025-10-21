@@ -44,7 +44,14 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            implementation(libs.androidx.lifecycle.viewmodelCompose)
+            implementation(libs.androidx.lifecycle.runtimeCompose)
+
+            // Logging
             implementation(libs.napier)
+
+            // Koin
+            api(libs.koin.core)
         }
 
         androidMain.dependencies {
