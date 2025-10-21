@@ -58,7 +58,9 @@ kotlin {
             // Coil
             implementation(libs.bundles.coil)
 
+            // Projects
             implementation(projects.core)
+            implementation(projects.capabilities)
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)
