@@ -48,6 +48,9 @@ kotlin {
                 implementation(compose.ui)
                 implementation(compose.components.resources)
 
+                // Navigation
+                implementation(libs.jetbrains.compose.navigation)
+
                 // Koin
                 api(libs.koin.core)
 

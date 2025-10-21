@@ -2,22 +2,23 @@ package com.apoorvgupta.newsshotskmp.capabilities.view.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import newsshotskmp.capabilities.generated.resources.Res
 import newsshotskmp.capabilities.generated.resources.graphik_medium
 import newsshotskmp.capabilities.generated.resources.graphik_regular
-import newsshotskmp.capabilities.generated.resources.newsreader_bold
-import newsshotskmp.capabilities.generated.resources.newsreader_italic
-import newsshotskmp.capabilities.generated.resources.newsreader_medium
-import newsshotskmp.capabilities.generated.resources.newsreader_regular
-import newsshotskmp.capabilities.generated.resources.newsreader_semi_bold
-import newsshotskmp.capabilities.generated.resources.poppins_bold
-import newsshotskmp.capabilities.generated.resources.poppins_italic
 import newsshotskmp.capabilities.generated.resources.poppins_medium
-import newsshotskmp.capabilities.generated.resources.poppins_regular
 import newsshotskmp.capabilities.generated.resources.poppins_semi_bold
+import newsshotskmp.capabilities.generated.resources.poppins_bold
+import newsshotskmp.capabilities.generated.resources.poppins_regular
+import newsshotskmp.capabilities.generated.resources.poppins_italic
+import newsshotskmp.capabilities.generated.resources.newsreader_medium
+import newsshotskmp.capabilities.generated.resources.newsreader_semi_bold
+import newsshotskmp.capabilities.generated.resources.newsreader_bold
+import newsshotskmp.capabilities.generated.resources.newsreader_regular
+import newsshotskmp.capabilities.generated.resources.newsreader_italic
 import org.jetbrains.compose.resources.Font
 
 /**
