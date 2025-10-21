@@ -44,7 +44,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-
+            implementation(libs.napier)
         }
 
         androidMain.dependencies {

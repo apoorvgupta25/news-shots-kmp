@@ -20,10 +20,8 @@ import androidx.compose.ui.Modifier
 import newsshotskmp.composeapp.generated.resources.Res
 import newsshotskmp.composeapp.generated.resources.compose_multiplatform
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
-@Preview
 fun App() {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
