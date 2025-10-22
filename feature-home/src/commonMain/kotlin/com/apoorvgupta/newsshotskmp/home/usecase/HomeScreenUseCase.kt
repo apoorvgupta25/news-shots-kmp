@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.home.navigation
+package com.apoorvgupta.newsshotskmp.home.usecase
 
 import com.apoorvgupta.newsshotskmp.home.model.HomeDataModel
 

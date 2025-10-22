@@ -21,6 +21,7 @@ data class NewsShots(
 //    val formattedDate: String
 //        get() = getDateFormatted(createdAt.getValueOrEmpty())
 
+    // TODO DraftJS
 //    val draftJSContent: DraftJS
 //        get() = Gson().fromJson(content, DraftJS::class.java)
 

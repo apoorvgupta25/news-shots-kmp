@@ -39,12 +39,12 @@ suspend inline fun <reified T> responseToResult(
             try {
                 Result.Success(response.body<T>())
             } catch(e: NoTransformationFoundException) {
-                Result.Error(DataError.Remote.SERIALIZATION)
+                Result.Error(DataError.Remote.SERIALIZATION, response.status.value)
             }
         }
-        408 -> Result.Error(DataError.Remote.REQUEST_TIMEOUT)
-        429 -> Result.Error(DataError.Remote.TOO_MANY_REQUESTS)
-        in 500..599 -> Result.Error(DataError.Remote.SERVER)
-        else -> Result.Error(DataError.Remote.UNKNOWN)
+        408 -> Result.Error(DataError.Remote.REQUEST_TIMEOUT, response.status.value)
+        429 -> Result.Error(DataError.Remote.TOO_MANY_REQUESTS, response.status.value)
+        in 500..599 -> Result.Error(DataError.Remote.SERVER, response.status.value)
+        else -> Result.Error(DataError.Remote.UNKNOWN, response.status.value)
     }
 }

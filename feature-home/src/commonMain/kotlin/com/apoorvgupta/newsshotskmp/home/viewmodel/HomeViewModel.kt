@@ -8,7 +8,7 @@ import com.apoorvgupta.newsshotskmp.home.intent.HomeNavEffect
 import com.apoorvgupta.newsshotskmp.home.intent.HomeViewState
 import com.apoorvgupta.newsshotskmp.home.intent.HomeViewStates
 import com.apoorvgupta.newsshotskmp.home.model.HomeDataModel
-import com.apoorvgupta.newsshotskmp.home.navigation.HomeScreenUseCase
+import com.apoorvgupta.newsshotskmp.home.usecase.HomeScreenUseCase
 import kotlinx.coroutines.launch
 
 /**

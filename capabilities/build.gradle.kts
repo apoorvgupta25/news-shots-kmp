@@ -60,6 +60,9 @@ kotlin {
                 // Coil
                 implementation(libs.bundles.coil)
 
+                // Pagination
+                implementation(libs.androidx.pagination)
+
             }
 
             androidMain.dependencies {

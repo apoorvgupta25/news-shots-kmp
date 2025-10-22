@@ -12,7 +12,7 @@ import com.apoorvgupta.newsshotskmp.core.utils.DataStatus
 import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
 import com.apoorvgupta.newsshotskmp.home.model.HomeContent
 import com.apoorvgupta.newsshotskmp.home.model.HomeDataModel
-import com.apoorvgupta.newsshotskmp.home.navigation.HomeScreenUseCase
+import com.apoorvgupta.newsshotskmp.home.usecase.HomeScreenUseCase
 import kotlinx.coroutines.flow.FlowCollector
 
 /**
@@ -33,20 +33,22 @@ class HomeScreenUseCaseImpl(
                     .onSuccess { categories ->
                         homeDataModel = getHomeData(newsshots, categories)
                     }
-                    .onError {
+                    .onError { err, code ->
                         homeDataModel = emitHomeError(
-                            message = it.name.getValueOrEmpty(),
+                            statusCode = code.getValueOrEmpty(),
+                            message = err.name.getValueOrEmpty(),
                         )
                     }
             }
-            .onError {
+            .onError { err, code ->
                 getAllCategoriesUseCase.getAllCategories()
                     .onSuccess { categories ->
                         homeDataModel = getHomeData(null, categories)
                     }
-                    .onError {
+                    .onError { err, code ->
                         homeDataModel = emitHomeError(
-                            message = it.name.getValueOrEmpty(),
+                            statusCode = code.getValueOrEmpty(),
+                            message = err.name.getValueOrEmpty(),
                         )
                     }
             }
@@ -72,7 +74,7 @@ class HomeScreenUseCaseImpl(
     }
 
     private fun emitHomeError(
-        statusCode: Int = 0,
+        statusCode: Int,
         message: String = "",
     ) = HomeDataModel(
         status = DataStatus.Error,

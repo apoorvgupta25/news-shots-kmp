@@ -54,6 +54,13 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             api(libs.koin.core)
+
+            // Coil
+            implementation(libs.bundles.coil)
+
+            // Pagination
+            implementation(libs.androidx.pagination)
+
         }
 
         androidMain.dependencies {
