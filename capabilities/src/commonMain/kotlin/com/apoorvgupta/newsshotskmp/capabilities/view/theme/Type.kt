@@ -2,6 +2,7 @@ package com.apoorvgupta.newsshotskmp.capabilities.view.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
@@ -89,4 +90,11 @@ val AppTypography @Composable get() = Typography(
         ),
         labelMedium = Typography().labelMedium.copy(fontFamily = AppFontFamily),
         labelSmall = Typography().labelSmall.copy(fontFamily = AppFontFamily),
+    )
+
+val Typography.buttonTextStyle: TextStyle
+    @Composable
+    get() = AppTypography.bodyMedium.copy(
+        fontFamily = AppFontFamily,
+        fontWeight = FontWeight.Bold,
     )

@@ -57,6 +57,9 @@ kotlin {
                 // Ktor
                 implementation(libs.bundles.ktor)
 
+                // Coil
+                implementation(libs.bundles.coil)
+
             }
 
             androidMain.dependencies {

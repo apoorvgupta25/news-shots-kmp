@@ -1,5 +1,6 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.network
 
+import com.apoorvgupta.newsshotskmp.core.logger.AppLogger
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.plugins.HttpTimeout
@@ -29,14 +30,13 @@ object HttpClientFactory {
                 )
             }
             install(HttpTimeout) {
-                socketTimeoutMillis = 20_000L
-                requestTimeoutMillis = 20_000L
+                socketTimeoutMillis = 60_000L
+                requestTimeoutMillis = 60_000L
             }
             install(Logging) {
                 logger = object : Logger {
                     override fun log(message: String) {
-                        // TODO use Logger
-                        println(message)
+                        AppLogger.d { message }
                     }
                 }
                 level = LogLevel.ALL

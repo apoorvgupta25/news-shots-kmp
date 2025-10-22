@@ -1,6 +1,8 @@
 package com.apoorvgupta.newsshotskmp.capabilities.di
 
 import com.apoorvgupta.newsshotskmp.capabilities.data.network.HttpClientFactory
+import com.apoorvgupta.newsshotskmp.capabilities.data.network.RemoteNewsShotsDataSource
+import com.apoorvgupta.newsshotskmp.capabilities.data.network.RemoteNewsShotsDataSourceImpl
 import com.apoorvgupta.newsshotskmp.capabilities.data.repo.NewsShotsRepoImpl
 import com.apoorvgupta.newsshotskmp.capabilities.data.usecase.GetAllCategoriesUseCaseImpl
 import com.apoorvgupta.newsshotskmp.capabilities.data.usecase.GetIndividualNewsShotsUseCaseImpl
@@ -21,6 +23,7 @@ expect val platformModule: Module
 val capabilitiesModule = module {
     single { HttpClientFactory.create(get()) }
 
+    singleOf(::RemoteNewsShotsDataSourceImpl).bind<RemoteNewsShotsDataSource>()
     singleOf(::NewsShotsRepoImpl).bind<NewsShotsRepo>()
 
     singleOf(::GetAllCategoriesUseCaseImpl).bind<GetAllCategoriesUseCase>()

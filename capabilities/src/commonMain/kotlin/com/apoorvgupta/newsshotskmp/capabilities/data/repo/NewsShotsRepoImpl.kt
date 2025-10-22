@@ -3,10 +3,8 @@ package com.apoorvgupta.newsshotskmp.capabilities.data.repo
 import com.apoorvgupta.newsshotskmp.capabilities.data.mappers.toCategory
 import com.apoorvgupta.newsshotskmp.capabilities.data.mappers.toNewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.data.network.RemoteNewsShotsDataSource
-import com.apoorvgupta.newsshotskmp.capabilities.domain.Category
+import com.apoorvgupta.newsshotskmp.capabilities.data.network.RemoteNewsShotsDataSourceImpl
 import com.apoorvgupta.newsshotskmp.capabilities.domain.repo.NewsShotsRepo
-import com.apoorvgupta.newsshotskmp.core.domain.DataError
-import com.apoorvgupta.newsshotskmp.core.domain.Result
 import com.apoorvgupta.newsshotskmp.core.domain.map
 
 /**

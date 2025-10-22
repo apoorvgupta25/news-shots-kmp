@@ -9,7 +9,7 @@ data class NewsShots(
     val id: String,
     val author: Author,
     val category: Category,
-    val content: String,
+    val content: String? = null,
     val createdAt: String,
     val description: String,
     val link: String,
@@ -17,7 +17,7 @@ data class NewsShots(
     val updatedAt: String? = null,
 ) {
 
-    // TODO
+    // TODO DATE
 //    val formattedDate: String
 //        get() = getDateFormatted(createdAt.getValueOrEmpty())
 
