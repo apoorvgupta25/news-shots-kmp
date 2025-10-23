@@ -15,7 +15,7 @@ koin = "4.1.1"
 ktor = "3.3.1"
 coil3 = "3.3.0"
 ktlintCli = "1.7.1"
-ksp = "2.2.20-2.0.4"
+ksp = "2.3.0"
 napier = "2.7.1"
 
 [libraries]
