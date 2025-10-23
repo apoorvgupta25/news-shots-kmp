@@ -39,7 +39,7 @@ kotlin {
             // Projects
             implementation(projects.core)
             implementation(projects.capabilities)
-            implementation(projects.featureHome)
+            implementation(projects.feature.home)
 
             implementation(compose.runtime)
             implementation(compose.foundation)

@@ -29,9 +29,9 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
-include(":feature-home")
-include(":capabilities")
 include(":core")
-include(":feature-bookmark")
-include(":feature-search")
+include(":capabilities")
+include(":feature:home")
+include(":feature:bookmark")
+include(":feature:search")
 include(":draftjskmp")
