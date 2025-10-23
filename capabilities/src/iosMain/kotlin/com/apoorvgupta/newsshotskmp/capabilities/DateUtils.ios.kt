@@ -1,9 +1,9 @@
 package com.apoorvgupta.newsshotskmp.capabilities
 
+import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
 import platform.Foundation.NSDateFormatter
 import platform.Foundation.NSTimeZone
 import platform.Foundation.localTimeZone
-import platform.Foundation.timeZoneWithAbbreviation
 
 actual object DateUtils {
     actual fun getDateFormatted(
@@ -11,16 +11,23 @@ actual object DateUtils {
         inputFormat: String,
         outputFormat: String
     ): String {
+        // input date format
+        val df = NSDateFormatter().apply { dateFormat = inputFormat }
 
-        val df = NSDateFormatter().apply {
-            dateFormat = inputFormat
-//            timeZone = NSTimeZone.timeZoneWithAbbreviation("GMT")!!
+        return try {
+            // parsing
+            val date = df.dateFromString(timestamp)
+            df.timeZone = NSTimeZone.localTimeZone
+            df.dateFormat = outputFormat
+
+            // output date format
+            if (date != null) {
+                df.stringFromDate(date)
+            } else {
+                String.emptyValue()
+            }
+        } catch (e: Exception) {
+            String.emptyValue()
         }
-
-        val date = df.dateFromString(timestamp)
-        df.timeZone = NSTimeZone.localTimeZone
-//        df.dateFormat = outputFormat
-
-        return df.stringFromDate(date!!)
     }
 }

@@ -10,10 +10,14 @@ actual object DateUtils {
         inputFormat: String,
         outputFormat: String
     ): String {
+        // input date format
         val simpleDateFormat = SimpleDateFormat(inputFormat, Locale.getDefault())
 
         return try {
+            // parsing
             val newDate = simpleDateFormat.parse(timestamp)
+
+            // output date format
             if (newDate != null) {
                 SimpleDateFormat(outputFormat, Locale.getDefault()).format(newDate)
             } else {

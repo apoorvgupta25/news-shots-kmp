@@ -64,9 +64,6 @@ kotlin {
                 // Pagination
                 implementation(libs.androidx.pagination)
 
-                // Kotlin Date-time
-                implementation(libs.kotlinx.datetime)
-
             }
 
             androidMain.dependencies {
