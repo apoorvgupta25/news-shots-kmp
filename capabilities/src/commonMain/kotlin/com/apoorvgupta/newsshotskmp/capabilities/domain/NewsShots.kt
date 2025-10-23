@@ -1,6 +1,9 @@
 package com.apoorvgupta.newsshotskmp.capabilities.domain
 
+import com.apoorvgupta.draftjskmp.data.DraftJS
 import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
+import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
+import kotlinx.serialization.json.Json
 
 /**
  * @author Apoorv Gupta
@@ -21,9 +24,8 @@ data class NewsShots(
 //    val formattedDate: String
 //        get() = getDateFormatted(createdAt.getValueOrEmpty())
 
-    // TODO DraftJS
-//    val draftJSContent: DraftJS
-//        get() = Gson().fromJson(content, DraftJS::class.java)
+    val draftJSContent: DraftJS
+        get() = deserializeDraftJS(content.getValueOrEmpty())
 
     companion object {
         val emptyValue: NewsShots
@@ -37,6 +39,10 @@ data class NewsShots(
                 title = String.emptyValue(),
                 link = String.emptyValue(),
             )
+    }
+
+    fun deserializeDraftJS(content: String): DraftJS {
+        return Json.decodeFromString(content)
     }
 }
 

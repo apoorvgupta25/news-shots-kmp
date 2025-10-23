@@ -15,10 +15,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import coil3.compose.AsyncImage
+import com.apoorvgupta.draftjskmp.view.DraftJSView
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
 import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.BackArrowNavigation
 import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.pulltorefresh.AppPullToRefresh
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
+import com.apoorvgupta.newsshotskmp.capabilities.view.theme.linkTextColor
 import com.apoorvgupta.newsshotskmp.newsshotsdetails.intent.NewsDetailsIntent
 import com.apoorvgupta.newsshotskmp.newsshotsdetails.intent.NewsDetailsViewStates
 
@@ -101,13 +103,11 @@ fun NewsDetailScreenLoadedContent(
             Box(
                 modifier = Modifier.padding(horizontal = Dimensions.HorizonalDimensions.m_horizontal_spacing),
             ) {
-                // TODO DraftJS
-                Text(text = state.data.newsShot.content.toString())
-//                DraftJSView(
-//                    modifier = Modifier,
-//                    draftJSContent = state.data.newsShot.draftJSContent,
-//                    linkTextColor = MaterialTheme.colorScheme.linkTextColor,
-//                )
+                DraftJSView(
+                    modifier = Modifier,
+                    draftJSContent = state.data.newsShot.draftJSContent,
+                    linkTextColor = MaterialTheme.colorScheme.linkTextColor,
+                )
             }
         }
     }

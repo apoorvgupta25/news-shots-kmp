@@ -37,6 +37,7 @@ kotlin {
         commonMain.dependencies {
             implementation(projects.core)
             implementation(projects.capabilities)
+            implementation(projects.draftjskmp)
 
             implementation(compose.runtime)
             implementation(compose.foundation)
