@@ -1,6 +1,7 @@
 package com.apoorvgupta.newsshotskmp.capabilities.domain
 
 import com.apoorvgupta.draftjskmp.data.DraftJS
+import com.apoorvgupta.newsshotskmp.capabilities.DateUtils.getDateFormatted
 import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
 import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
 import kotlinx.serialization.json.Json
@@ -20,9 +21,8 @@ data class NewsShots(
     val updatedAt: String? = null,
 ) {
 
-    // TODO DATE
-//    val formattedDate: String
-//        get() = getDateFormatted(createdAt.getValueOrEmpty())
+    val formattedDate: String
+        get() = getDateFormatted(createdAt.getValueOrEmpty())
 
     val draftJSContent: DraftJS
         get() = deserializeDraftJS(content.getValueOrEmpty())

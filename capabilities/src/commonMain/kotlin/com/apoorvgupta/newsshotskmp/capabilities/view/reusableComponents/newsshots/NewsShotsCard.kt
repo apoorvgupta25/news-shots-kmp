@@ -73,13 +73,12 @@ fun NewsShotsCard(
 
             Spacer(modifier = Modifier.weight(Constants.FULL_WEIGHT))
 
-            // TODO DATE
-          /*  Text(
+            Text(
                 modifier = Modifier.padding(top = Dimensions.VerticalDimensions.sl_vertical_spacing),
                 text = newsShot.formattedDate,
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurface,
-            )*/
+            )
         }
 
         Column(

@@ -81,12 +81,11 @@ fun NewsDetailScreenLoadedContent(
 
                 Spacer(modifier = Modifier.weight(Constants.FULL_WEIGHT))
 
-//                TODO DATE
-//                Text(
-//                    text = state.data.newsShot.formattedDate,
-//                    style = MaterialTheme.typography.bodyLarge,
-//                    color = MaterialTheme.colorScheme.onSurface,
-//                )
+                Text(
+                    text = state.data.newsShot.formattedDate,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
             }
 
             Text(

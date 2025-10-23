@@ -9,15 +9,15 @@ import com.apoorvgupta.draftjskmp.data.DraftJS
  */
 
 object DraftJsUtils {
-    const val EMPTY_STRING = ""
+    internal const val EMPTY_STRING = ""
 
-    fun String.Companion.emptyValue() = EMPTY_STRING
+    internal fun String.Companion.emptyValue() = EMPTY_STRING
 
-    fun Int.Companion.emptyValue() = 0
+    internal fun Int.Companion.emptyValue() = 0
 
-    fun String?.getValueOrEmpty() = this ?: EMPTY_STRING
+    internal fun String?.getValueOrEmpty() = this ?: EMPTY_STRING
 
-    fun parseDraftJsContent(draftJSContent: DraftJS, linkTextColor: Color): AnnotatedString {
+    internal fun parseDraftJsContent(draftJSContent: DraftJS, linkTextColor: Color): AnnotatedString {
         val builder = AnnotatedString.Builder()
 
         draftJSContent.blocks.forEach { block ->
