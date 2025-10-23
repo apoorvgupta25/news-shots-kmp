@@ -21,7 +21,7 @@ data class NewsShotsDto(
     val category: CategoryDto,
 
     @SerialName("content")
-    val content: String,
+    val content: String? = null,
 
     @SerialName("createdAt")
     val createdAt: String,

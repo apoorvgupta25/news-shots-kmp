@@ -41,6 +41,7 @@ kotlin {
         sourceSets {
             commonMain.dependencies {
                 implementation(projects.core)
+                implementation(projects.draftjskmp)
 
                 implementation(compose.runtime)
                 implementation(compose.foundation)
@@ -56,6 +57,15 @@ kotlin {
 
                 // Ktor
                 implementation(libs.bundles.ktor)
+
+                // Coil
+                implementation(libs.bundles.coil)
+
+                // Pagination
+                implementation(libs.androidx.pagination)
+
+                // Kotlin Date-time
+                implementation(libs.kotlinx.datetime)
 
             }
 

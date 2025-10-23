@@ -1,5 +1,6 @@
 package com.apoorvgupta.newsshotskmp.capabilities.domain.repo
 
+import androidx.paging.PagingData
 import com.apoorvgupta.newsshotskmp.capabilities.domain.Category
 import com.apoorvgupta.newsshotskmp.capabilities.domain.NewsShots
 import com.apoorvgupta.newsshotskmp.core.domain.DataError
@@ -13,7 +14,7 @@ interface NewsShotsRepo {
 
     suspend fun getRecentNewsShots(limit: Int, sortBy: String): Result<List<NewsShots>?, DataError.Remote>
 
-//    fun getNewsShotsByCategory(categoryName: String): Flow<PagingData<NewsShots>>
+    fun getNewsShotsByCategory(categoryName: String): Flow<PagingData<NewsShots>>
 
     suspend fun getIndividualNewsShots(postLink: String): Result<NewsShots?, DataError.Remote>
 
@@ -21,6 +22,5 @@ interface NewsShotsRepo {
 
     suspend fun getCategories(): Result<List<Category>?, DataError.Remote>
 
-    // TODO Pagination
-//    fun getAllNewsShots(): Flow<PagingData<NewsShots>>
+    fun getAllNewsShots(): Flow<PagingData<NewsShots>>
 }
