@@ -21,6 +21,6 @@ actual object DateUtils {
         df.timeZone = NSTimeZone.localTimeZone
 //        df.dateFormat = outputFormat
 
-        return df.stringFromDate(date)
+        return df.stringFromDate(date!!)
     }
 }
