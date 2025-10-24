@@ -30,9 +30,11 @@ kotlin {
     sourceSets {
         sourceSets {
             commonMain.dependencies {
+                // Projects
                 implementation(projects.core)
                 implementation(projects.domain)
 
+                // Compose
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material3)
@@ -53,7 +55,6 @@ kotlin {
 
                 // Pagination
                 implementation(libs.androidx.pagination)
-
             }
 
             androidMain.dependencies {

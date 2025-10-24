@@ -8,7 +8,7 @@ plugins {
 kotlin {
 
     androidLibrary {
-        namespace = "com.apoorvgupta.home"
+        namespace = "com.apoorvgupta.details"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
@@ -19,7 +19,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "homeKit"
+            baseName = "detailsKit"
         }
     }
 
@@ -29,6 +29,7 @@ kotlin {
             implementation(projects.core)
             implementation(projects.capabilities)
             implementation(projects.domain)
+            implementation(projects.draftjskmp)
 
             // Compose
             implementation(compose.runtime)
@@ -43,6 +44,10 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             api(libs.koin.core)
+
+            // Coil
+            implementation(libs.bundles.coil)
+
         }
     }
 }

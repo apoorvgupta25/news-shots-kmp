@@ -28,7 +28,6 @@ kotlin {
 
     sourceSets {
         androidMain.dependencies {
-            implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
 
             implementation(libs.koin.android)
@@ -40,14 +39,14 @@ kotlin {
             implementation(projects.core)
             implementation(projects.capabilities)
             implementation(projects.feature.home)
+            implementation(projects.feature.details)
+            implementation(projects.feature.listing)
 
+            // Compose
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
             implementation(compose.ui)
-            implementation(compose.components.resources)
-            implementation(libs.androidx.lifecycle.viewmodelCompose)
-            implementation(libs.androidx.lifecycle.runtimeCompose)
 
             // Navigation
             implementation(libs.jetbrains.compose.navigation)
@@ -57,14 +56,6 @@ kotlin {
             implementation(libs.koin.compose.viewmodel)
             api(libs.koin.core)
 
-            // Ktor
-            implementation(libs.bundles.ktor)
-
-            // Coil
-            implementation(libs.bundles.coil)
-        }
-        nativeMain.dependencies {
-            implementation(libs.ktor.client.darwin)
         }
     }
 }
@@ -94,8 +85,4 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-}
-
-dependencies {
-    debugImplementation(compose.uiTooling)
 }

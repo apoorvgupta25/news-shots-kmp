@@ -8,7 +8,7 @@ plugins {
 kotlin {
 
     androidLibrary {
-        namespace = "com.apoorvgupta.home"
+        namespace = "com.apoorvgupta.listing"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
@@ -19,7 +19,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "homeKit"
+            baseName = "listingKit"
         }
     }
 
@@ -43,6 +43,9 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             api(libs.koin.core)
+
+            // Pagination
+            implementation(libs.androidx.pagination)
         }
     }
 }
