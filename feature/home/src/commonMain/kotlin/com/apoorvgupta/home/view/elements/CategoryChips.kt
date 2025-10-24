@@ -13,10 +13,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.noRippleClickable
-import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
 import com.apoorvgupta.home.intent.HomeIntent
 import com.apoorvgupta.home.intent.HomeViewStates
+import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.noRippleClickable
+import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
 
 /**
  * @author Apoorv Gupta

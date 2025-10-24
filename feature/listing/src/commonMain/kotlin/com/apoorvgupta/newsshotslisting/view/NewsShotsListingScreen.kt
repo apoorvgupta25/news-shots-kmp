@@ -3,13 +3,13 @@ package com.apoorvgupta.newsshotslisting.view
 import androidx.compose.runtime.Composable
 import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.apoorvgupta.newsshotslisting.view.elements.NewsShotsListingErrorContent
-import com.apoorvgupta.newsshotslisting.view.elements.NewsShotsListingLoadedContent
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.loader.CircularProgressBarComponent
 import com.apoorvgupta.core.logger.AppLogger
 import com.apoorvgupta.core.utils.getValueOrEmpty
+import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.loader.CircularProgressBarComponent
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingIntent
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingViewStates
+import com.apoorvgupta.newsshotslisting.view.elements.NewsShotsListingErrorContent
+import com.apoorvgupta.newsshotslisting.view.elements.NewsShotsListingLoadedContent
 import com.apoorvgupta.newsshotslisting.viewmodel.NewsShotsListingViewModel
 
 /**

@@ -20,30 +20,28 @@ import kotlinx.serialization.json.Json
 
 object HttpClientFactory {
 
-    fun create(engine: HttpClientEngine): HttpClient {
-        return HttpClient(engine) {
-            install(ContentNegotiation) {
-                json(
-                    json = Json {
-                        ignoreUnknownKeys = true
-                    }
-                )
-            }
-            install(HttpTimeout) {
-                socketTimeoutMillis = 60_000L
-                requestTimeoutMillis = 60_000L
-            }
-            install(Logging) {
-                logger = object : Logger {
-                    override fun log(message: String) {
-                        AppLogger.d { message }
-                    }
+    fun create(engine: HttpClientEngine): HttpClient = HttpClient(engine) {
+        install(ContentNegotiation) {
+            json(
+                json = Json {
+                    ignoreUnknownKeys = true
+                },
+            )
+        }
+        install(HttpTimeout) {
+            socketTimeoutMillis = 60_000L
+            requestTimeoutMillis = 60_000L
+        }
+        install(Logging) {
+            logger = object : Logger {
+                override fun log(message: String) {
+                    AppLogger.d { message }
                 }
-                level = LogLevel.ALL
             }
-            defaultRequest {
-                contentType(ContentType.Application.Json)
-            }
+            level = LogLevel.ALL
+        }
+        defaultRequest {
+            contentType(ContentType.Application.Json)
         }
     }
 }

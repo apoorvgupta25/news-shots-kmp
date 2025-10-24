@@ -1,9 +1,9 @@
 package com.apoorvgupta.domain.model
 
-import com.apoorvgupta.draftjskmp.data.DraftJS
 import com.apoorvgupta.core.utils.DateUtils.getDateFormatted
 import com.apoorvgupta.core.utils.emptyValue
 import com.apoorvgupta.core.utils.getValueOrEmpty
+import com.apoorvgupta.draftjskmp.data.DraftJS
 import kotlinx.serialization.json.Json
 
 /**
@@ -41,8 +41,5 @@ data class NewsShots(
             )
     }
 
-    fun deserializeDraftJS(content: String): DraftJS {
-        return Json.decodeFromString(content)
-    }
+    fun deserializeDraftJS(content: String): DraftJS = Json.decodeFromString(content)
 }
-

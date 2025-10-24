@@ -1,11 +1,11 @@
 package com.apoorvgupta.newsshotsdetails.usecase
 
-import com.apoorvgupta.domain.model.NewsShots
-import com.apoorvgupta.domain.usecase.GetIndividualNewsShotsUseCase
+import com.apoorvgupta.core.model.DataStatus
 import com.apoorvgupta.core.model.ErrorModel
 import com.apoorvgupta.core.model.onError
 import com.apoorvgupta.core.model.onSuccess
-import com.apoorvgupta.core.model.DataStatus
+import com.apoorvgupta.domain.model.NewsShots
+import com.apoorvgupta.domain.usecase.GetIndividualNewsShotsUseCase
 import com.apoorvgupta.newsshotsdetails.model.NewsDetailsDataModel
 
 /**
@@ -52,5 +52,3 @@ class NewsDetailsScreenUseCaseImpl(
         ),
     )
 }
-
-

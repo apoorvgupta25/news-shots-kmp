@@ -7,7 +7,7 @@ actual object DateUtils {
     actual fun getDateFormatted(
         timestamp: String,
         inputFormat: String,
-        outputFormat: String
+        outputFormat: String,
     ): String {
         // input date format
         val simpleDateFormat = SimpleDateFormat(inputFormat, Locale.getDefault())

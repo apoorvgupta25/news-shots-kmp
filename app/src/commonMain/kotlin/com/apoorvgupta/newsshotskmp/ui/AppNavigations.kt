@@ -11,11 +11,11 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
 import com.apoorvgupta.home.navigation.HomeScreenDestination
 import com.apoorvgupta.home.viewmodel.HomeViewModel
 import com.apoorvgupta.newsshotsdetails.navigation.NewsDetailsScreenDestination
 import com.apoorvgupta.newsshotsdetails.viewmodel.NewsDetailsViewModel
+import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
 import com.apoorvgupta.newsshotslisting.navigation.NewsShotsListingScreenDestination
 import com.apoorvgupta.newsshotslisting.viewmodel.NewsShotsListingViewModel
 import org.koin.compose.viewmodel.koinViewModel

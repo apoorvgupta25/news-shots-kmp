@@ -8,7 +8,7 @@ import org.koin.android.ext.koin.androidContext
 /**
  * @author Apoorv Gupta
  */
-class NewsShotsApplication: Application() {
+class NewsShotsApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 

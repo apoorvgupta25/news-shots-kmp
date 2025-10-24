@@ -74,9 +74,7 @@ val DarkColorScheme =
     )
 
 @Composable
-private fun extendedColor(light: Color, dark: Color): Color {
-    return if (isSystemInDarkTheme()) dark else light
-}
+private fun extendedColor(light: Color, dark: Color): Color = if (isSystemInDarkTheme()) dark else light
 
 val ColorScheme.disabledTextColor: Color
     @Composable

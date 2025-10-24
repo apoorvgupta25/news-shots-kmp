@@ -1,8 +1,8 @@
 package com.apoorvgupta.domain.usecase
 
-import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.core.model.DataError
 import com.apoorvgupta.core.model.Result
+import com.apoorvgupta.domain.model.NewsShots
 
 /**
  * @author Apoorv Gupta

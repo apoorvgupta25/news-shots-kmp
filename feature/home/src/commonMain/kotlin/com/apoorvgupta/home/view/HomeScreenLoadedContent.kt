@@ -9,12 +9,12 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.apoorvgupta.home.intent.HomeIntent
+import com.apoorvgupta.home.intent.HomeViewStates
 import com.apoorvgupta.home.view.elements.HomeHeaderSection
 import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.newsshots.NewsShotsCard
 import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.pulltorefresh.AppPullToRefresh
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
-import com.apoorvgupta.home.intent.HomeIntent
-import com.apoorvgupta.home.intent.HomeViewStates
 
 /**
  * @author Apoorv Gupta

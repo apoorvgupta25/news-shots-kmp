@@ -3,14 +3,14 @@ package com.apoorvgupta.newsshotsdetails.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.navigation.NavController
-import com.apoorvgupta.newsshotsdetails.view.NewsDetailScreenErrorContent
-import com.apoorvgupta.newsshotsdetails.view.NewsDetailScreenLoadedContent
-import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.loader.CircularProgressBarComponent
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsIntent
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsNavEffect
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewStates
+import com.apoorvgupta.newsshotsdetails.view.NewsDetailScreenErrorContent
+import com.apoorvgupta.newsshotsdetails.view.NewsDetailScreenLoadedContent
 import com.apoorvgupta.newsshotsdetails.viewmodel.NewsDetailsViewModel
+import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
+import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.loader.CircularProgressBarComponent
 import kotlinx.coroutines.flow.Flow
 
 /**

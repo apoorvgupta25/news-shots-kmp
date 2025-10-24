@@ -3,12 +3,12 @@ package com.apoorvgupta.newsshotslisting.viewmodel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.apoorvgupta.domain.model.NewsShots
-import com.apoorvgupta.newsshotskmp.capabilities.Constants.DAILY
-import com.apoorvgupta.domain.usecase.GetAllNewsShotsUseCase
-import com.apoorvgupta.domain.usecase.GetNewsShotsByCategoryUseCase
 import com.apoorvgupta.core.base.BaseViewModel
 import com.apoorvgupta.core.utils.emptyValue
+import com.apoorvgupta.domain.model.NewsShots
+import com.apoorvgupta.domain.usecase.GetAllNewsShotsUseCase
+import com.apoorvgupta.domain.usecase.GetNewsShotsByCategoryUseCase
+import com.apoorvgupta.newsshotskmp.capabilities.Constants.DAILY
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingIntent
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingNavEffect
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingViewState
@@ -23,7 +23,7 @@ import kotlinx.coroutines.launch
  * @author Apoorv Gupta
  */
 
-class NewsShotsListingViewModel (
+class NewsShotsListingViewModel(
     private val getAllNewsShotsUseCase: GetAllNewsShotsUseCase,
     private val getNewsShotsByCategoryUseCase: GetNewsShotsByCategoryUseCase,
 ) : BaseViewModel<NewsShotsListingIntent, NewsShotsListingViewState, NewsShotsListingNavEffect>() {
@@ -36,8 +36,7 @@ class NewsShotsListingViewModel (
 
     private var categoryName: String = String.emptyValue()
 
-    override fun createInitialState(): NewsShotsListingViewState = NewsShotsListingViewState(
-        NewsShotsListingViewStates.UnInitialized)
+    override fun createInitialState(): NewsShotsListingViewState = NewsShotsListingViewState(NewsShotsListingViewStates.UnInitialized)
 
     override fun handleIntent(intent: NewsShotsListingIntent) {
         when (intent) {

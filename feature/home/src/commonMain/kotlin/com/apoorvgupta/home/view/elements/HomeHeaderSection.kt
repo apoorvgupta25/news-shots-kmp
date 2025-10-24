@@ -5,11 +5,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.apoorvgupta.home.intent.HomeIntent
+import com.apoorvgupta.home.intent.HomeViewStates
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
 import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.HeadLine
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
-import com.apoorvgupta.home.intent.HomeIntent
-import com.apoorvgupta.home.intent.HomeViewStates
 
 /**
  * @author Apoorv Gupta

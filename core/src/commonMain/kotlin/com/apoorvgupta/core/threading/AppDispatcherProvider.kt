@@ -11,7 +11,7 @@ import kotlin.coroutines.CoroutineContext
  *
  * @author Apoorv Gupta
  */
-class AppDispatcherProvider: DispatcherProvider {
+class AppDispatcherProvider : DispatcherProvider {
     override val main: CoroutineContext = Dispatchers.Main
     override val io: CoroutineContext = Dispatchers.IO
     override val default: CoroutineContext = Dispatchers.Default

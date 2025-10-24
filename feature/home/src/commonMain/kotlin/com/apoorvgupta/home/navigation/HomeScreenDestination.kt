@@ -3,17 +3,16 @@ package com.apoorvgupta.home.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.ExperimentalComposeUiApi
-//import androidx.compose.ui.backhandler.BackHandler
 import androidx.navigation.NavController
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.loader.CircularProgressBarComponent
-import com.apoorvgupta.home.view.HomeScreenErrorContent
-import com.apoorvgupta.home.view.HomeScreenLoadedContent
-import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
 import com.apoorvgupta.core.interactions.session.FinishActivityChannel
 import com.apoorvgupta.home.intent.HomeIntent
 import com.apoorvgupta.home.intent.HomeNavEffect
 import com.apoorvgupta.home.intent.HomeViewStates
+import com.apoorvgupta.home.view.HomeScreenErrorContent
+import com.apoorvgupta.home.view.HomeScreenLoadedContent
 import com.apoorvgupta.home.viewmodel.HomeViewModel
+import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
+import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.loader.CircularProgressBarComponent
 import kotlinx.coroutines.flow.Flow
 
 /**

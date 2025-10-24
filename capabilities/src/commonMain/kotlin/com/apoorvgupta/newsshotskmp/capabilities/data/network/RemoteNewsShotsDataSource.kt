@@ -1,9 +1,9 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.network
 
-import com.apoorvgupta.newsshotskmp.capabilities.data.dto.category.CategoryDto
-import com.apoorvgupta.newsshotskmp.capabilities.data.dto.newsshots.NewsShotsDto
 import com.apoorvgupta.core.model.DataError
 import com.apoorvgupta.core.model.Result
+import com.apoorvgupta.newsshotskmp.capabilities.data.dto.category.CategoryDto
+import com.apoorvgupta.newsshotskmp.capabilities.data.dto.newsshots.NewsShotsDto
 
 /**
  * @author Apoorv Gupta
@@ -29,6 +29,6 @@ interface RemoteNewsShotsDataSource {
     ): Result<NewsShotsDto, DataError.Remote>
 
     suspend fun getSearchedPost(
-        search: String
+        search: String,
     ): Result<List<NewsShotsDto>, DataError.Remote>
 }

@@ -1,7 +1,6 @@
 package com.apoorvgupta.newsshotsdetails.viewmodel
 
 import androidx.lifecycle.viewModelScope
-import com.apoorvgupta.newsshotsdetails.usecase.NewsDetailsScreenUseCase
 import com.apoorvgupta.core.base.BaseViewModel
 import com.apoorvgupta.core.model.DataStatus
 import com.apoorvgupta.core.utils.emptyValue
@@ -10,6 +9,7 @@ import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsNavEffect
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewState
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewStates
 import com.apoorvgupta.newsshotsdetails.model.NewsDetailsDataModel
+import com.apoorvgupta.newsshotsdetails.usecase.NewsDetailsScreenUseCase
 import kotlinx.coroutines.launch
 
 /**
@@ -21,8 +21,7 @@ class NewsDetailsViewModel(
 
     private var postLink: String = String.emptyValue()
 
-    override fun createInitialState(): NewsDetailsViewState =
-        NewsDetailsViewState(NewsDetailsViewStates.UnInitialized)
+    override fun createInitialState(): NewsDetailsViewState = NewsDetailsViewState(NewsDetailsViewStates.UnInitialized)
 
     override fun handleIntent(intent: NewsDetailsIntent) {
         when (intent) {
@@ -78,7 +77,7 @@ class NewsDetailsViewModel(
             DataStatus.Error,
             DataStatus.Offline,
             DataStatus.Empty,
-                -> {
+            -> {
                 NewsDetailsViewStates.ErrorData(
                     showLoader = false,
                     data = newsDetailsDataModel,

@@ -1,8 +1,8 @@
 package com.apoorvgupta.newsshotsdetails.model
 
-import com.apoorvgupta.domain.model.NewsShots
-import com.apoorvgupta.core.model.ErrorModel
 import com.apoorvgupta.core.model.DataStatus
+import com.apoorvgupta.core.model.ErrorModel
+import com.apoorvgupta.domain.model.NewsShots
 
 /**
  * @author Apoorv Gupta

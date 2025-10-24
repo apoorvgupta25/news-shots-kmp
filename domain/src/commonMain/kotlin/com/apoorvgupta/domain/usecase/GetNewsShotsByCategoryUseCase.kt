@@ -4,7 +4,6 @@ import androidx.paging.PagingData
 import com.apoorvgupta.domain.model.NewsShots
 import kotlinx.coroutines.flow.Flow
 
-
 /**
  * Get news shots by category use case
  *

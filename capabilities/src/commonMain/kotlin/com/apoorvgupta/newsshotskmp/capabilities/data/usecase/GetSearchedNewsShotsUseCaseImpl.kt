@@ -11,7 +11,7 @@ import com.apoorvgupta.domain.usecase.GetSearchedNewsShotsUseCase
  *
  * @author Apoorv Gupta
  */
-class GetSearchedNewsShotsUseCaseImpl (
+class GetSearchedNewsShotsUseCaseImpl(
     private val newsShotsRepo: NewsShotsRepo,
 ) : GetSearchedNewsShotsUseCase {
 

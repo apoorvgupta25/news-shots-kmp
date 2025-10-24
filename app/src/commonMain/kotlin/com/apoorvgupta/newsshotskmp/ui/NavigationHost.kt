@@ -35,7 +35,7 @@ fun NavigationHost(
         exitTransition = { ExitTransition.None },
     ) {
         navigation<Destinations.NewsGraph>(
-            startDestination = Destinations.Home
+            startDestination = Destinations.Home,
         ) {
             homeNavigationGraph(
                 navController = navController,

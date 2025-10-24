@@ -66,7 +66,7 @@ class HomeViewModel(
             DataStatus.Error,
             DataStatus.Offline,
             DataStatus.Empty,
-                -> {
+            -> {
                 HomeViewStates.ErrorData(
                     showLoader = false,
                     data = homeDataModel,

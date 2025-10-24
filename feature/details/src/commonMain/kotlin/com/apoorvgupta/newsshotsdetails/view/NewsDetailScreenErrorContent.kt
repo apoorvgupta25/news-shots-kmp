@@ -1,9 +1,9 @@
 package com.apoorvgupta.newsshotsdetails.view
 
 import androidx.compose.runtime.Composable
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.errorscreen.AppErrorScreen
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsIntent
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewStates
+import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.errorscreen.AppErrorScreen
 
 /**
  * @author Apoorv Gupta

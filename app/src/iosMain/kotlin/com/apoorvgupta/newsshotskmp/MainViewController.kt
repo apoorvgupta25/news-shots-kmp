@@ -10,7 +10,7 @@ fun MainViewController() = ComposeUIViewController(
         AppLogger.enableLogging()
 
         initKoin()
-    }
+    },
 ) {
     App()
 }

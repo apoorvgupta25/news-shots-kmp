@@ -1,6 +1,5 @@
 package com.apoorvgupta.core.utils
 
-
 expect object DateUtils {
 
     /**
@@ -16,7 +15,6 @@ expect object DateUtils {
         inputFormat: String = DateFormatConst.API_DATE_FORMAT,
         outputFormat: String = DateFormatConst.DATE_FORMAT,
     ): String
-
 }
 
 object DateFormatConst {

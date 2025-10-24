@@ -4,18 +4,18 @@ package com.apoorvgupta.core.model
  * @author Apoorv Gupta
  */
 
-sealed interface DataError: Error {
-    enum class Remote: DataError {
+sealed interface DataError : Error {
+    enum class Remote : DataError {
         REQUEST_TIMEOUT,
         TOO_MANY_REQUESTS,
         NO_INTERNET,
         SERVER,
         SERIALIZATION,
-        UNKNOWN
+        UNKNOWN,
     }
 
-    enum class Local: DataError {
+    enum class Local : DataError {
         DISK_FULL,
-        UNKNOWN
+        UNKNOWN,
     }
 }

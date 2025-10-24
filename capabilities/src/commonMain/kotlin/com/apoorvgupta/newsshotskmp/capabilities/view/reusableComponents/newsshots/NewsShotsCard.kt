@@ -20,11 +20,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextOverflow
 import coil3.compose.AsyncImage
-import com.apoorvgupta.domain.model.NewsShots
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.noRippleClickable
-import com.apoorvgupta.newsshotskmp.capabilities.Constants
-import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
 import com.apoorvgupta.core.utils.emptyValue
+import com.apoorvgupta.domain.model.NewsShots
+import com.apoorvgupta.newsshotskmp.capabilities.Constants
+import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.noRippleClickable
+import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
 import newsshotskmp.capabilities.generated.resources.Res
 import newsshotskmp.capabilities.generated.resources.ic_bookmark_unselected
 import org.jetbrains.compose.resources.painterResource

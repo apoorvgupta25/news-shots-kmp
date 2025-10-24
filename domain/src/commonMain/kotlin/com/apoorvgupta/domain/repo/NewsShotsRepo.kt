@@ -1,10 +1,10 @@
 package com.apoorvgupta.domain.repo
 
 import androidx.paging.PagingData
-import com.apoorvgupta.domain.model.Category
-import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.core.model.DataError
 import com.apoorvgupta.core.model.Result
+import com.apoorvgupta.domain.model.Category
+import com.apoorvgupta.domain.model.NewsShots
 import kotlinx.coroutines.flow.Flow
 
 /**
