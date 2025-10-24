@@ -10,6 +10,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.ColorFilter
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
 import newsshotskmp.capabilities.generated.resources.Res
 import newsshotskmp.capabilities.generated.resources.ic_back_arrow
@@ -24,6 +25,7 @@ fun BackArrowNavigation(onBackClick: () -> Unit) {
     Image(
         painter = painterResource(resource = Res.drawable.ic_back_arrow),
         contentDescription = "Back",
+        colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.onBackground),
         modifier = Modifier.Companion
             .noRippleClickable {
                 onBackClick()
