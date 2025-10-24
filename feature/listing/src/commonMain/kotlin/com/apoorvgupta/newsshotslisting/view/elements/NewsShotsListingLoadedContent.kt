@@ -1,6 +1,7 @@
 package com.apoorvgupta.newsshotslisting.view.elements
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -28,45 +29,46 @@ fun NewsShotsListingLoadedContent(
     userIntent: (NewsShotsListingIntent) -> Unit,
     newsShotsResults: LazyPagingItems<NewsShots>,
 ) {
-    LazyColumn(
+    Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(horizontal = Dimensions.HorizonalDimensions.m_horizontal_spacing),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start,
     ) {
-        item {
-            Spacer(modifier = Modifier.height(Dimensions.VerticalDimensions.s_vertical_spacing))
+        Spacer(modifier = Modifier.height(Dimensions.VerticalDimensions.s_vertical_spacing))
 
-            HeadLine(
-                headText = state.data.headingText,
-                onBackClick = {
-                    userIntent.invoke(NewsShotsListingIntent.NavigateToPreviousScreen)
-                },
-            )
+        HeadLine(
+            headText = state.data.headingText,
+            onBackClick = {
+                userIntent.invoke(NewsShotsListingIntent.NavigateToPreviousScreen)
+            },
+        )
 
-            Spacer(modifier = Modifier.height(Dimensions.VerticalDimensions.s_vertical_spacing))
-        }
+        Spacer(modifier = Modifier.height(Dimensions.VerticalDimensions.s_vertical_spacing))
 
-        items(
-            count = newsShotsResults.itemCount,
-        ) { index ->
-            newsShotsResults.get(index = index)?.let { newsShot ->
-                NewsShotsCard(
-                    newsShot = newsShot,
-                    onCardClick = {
-                        userIntent.invoke(
-                            NewsShotsListingIntent.NavigateToIndividualNewsShots(
-                                newsShot.link,
-                            ),
-                        )
-                    },
-                    onBookmarkClick = {},
-                )
-                if (newsShotsResults.itemCount - 1 != index) {
-                    HorizontalDivider(
-                        modifier = Modifier.padding(all = Dimensions.SurroundingDimensions.s_surrounding_spacing),
+        LazyColumn {
+
+            items(
+                count = newsShotsResults.itemCount,
+            ) { index ->
+                newsShotsResults.get(index = index)?.let { newsShot ->
+                    NewsShotsCard(
+                        newsShot = newsShot,
+                        onCardClick = {
+                            userIntent.invoke(
+                                NewsShotsListingIntent.NavigateToIndividualNewsShots(
+                                    newsShot.link,
+                                ),
+                            )
+                        },
+                        onBookmarkClick = {},
                     )
+                    if (newsShotsResults.itemCount - 1 != index) {
+                        HorizontalDivider(
+                            modifier = Modifier.padding(all = Dimensions.SurroundingDimensions.s_surrounding_spacing),
+                        )
+                    }
                 }
             }
         }
