@@ -6,39 +6,18 @@ plugins {
 kotlin {
 
     androidLibrary {
-        namespace = "com.apoorvgupta.newsshotskmp.core"
+        namespace = "com.apoorvgupta.core"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
-
-        /*
-  withHostTestBuilder {
-  }
-
-  withDeviceTestBuilder {
-      sourceSetTreeName = "test"
-  }.configure {
-      instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-  }
-  */
     }
 
-    val xcfName = "coreKit"
-
-    iosX64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosArm64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosSimulatorArm64 {
-        binaries.framework {
-            baseName = xcfName
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "coreKit"
         }
     }
 
@@ -52,14 +31,6 @@ kotlin {
 
             // Koin
             api(libs.koin.core)
-        }
-
-        androidMain.dependencies {
-
-        }
-
-        iosMain.dependencies {
-
         }
     }
 }

@@ -2,13 +2,13 @@ package com.apoorvgupta.newsshotskmp.capabilities.data.network
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.apoorvgupta.core.model.onError
+import com.apoorvgupta.core.model.onSuccess
+import com.apoorvgupta.core.utils.emptyValue
+import com.apoorvgupta.core.utils.getValueOrEmpty
+import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
 import com.apoorvgupta.newsshotskmp.capabilities.data.mappers.toNewsShots
-import com.apoorvgupta.newsshotskmp.capabilities.domain.NewsShots
-import com.apoorvgupta.newsshotskmp.core.domain.onError
-import com.apoorvgupta.newsshotskmp.core.domain.onSuccess
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
-import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
 
 /**
  * @author Apoorv Gupta
@@ -20,11 +20,10 @@ class NewsShotsPagingSource(
     private val categoryName: String = String.emptyValue(),
 ) : PagingSource<Int, NewsShots>() {
 
-    override fun getRefreshKey(state: PagingState<Int, NewsShots>) =
-        state.anchorPosition?.let { anchorPosition ->
-            state.closestPageToPosition(anchorPosition)?.prevKey?.plus(8)
-                ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(8)
-        }
+    override fun getRefreshKey(state: PagingState<Int, NewsShots>) = state.anchorPosition?.let { anchorPosition ->
+        state.closestPageToPosition(anchorPosition)?.prevKey?.plus(8)
+            ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(8)
+    }
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, NewsShots> {
         val page = params.key ?: 0

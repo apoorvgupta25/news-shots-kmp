@@ -11,30 +11,29 @@ import kotlinx.serialization.Serializable
 sealed interface Destinations {
 
     @Serializable
-    data object NewsGraph: Destinations
+    data object NewsGraph : Destinations
 
     // Home Destination
     @Serializable
-    object Home: Destinations
+    object Home : Destinations
 
     // NewsShotsListing Destination
     @Serializable
     data class NewsShotsListing(
         val categoryName: String,
-    ): Destinations
+    ) : Destinations
 
     // NewsShotsDetails Destination
     @Serializable
     data class NewsDetails(
         val postLink: String,
-    ): Destinations
+    ) : Destinations
 
     // Search Destination
     @Serializable
-    object Search: Destinations
+    object Search : Destinations
 
     // Bookmark Destination
     @Serializable
-    object Bookmark: Destinations
-
+    object Bookmark : Destinations
 }

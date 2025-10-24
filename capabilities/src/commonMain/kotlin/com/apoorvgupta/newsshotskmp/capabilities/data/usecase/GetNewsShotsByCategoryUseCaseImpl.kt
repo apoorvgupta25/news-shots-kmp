@@ -1,7 +1,7 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.usecase
 
-import com.apoorvgupta.newsshotskmp.capabilities.domain.repo.NewsShotsRepo
-import com.apoorvgupta.newsshotskmp.capabilities.domain.usecase.GetNewsShotsByCategoryUseCase
+import com.apoorvgupta.domain.repo.NewsShotsRepo
+import com.apoorvgupta.domain.usecase.GetNewsShotsByCategoryUseCase
 
 /**
  * Get news shots by category use case impl
@@ -21,8 +21,7 @@ class GetNewsShotsByCategoryUseCaseImpl(
      * @param categoryName
      * @return
      */
-    override fun getNewsShotsByCategory(categoryName: String) =
-        newsShotsRepo.getNewsShotsByCategory(categoryName = categoryName)
+    override fun getNewsShotsByCategory(categoryName: String) = newsShotsRepo.getNewsShotsByCategory(categoryName = categoryName)
 //        .transform { response ->
 //        emit(response)
 //    }

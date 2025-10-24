@@ -1,8 +1,8 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.usecase
 
+import com.apoorvgupta.domain.repo.NewsShotsRepo
+import com.apoorvgupta.domain.usecase.GetRecentNewsShotsUseCase
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
-import com.apoorvgupta.newsshotskmp.capabilities.domain.repo.NewsShotsRepo
-import com.apoorvgupta.newsshotskmp.capabilities.domain.usecase.GetRecentNewsShotsUseCase
 
 /**
  * Get recent news shots use case impl

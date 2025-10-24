@@ -29,10 +29,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.apoorvgupta.core.utils.emptyValue
 import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.shadowBackgroundColor
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
 import newsshotskmp.capabilities.generated.resources.Res
 import newsshotskmp.capabilities.generated.resources.ic_bookmark_selected
 import newsshotskmp.capabilities.generated.resources.ic_bookmark_unselected

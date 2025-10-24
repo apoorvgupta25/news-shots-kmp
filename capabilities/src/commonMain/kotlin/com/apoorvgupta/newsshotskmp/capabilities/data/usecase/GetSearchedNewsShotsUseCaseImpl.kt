@@ -1,7 +1,7 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.usecase
 
-import com.apoorvgupta.newsshotskmp.capabilities.domain.repo.NewsShotsRepo
-import com.apoorvgupta.newsshotskmp.capabilities.domain.usecase.GetSearchedNewsShotsUseCase
+import com.apoorvgupta.domain.repo.NewsShotsRepo
+import com.apoorvgupta.domain.usecase.GetSearchedNewsShotsUseCase
 
 /**
  * Get searched news shots use case impl
@@ -11,7 +11,7 @@ import com.apoorvgupta.newsshotskmp.capabilities.domain.usecase.GetSearchedNewsS
  *
  * @author Apoorv Gupta
  */
-class GetSearchedNewsShotsUseCaseImpl (
+class GetSearchedNewsShotsUseCaseImpl(
     private val newsShotsRepo: NewsShotsRepo,
 ) : GetSearchedNewsShotsUseCase {
 

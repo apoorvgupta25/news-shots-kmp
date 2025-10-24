@@ -14,46 +14,20 @@ kotlin {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
 
-    val xcfName = "draftjskmpKit"
-
-    iosX64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosArm64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosSimulatorArm64 {
-        binaries.framework {
-            baseName = xcfName
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "draftjskmpKit"
         }
     }
 
     sourceSets {
-        commonMain {
-            dependencies {
-//                implementation(compose.runtime)
-//                implementation(compose.foundation)
-                implementation(compose.material3)
-                implementation(compose.ui)
-            }
-        }
-
-        androidMain {
-            dependencies {
-
-            }
-        }
-
-        iosMain {
-            dependencies {
-
-            }
+        commonMain.dependencies {
+            implementation(compose.material3)
+            implementation(compose.ui)
         }
     }
 }

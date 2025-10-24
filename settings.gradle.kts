@@ -28,10 +28,13 @@ dependencyResolutionManagement {
     }
 }
 
-include(":composeApp")
-include(":feature-home")
-include(":capabilities")
+include(":app")
 include(":core")
-include(":feature-bookmark")
-include(":feature-search")
+include(":capabilities")
+include(":feature:home")
+include(":feature:details")
+include(":feature:listing")
+include(":feature:bookmark")
+include(":feature:search")
 include(":draftjskmp")
+include(":domain")

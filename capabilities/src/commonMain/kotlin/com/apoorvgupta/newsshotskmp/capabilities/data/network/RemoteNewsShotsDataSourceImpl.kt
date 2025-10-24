@@ -1,11 +1,11 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.network
 
+import com.apoorvgupta.core.interactions.buildConfigProvider.BuildConfigContract
+import com.apoorvgupta.core.model.DataError
+import com.apoorvgupta.core.model.Result
 import com.apoorvgupta.newsshotskmp.capabilities.data.dto.category.CategoryDto
 import com.apoorvgupta.newsshotskmp.capabilities.data.dto.newsshots.NewsShotsDto
 import com.apoorvgupta.newsshotskmp.capabilities.data.helper.safeCall
-import com.apoorvgupta.newsshotskmp.core.domain.DataError
-import com.apoorvgupta.newsshotskmp.core.domain.Result
-import com.apoorvgupta.newsshotskmp.core.interactions.buildConfigProvider.BuildConfigContract
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.request.parameter
@@ -30,15 +30,13 @@ class RemoteNewsShotsDataSourceImpl(
         limit: Int,
         sortBy: String,
         skip: Int,
-    ): Result<List<NewsShotsDto>, DataError.Remote> {
-        return safeCall<List<NewsShotsDto>> {
-            httpClient.get(
-                urlString = appendBaseUrl("api/index/daily")
-            ) {
-                parameter("limit", limit)
-                parameter("skip", skip)
-                parameter("sortBy", sortBy)
-            }
+    ): Result<List<NewsShotsDto>, DataError.Remote> = safeCall<List<NewsShotsDto>> {
+        httpClient.get(
+            urlString = appendBaseUrl("api/index/daily"),
+        ) {
+            parameter("limit", limit)
+            parameter("skip", skip)
+            parameter("sortBy", sortBy)
         }
     }
 
@@ -47,12 +45,10 @@ class RemoteNewsShotsDataSourceImpl(
      *
      * @return
      */
-    override suspend fun getAllCategories(): Result<List<CategoryDto>, DataError.Remote> {
-        return safeCall<List<CategoryDto>> {
-            httpClient.get(
-                urlString = appendBaseUrl("api/all/categories")
-            )
-        }
+    override suspend fun getAllCategories(): Result<List<CategoryDto>, DataError.Remote> = safeCall<List<CategoryDto>> {
+        httpClient.get(
+            urlString = appendBaseUrl("api/all/categories"),
+        )
     }
 
     /**
@@ -67,14 +63,12 @@ class RemoteNewsShotsDataSourceImpl(
         categoryName: String,
         limit: Int,
         skip: Int,
-    ): Result<List<NewsShotsDto>, DataError.Remote> {
-        return safeCall<List<NewsShotsDto>> {
-            httpClient.get(
-                urlString = appendBaseUrl("api/index/category/$categoryName")
-            ) {
-                parameter("limit", limit)
-                parameter("skip", skip)
-            }
+    ): Result<List<NewsShotsDto>, DataError.Remote> = safeCall<List<NewsShotsDto>> {
+        httpClient.get(
+            urlString = appendBaseUrl("api/index/category/$categoryName"),
+        ) {
+            parameter("limit", limit)
+            parameter("skip", skip)
         }
     }
 
@@ -86,12 +80,10 @@ class RemoteNewsShotsDataSourceImpl(
      */
     override suspend fun getIndividualPost(
         postLink: String,
-    ): Result<NewsShotsDto, DataError.Remote> {
-        return safeCall<NewsShotsDto> {
-            httpClient.get(
-                urlString = appendBaseUrl("api/daily/$postLink")
-            )
-        }
+    ): Result<NewsShotsDto, DataError.Remote> = safeCall<NewsShotsDto> {
+        httpClient.get(
+            urlString = appendBaseUrl("api/daily/$postLink"),
+        )
     }
 
     /**
@@ -101,18 +93,14 @@ class RemoteNewsShotsDataSourceImpl(
      * @return
      */
     override suspend fun getSearchedPost(
-        search: String
-    ): Result<List<NewsShotsDto>, DataError.Remote> {
-        return safeCall<List<NewsShotsDto>> {
-            httpClient.get(
-                urlString = appendBaseUrl("api/find/regex/post")
-            ) {
-                parameter("search", search)
-            }
+        search: String,
+    ): Result<List<NewsShotsDto>, DataError.Remote> = safeCall<List<NewsShotsDto>> {
+        httpClient.get(
+            urlString = appendBaseUrl("api/find/regex/post"),
+        ) {
+            parameter("search", search)
         }
     }
 
     private fun appendBaseUrl(endpoint: String) = buildConfigContract.getBaseUrl() + "/$endpoint"
 }
-
-

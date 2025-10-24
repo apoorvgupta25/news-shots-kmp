@@ -7,7 +7,7 @@ plugins {
 }
 
 kotlin {
-    
+
     androidLibrary {
         namespace = "com.apoorvgupta.newsshotskmp.capabilities"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
@@ -17,32 +17,24 @@ kotlin {
         androidResources.enable = true
     }
 
-    val xcfName = "capabilitiesKit"
-
-    iosX64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosArm64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosSimulatorArm64 {
-        binaries.framework {
-            baseName = xcfName
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "capabilitiesKit"
         }
     }
 
     sourceSets {
         sourceSets {
             commonMain.dependencies {
+                // Projects
                 implementation(projects.core)
-                implementation(projects.draftjskmp)
+                implementation(projects.domain)
 
+                // Compose
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material3)
@@ -63,7 +55,6 @@ kotlin {
 
                 // Pagination
                 implementation(libs.androidx.pagination)
-
             }
 
             androidMain.dependencies {
