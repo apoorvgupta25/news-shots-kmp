@@ -1,6 +1,6 @@
-package com.apoorvgupta.newsshotskmp.core.model
+package com.apoorvgupta.core.model
 
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
+import com.apoorvgupta.core.utils.emptyValue
 
 /**
  * Data class representing the model for an error response.

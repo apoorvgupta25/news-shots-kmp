@@ -1,6 +1,6 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.network
 
-import com.apoorvgupta.newsshotskmp.core.logger.AppLogger
+import com.apoorvgupta.core.logger.AppLogger
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.plugins.HttpTimeout

@@ -2,10 +2,10 @@ package com.apoorvgupta.newsshotskmp.newsshotsdetails.usecase
 
 import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.domain.usecase.GetIndividualNewsShotsUseCase
-import com.apoorvgupta.newsshotskmp.core.model.ErrorModel
-import com.apoorvgupta.newsshotskmp.core.model.onError
-import com.apoorvgupta.newsshotskmp.core.model.onSuccess
-import com.apoorvgupta.newsshotskmp.core.model.DataStatus
+import com.apoorvgupta.core.model.ErrorModel
+import com.apoorvgupta.core.model.onError
+import com.apoorvgupta.core.model.onSuccess
+import com.apoorvgupta.core.model.DataStatus
 import com.apoorvgupta.newsshotskmp.newsshotsdetails.model.NewsDetailsDataModel
 
 /**

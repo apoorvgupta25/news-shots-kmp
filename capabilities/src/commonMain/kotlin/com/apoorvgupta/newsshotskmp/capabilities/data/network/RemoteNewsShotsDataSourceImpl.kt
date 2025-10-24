@@ -3,9 +3,9 @@ package com.apoorvgupta.newsshotskmp.capabilities.data.network
 import com.apoorvgupta.newsshotskmp.capabilities.data.dto.category.CategoryDto
 import com.apoorvgupta.newsshotskmp.capabilities.data.dto.newsshots.NewsShotsDto
 import com.apoorvgupta.newsshotskmp.capabilities.data.helper.safeCall
-import com.apoorvgupta.newsshotskmp.core.model.DataError
-import com.apoorvgupta.newsshotskmp.core.model.Result
-import com.apoorvgupta.newsshotskmp.core.interactions.buildConfigProvider.BuildConfigContract
+import com.apoorvgupta.core.model.DataError
+import com.apoorvgupta.core.model.Result
+import com.apoorvgupta.core.interactions.buildConfigProvider.BuildConfigContract
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.request.parameter

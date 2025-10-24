@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.base
+package com.apoorvgupta.core.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.logger
+package com.apoorvgupta.core.logger
 
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier

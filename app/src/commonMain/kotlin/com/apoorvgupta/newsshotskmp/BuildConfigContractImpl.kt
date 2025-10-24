@@ -1,6 +1,6 @@
 package com.apoorvgupta.newsshotskmp
 
-import com.apoorvgupta.newsshotskmp.core.interactions.buildConfigProvider.BuildConfigContract
+import com.apoorvgupta.core.interactions.buildConfigProvider.BuildConfigContract
 
 class BuildConfigContractImpl : BuildConfigContract {
 

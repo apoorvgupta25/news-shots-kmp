@@ -7,8 +7,8 @@ import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.Constants.DAILY
 import com.apoorvgupta.domain.usecase.GetAllNewsShotsUseCase
 import com.apoorvgupta.domain.usecase.GetNewsShotsByCategoryUseCase
-import com.apoorvgupta.newsshotskmp.core.base.BaseViewModel
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
+import com.apoorvgupta.core.base.BaseViewModel
+import com.apoorvgupta.core.utils.emptyValue
 import com.apoorvgupta.newsshotskmp.newsshotslisting.intent.NewsShotsListingIntent
 import com.apoorvgupta.newsshotskmp.newsshotslisting.intent.NewsShotsListingNavEffect
 import com.apoorvgupta.newsshotskmp.newsshotslisting.intent.NewsShotsListingViewState

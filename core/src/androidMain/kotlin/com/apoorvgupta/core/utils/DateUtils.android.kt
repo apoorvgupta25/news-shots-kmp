@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.utils
+package com.apoorvgupta.core.utils
 
 import java.text.SimpleDateFormat
 import java.util.Locale

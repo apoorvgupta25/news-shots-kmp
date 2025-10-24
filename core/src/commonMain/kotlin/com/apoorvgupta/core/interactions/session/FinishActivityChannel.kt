@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.interactions.session
+package com.apoorvgupta.core.interactions.session
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

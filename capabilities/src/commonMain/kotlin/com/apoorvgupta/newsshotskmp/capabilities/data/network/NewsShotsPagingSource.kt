@@ -5,10 +5,10 @@ import androidx.paging.PagingState
 import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
 import com.apoorvgupta.newsshotskmp.capabilities.data.mappers.toNewsShots
-import com.apoorvgupta.newsshotskmp.core.model.onError
-import com.apoorvgupta.newsshotskmp.core.model.onSuccess
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
-import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
+import com.apoorvgupta.core.model.onError
+import com.apoorvgupta.core.model.onSuccess
+import com.apoorvgupta.core.utils.emptyValue
+import com.apoorvgupta.core.utils.getValueOrEmpty
 
 /**
  * @author Apoorv Gupta

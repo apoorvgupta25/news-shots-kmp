@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.model
+package com.apoorvgupta.core.model
 
 /**
  * @author Apoorv Gupta
@@ -6,7 +6,7 @@ package com.apoorvgupta.newsshotskmp.core.model
 
 sealed interface Result<out D, out E: Error> {
     data class Success<out D>(val data: D): Result<D, Nothing>
-    data class Error<out E: com.apoorvgupta.newsshotskmp.core.model.Error>(val error: E, val statusCode: Int = -1):
+    data class Error<out E: com.apoorvgupta.core.model.Error>(val error: E, val statusCode: Int = -1):
         Result<Nothing, E>
 }
 

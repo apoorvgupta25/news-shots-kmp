@@ -1,7 +1,7 @@
 package com.apoorvgupta.newsshotskmp
 
 import android.app.Application
-import com.apoorvgupta.newsshotskmp.core.logger.AppLogger
+import com.apoorvgupta.core.logger.AppLogger
 import com.apoorvgupta.newsshotskmp.di.initKoin
 import org.koin.android.ext.koin.androidContext
 

@@ -16,7 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
+import com.apoorvgupta.core.utils.emptyValue
 import newsshotskmp.capabilities.generated.resources.Res
 import newsshotskmp.capabilities.generated.resources.ic_dark_mode
 import newsshotskmp.capabilities.generated.resources.ic_light_mode

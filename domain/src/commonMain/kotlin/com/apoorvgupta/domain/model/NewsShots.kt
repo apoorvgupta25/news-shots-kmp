@@ -1,9 +1,9 @@
 package com.apoorvgupta.domain.model
 
 import com.apoorvgupta.draftjskmp.data.DraftJS
-import com.apoorvgupta.newsshotskmp.core.utils.DateUtils.getDateFormatted
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
-import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
+import com.apoorvgupta.core.utils.DateUtils.getDateFormatted
+import com.apoorvgupta.core.utils.emptyValue
+import com.apoorvgupta.core.utils.getValueOrEmpty
 import kotlinx.serialization.json.Json
 
 /**

@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.threading
+package com.apoorvgupta.core.threading
 
 import kotlin.coroutines.CoroutineContext
 

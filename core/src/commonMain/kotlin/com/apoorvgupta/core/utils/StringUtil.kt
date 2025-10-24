@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.utils
+package com.apoorvgupta.core.utils
 
 // Constants
 private const val EMPTY_STRING = ""

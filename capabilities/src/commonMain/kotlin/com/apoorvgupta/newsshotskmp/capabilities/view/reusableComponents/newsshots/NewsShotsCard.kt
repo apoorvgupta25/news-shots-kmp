@@ -24,7 +24,7 @@ import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.noRippleClickable
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
+import com.apoorvgupta.core.utils.emptyValue
 import newsshotskmp.capabilities.generated.resources.Res
 import newsshotskmp.capabilities.generated.resources.ic_bookmark_unselected
 import org.jetbrains.compose.resources.painterResource

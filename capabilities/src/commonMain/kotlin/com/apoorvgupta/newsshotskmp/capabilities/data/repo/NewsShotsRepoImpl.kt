@@ -10,7 +10,7 @@ import com.apoorvgupta.newsshotskmp.capabilities.data.mappers.toNewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.data.network.NewsShotsPagingSource
 import com.apoorvgupta.newsshotskmp.capabilities.data.network.RemoteNewsShotsDataSource
 import com.apoorvgupta.domain.repo.NewsShotsRepo
-import com.apoorvgupta.newsshotskmp.core.model.map
+import com.apoorvgupta.core.model.map
 import kotlinx.coroutines.flow.Flow
 
 /**

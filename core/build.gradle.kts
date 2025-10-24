@@ -6,20 +6,9 @@ plugins {
 kotlin {
 
     androidLibrary {
-        namespace = "com.apoorvgupta.newsshotskmp.core"
+        namespace = "com.apoorvgupta.core"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
-
-        /*
-  withHostTestBuilder {
-  }
-
-  withDeviceTestBuilder {
-      sourceSetTreeName = "test"
-  }.configure {
-      instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-  }
-  */
     }
 
     val xcfName = "coreKit"

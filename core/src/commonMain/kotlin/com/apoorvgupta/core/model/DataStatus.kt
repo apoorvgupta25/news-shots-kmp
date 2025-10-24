@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.model
+package com.apoorvgupta.core.model
 
 /**
  * Enum class representing the different states of data loading.

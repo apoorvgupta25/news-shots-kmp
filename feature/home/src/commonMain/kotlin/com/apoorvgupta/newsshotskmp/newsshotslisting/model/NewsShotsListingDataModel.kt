@@ -1,6 +1,6 @@
 package com.apoorvgupta.newsshotskmp.newsshotslisting.model
 
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
+import com.apoorvgupta.core.utils.emptyValue
 
 /**
  * @author Apoorv Gupta

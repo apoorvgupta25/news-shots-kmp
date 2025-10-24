@@ -4,11 +4,11 @@ import com.apoorvgupta.domain.model.Category
 import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.domain.usecase.GetAllCategoriesUseCase
 import com.apoorvgupta.domain.usecase.GetRecentNewsShotsUseCase
-import com.apoorvgupta.newsshotskmp.core.model.ErrorModel
-import com.apoorvgupta.newsshotskmp.core.model.onError
-import com.apoorvgupta.newsshotskmp.core.model.onSuccess
-import com.apoorvgupta.newsshotskmp.core.model.DataStatus
-import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
+import com.apoorvgupta.core.model.ErrorModel
+import com.apoorvgupta.core.model.onError
+import com.apoorvgupta.core.model.onSuccess
+import com.apoorvgupta.core.model.DataStatus
+import com.apoorvgupta.core.utils.getValueOrEmpty
 import com.apoorvgupta.newsshotskmp.home.model.HomeContent
 import com.apoorvgupta.newsshotskmp.home.model.HomeDataModel
 

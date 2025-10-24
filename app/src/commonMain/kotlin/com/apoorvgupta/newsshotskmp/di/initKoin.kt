@@ -2,7 +2,7 @@ package com.apoorvgupta.newsshotskmp.di
 
 import com.apoorvgupta.newsshotskmp.capabilities.di.capabilitiesModule
 import com.apoorvgupta.newsshotskmp.capabilities.di.platformModule
-import com.apoorvgupta.newsshotskmp.core.di.coreModule
+import com.apoorvgupta.core.di.coreModule
 import org.koin.core.context.startKoin
 import org.koin.dsl.KoinAppDeclaration
 

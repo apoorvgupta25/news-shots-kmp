@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.model
+package com.apoorvgupta.core.model
 
 /**
  * @author Apoorv Gupta

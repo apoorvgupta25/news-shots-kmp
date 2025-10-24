@@ -2,8 +2,8 @@ package com.apoorvgupta.newsshotskmp.capabilities.data.network
 
 import com.apoorvgupta.newsshotskmp.capabilities.data.dto.category.CategoryDto
 import com.apoorvgupta.newsshotskmp.capabilities.data.dto.newsshots.NewsShotsDto
-import com.apoorvgupta.newsshotskmp.core.model.DataError
-import com.apoorvgupta.newsshotskmp.core.model.Result
+import com.apoorvgupta.core.model.DataError
+import com.apoorvgupta.core.model.Result
 
 /**
  * @author Apoorv Gupta

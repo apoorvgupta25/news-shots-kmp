@@ -1,6 +1,6 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.dto.category
 
-import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
+import com.apoorvgupta.core.utils.emptyValue
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

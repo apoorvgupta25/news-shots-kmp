@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.interactions.buildConfigProvider
+package com.apoorvgupta.core.interactions.buildConfigProvider
 
 /**
  * Interface for accessing BuildConfig constants such as base URL, application version, and application ID.

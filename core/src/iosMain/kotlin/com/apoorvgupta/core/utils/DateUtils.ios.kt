@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.core.utils
+package com.apoorvgupta.core.utils
 
 import platform.Foundation.NSDateFormatter
 import platform.Foundation.NSTimeZone

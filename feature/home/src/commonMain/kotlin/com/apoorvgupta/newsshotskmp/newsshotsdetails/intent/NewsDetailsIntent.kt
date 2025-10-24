@@ -1,8 +1,8 @@
 package com.apoorvgupta.newsshotskmp.newsshotsdetails.intent
 
-import com.apoorvgupta.newsshotskmp.core.base.NavEffect
-import com.apoorvgupta.newsshotskmp.core.base.UserIntent
-import com.apoorvgupta.newsshotskmp.core.base.ViewState
+import com.apoorvgupta.core.base.NavEffect
+import com.apoorvgupta.core.base.UserIntent
+import com.apoorvgupta.core.base.ViewState
 import com.apoorvgupta.newsshotskmp.newsshotsdetails.model.NewsDetailsDataModel
 
 /**

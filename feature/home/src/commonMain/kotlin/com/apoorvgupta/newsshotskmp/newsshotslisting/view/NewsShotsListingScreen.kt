@@ -6,8 +6,8 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import com.apoorvgupta.newsshotskmp.newsshotslisting.view.elements.NewsShotsListingErrorContent
 import com.apoorvgupta.newsshotskmp.newsshotslisting.view.elements.NewsShotsListingLoadedContent
 import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.loader.CircularProgressBarComponent
-import com.apoorvgupta.newsshotskmp.core.logger.AppLogger
-import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
+import com.apoorvgupta.core.logger.AppLogger
+import com.apoorvgupta.core.utils.getValueOrEmpty
 import com.apoorvgupta.newsshotskmp.newsshotslisting.intent.NewsShotsListingIntent
 import com.apoorvgupta.newsshotskmp.newsshotslisting.intent.NewsShotsListingViewStates
 import com.apoorvgupta.newsshotskmp.newsshotslisting.viewmodel.NewsShotsListingViewModel

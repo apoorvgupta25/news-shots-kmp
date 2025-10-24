@@ -9,7 +9,7 @@ import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.loader.
 import com.apoorvgupta.newsshotskmp.home.view.HomeScreenErrorContent
 import com.apoorvgupta.newsshotskmp.home.view.HomeScreenLoadedContent
 import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
-import com.apoorvgupta.newsshotskmp.core.interactions.session.FinishActivityChannel
+import com.apoorvgupta.core.interactions.session.FinishActivityChannel
 import com.apoorvgupta.newsshotskmp.home.intent.HomeIntent
 import com.apoorvgupta.newsshotskmp.home.intent.HomeNavEffect
 import com.apoorvgupta.newsshotskmp.home.intent.HomeViewStates
