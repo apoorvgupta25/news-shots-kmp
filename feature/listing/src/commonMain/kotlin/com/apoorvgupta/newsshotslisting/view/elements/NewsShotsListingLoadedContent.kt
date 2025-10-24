@@ -48,7 +48,6 @@ fun NewsShotsListingLoadedContent(
         Spacer(modifier = Modifier.height(Dimensions.VerticalDimensions.s_vertical_spacing))
 
         LazyColumn {
-
             items(
                 count = newsShotsResults.itemCount,
             ) { index ->
