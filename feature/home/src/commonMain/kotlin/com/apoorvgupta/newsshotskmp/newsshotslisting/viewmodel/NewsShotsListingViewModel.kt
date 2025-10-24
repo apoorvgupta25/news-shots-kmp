@@ -3,10 +3,10 @@ package com.apoorvgupta.newsshotskmp.newsshotslisting.viewmodel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
+import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.Constants.DAILY
-import com.apoorvgupta.newsshotskmp.capabilities.domain.NewsShots
-import com.apoorvgupta.newsshotskmp.capabilities.domain.usecase.GetAllNewsShotsUseCase
-import com.apoorvgupta.newsshotskmp.capabilities.domain.usecase.GetNewsShotsByCategoryUseCase
+import com.apoorvgupta.domain.usecase.GetAllNewsShotsUseCase
+import com.apoorvgupta.domain.usecase.GetNewsShotsByCategoryUseCase
 import com.apoorvgupta.newsshotskmp.core.base.BaseViewModel
 import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
 import com.apoorvgupta.newsshotskmp.newsshotslisting.intent.NewsShotsListingIntent

@@ -3,7 +3,7 @@ package com.apoorvgupta.newsshotskmp.newsshotsdetails.viewmodel
 import androidx.lifecycle.viewModelScope
 import com.apoorvgupta.newsshotskmp.newsshotsdetails.usecase.NewsDetailsScreenUseCase
 import com.apoorvgupta.newsshotskmp.core.base.BaseViewModel
-import com.apoorvgupta.newsshotskmp.core.utils.DataStatus
+import com.apoorvgupta.newsshotskmp.core.model.DataStatus
 import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
 import com.apoorvgupta.newsshotskmp.newsshotsdetails.intent.NewsDetailsIntent
 import com.apoorvgupta.newsshotskmp.newsshotsdetails.intent.NewsDetailsNavEffect

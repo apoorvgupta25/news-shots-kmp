@@ -1,19 +1,16 @@
 package com.apoorvgupta.newsshotskmp.home.usecase
 
-import com.apoorvgupta.newsshotskmp.capabilities.domain.Category
-import com.apoorvgupta.newsshotskmp.capabilities.domain.NewsShots
-import com.apoorvgupta.newsshotskmp.capabilities.domain.usecase.GetAllCategoriesUseCase
-import com.apoorvgupta.newsshotskmp.capabilities.domain.usecase.GetRecentNewsShotsUseCase
-import com.apoorvgupta.newsshotskmp.core.domain.ErrorModel
-import com.apoorvgupta.newsshotskmp.core.domain.onError
-import com.apoorvgupta.newsshotskmp.core.domain.onSuccess
-import com.apoorvgupta.newsshotskmp.core.logger.AppLogger
-import com.apoorvgupta.newsshotskmp.core.utils.DataStatus
+import com.apoorvgupta.domain.model.Category
+import com.apoorvgupta.domain.model.NewsShots
+import com.apoorvgupta.domain.usecase.GetAllCategoriesUseCase
+import com.apoorvgupta.domain.usecase.GetRecentNewsShotsUseCase
+import com.apoorvgupta.newsshotskmp.core.model.ErrorModel
+import com.apoorvgupta.newsshotskmp.core.model.onError
+import com.apoorvgupta.newsshotskmp.core.model.onSuccess
+import com.apoorvgupta.newsshotskmp.core.model.DataStatus
 import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
 import com.apoorvgupta.newsshotskmp.home.model.HomeContent
 import com.apoorvgupta.newsshotskmp.home.model.HomeDataModel
-import com.apoorvgupta.newsshotskmp.home.usecase.HomeScreenUseCase
-import kotlinx.coroutines.flow.FlowCollector
 
 /**
  * @author Apoorv Gupta

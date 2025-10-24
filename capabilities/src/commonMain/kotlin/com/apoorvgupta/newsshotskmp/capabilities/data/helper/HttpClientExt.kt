@@ -1,7 +1,7 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.helper
 
-import com.apoorvgupta.newsshotskmp.core.domain.DataError
-import com.apoorvgupta.newsshotskmp.core.domain.Result
+import com.apoorvgupta.newsshotskmp.core.model.DataError
+import com.apoorvgupta.newsshotskmp.core.model.Result
 import io.ktor.client.call.NoTransformationFoundException
 import io.ktor.client.call.body
 import io.ktor.client.network.sockets.SocketTimeoutException

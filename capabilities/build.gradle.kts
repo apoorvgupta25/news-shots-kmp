@@ -41,7 +41,7 @@ kotlin {
         sourceSets {
             commonMain.dependencies {
                 implementation(projects.core)
-                implementation(projects.draftjskmp)
+                implementation(projects.domain)
 
                 implementation(compose.runtime)
                 implementation(compose.foundation)

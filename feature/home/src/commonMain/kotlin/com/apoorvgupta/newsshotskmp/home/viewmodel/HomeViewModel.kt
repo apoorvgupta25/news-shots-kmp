@@ -2,7 +2,7 @@ package com.apoorvgupta.newsshotskmp.home.viewmodel
 
 import androidx.lifecycle.viewModelScope
 import com.apoorvgupta.newsshotskmp.core.base.BaseViewModel
-import com.apoorvgupta.newsshotskmp.core.utils.DataStatus
+import com.apoorvgupta.newsshotskmp.core.model.DataStatus
 import com.apoorvgupta.newsshotskmp.home.intent.HomeIntent
 import com.apoorvgupta.newsshotskmp.home.intent.HomeNavEffect
 import com.apoorvgupta.newsshotskmp.home.intent.HomeViewState

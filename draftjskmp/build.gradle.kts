@@ -35,25 +35,17 @@ kotlin {
     }
 
     sourceSets {
-        commonMain {
-            dependencies {
-//                implementation(compose.runtime)
-//                implementation(compose.foundation)
-                implementation(compose.material3)
-                implementation(compose.ui)
-            }
+        commonMain.dependencies {
+            implementation(compose.material3)
+            implementation(compose.ui)
         }
 
-        androidMain {
-            dependencies {
+        androidMain.dependencies {
 
-            }
         }
 
-        iosMain {
-            dependencies {
+        iosMain.dependencies {
 
-            }
         }
     }
 }

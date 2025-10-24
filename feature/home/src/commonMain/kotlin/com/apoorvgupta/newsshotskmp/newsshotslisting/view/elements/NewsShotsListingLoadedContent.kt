@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.paging.compose.LazyPagingItems
-import com.apoorvgupta.newsshotskmp.capabilities.domain.NewsShots
+import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.HeadLine
 import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.newsshots.NewsShotsCard
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions

@@ -1,8 +1,8 @@
 package com.apoorvgupta.newsshotskmp.newsshotsdetails.model
 
-import com.apoorvgupta.newsshotskmp.capabilities.domain.NewsShots
-import com.apoorvgupta.newsshotskmp.core.domain.ErrorModel
-import com.apoorvgupta.newsshotskmp.core.utils.DataStatus
+import com.apoorvgupta.domain.model.NewsShots
+import com.apoorvgupta.newsshotskmp.core.model.ErrorModel
+import com.apoorvgupta.newsshotskmp.core.model.DataStatus
 
 /**
  * @author Apoorv Gupta

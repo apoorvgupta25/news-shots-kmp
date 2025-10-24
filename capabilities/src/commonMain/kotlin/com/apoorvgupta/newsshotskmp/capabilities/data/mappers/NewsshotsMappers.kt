@@ -1,11 +1,11 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.mappers
 
+import com.apoorvgupta.domain.model.Author
+import com.apoorvgupta.domain.model.Category
+import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.data.dto.category.CategoryDto
 import com.apoorvgupta.newsshotskmp.capabilities.data.dto.newsshots.AuthorDto
 import com.apoorvgupta.newsshotskmp.capabilities.data.dto.newsshots.NewsShotsDto
-import com.apoorvgupta.newsshotskmp.capabilities.domain.Author
-import com.apoorvgupta.newsshotskmp.capabilities.domain.Category
-import com.apoorvgupta.newsshotskmp.capabilities.domain.NewsShots
 
 /**
  * @author Apoorv Gupta

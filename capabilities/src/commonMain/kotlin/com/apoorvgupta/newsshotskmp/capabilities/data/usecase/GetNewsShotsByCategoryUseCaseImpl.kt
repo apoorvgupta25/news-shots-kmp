@@ -1,7 +1,7 @@
 package com.apoorvgupta.newsshotskmp.capabilities.data.usecase
 
-import com.apoorvgupta.newsshotskmp.capabilities.domain.repo.NewsShotsRepo
-import com.apoorvgupta.newsshotskmp.capabilities.domain.usecase.GetNewsShotsByCategoryUseCase
+import com.apoorvgupta.domain.repo.NewsShotsRepo
+import com.apoorvgupta.domain.usecase.GetNewsShotsByCategoryUseCase
 
 /**
  * Get news shots by category use case impl

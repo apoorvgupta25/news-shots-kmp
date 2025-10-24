@@ -2,11 +2,11 @@ package com.apoorvgupta.newsshotskmp.capabilities.data.network
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
 import com.apoorvgupta.newsshotskmp.capabilities.data.mappers.toNewsShots
-import com.apoorvgupta.newsshotskmp.capabilities.domain.NewsShots
-import com.apoorvgupta.newsshotskmp.core.domain.onError
-import com.apoorvgupta.newsshotskmp.core.domain.onSuccess
+import com.apoorvgupta.newsshotskmp.core.model.onError
+import com.apoorvgupta.newsshotskmp.core.model.onSuccess
 import com.apoorvgupta.newsshotskmp.core.utils.emptyValue
 import com.apoorvgupta.newsshotskmp.core.utils.getValueOrEmpty
 

@@ -3,15 +3,14 @@ package com.apoorvgupta.newsshotskmp.capabilities.data.repo
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
+import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
 import com.apoorvgupta.newsshotskmp.capabilities.data.mappers.toCategory
 import com.apoorvgupta.newsshotskmp.capabilities.data.mappers.toNewsShots
 import com.apoorvgupta.newsshotskmp.capabilities.data.network.NewsShotsPagingSource
 import com.apoorvgupta.newsshotskmp.capabilities.data.network.RemoteNewsShotsDataSource
-import com.apoorvgupta.newsshotskmp.capabilities.data.network.RemoteNewsShotsDataSourceImpl
-import com.apoorvgupta.newsshotskmp.capabilities.domain.NewsShots
-import com.apoorvgupta.newsshotskmp.capabilities.domain.repo.NewsShotsRepo
-import com.apoorvgupta.newsshotskmp.core.domain.map
+import com.apoorvgupta.domain.repo.NewsShotsRepo
+import com.apoorvgupta.newsshotskmp.core.model.map
 import kotlinx.coroutines.flow.Flow
 
 /**
