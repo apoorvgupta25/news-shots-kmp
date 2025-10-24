@@ -72,8 +72,8 @@ fun HeadLine(
                     when (currentTheme) {
                         AppThemeOptions.LIGHT -> Res.drawable.ic_light_mode
                         AppThemeOptions.DARK -> Res.drawable.ic_dark_mode
-                        AppThemeOptions.SYSTEM -> if (isSystemInDarkTheme()) Res.drawable.ic_system_dark_mode else  Res.drawable.ic_system_light_mode
-                    }
+                        AppThemeOptions.SYSTEM -> if (isSystemInDarkTheme()) Res.drawable.ic_system_dark_mode else Res.drawable.ic_system_light_mode
+                    },
                 ),
                 contentDescription = String.emptyValue(),
                 modifier = Modifier

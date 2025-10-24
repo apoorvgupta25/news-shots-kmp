@@ -15,12 +15,11 @@ internal class AppThemeOptionsMapper {
      *
      * @return the converted object
      */
-    fun toDataStore(appThemeOptions: DomainThemeOptions): DataStoreThemeOptions =
-        when (appThemeOptions) {
-            DomainThemeOptions.LIGHT -> DataStoreThemeOptions.LIGHT
-            DomainThemeOptions.DARK -> DataStoreThemeOptions.DARK
-            DomainThemeOptions.SYSTEM -> DataStoreThemeOptions.SYSTEM
-        }
+    fun toDataStore(appThemeOptions: DomainThemeOptions): DataStoreThemeOptions = when (appThemeOptions) {
+        DomainThemeOptions.LIGHT -> DataStoreThemeOptions.LIGHT
+        DomainThemeOptions.DARK -> DataStoreThemeOptions.DARK
+        DomainThemeOptions.SYSTEM -> DataStoreThemeOptions.SYSTEM
+    }
 
     /**
      * Maps AppThemeOptions from DataStore to Repo.
@@ -29,10 +28,9 @@ internal class AppThemeOptionsMapper {
      *
      * @return the converted object
      */
-    fun toRepo(appThemeOptions: DataStoreThemeOptions): DomainThemeOptions =
-        when (appThemeOptions) {
-            DataStoreThemeOptions.LIGHT -> DomainThemeOptions.LIGHT
-            DataStoreThemeOptions.DARK -> DomainThemeOptions.DARK
-            DataStoreThemeOptions.SYSTEM -> DomainThemeOptions.SYSTEM
-        }
+    fun toRepo(appThemeOptions: DataStoreThemeOptions): DomainThemeOptions = when (appThemeOptions) {
+        DataStoreThemeOptions.LIGHT -> DomainThemeOptions.LIGHT
+        DataStoreThemeOptions.DARK -> DomainThemeOptions.DARK
+        DataStoreThemeOptions.SYSTEM -> DomainThemeOptions.SYSTEM
+    }
 }

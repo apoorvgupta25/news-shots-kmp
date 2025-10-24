@@ -66,7 +66,6 @@ fun App() {
     }
 }
 
-
 @Composable
 private fun rememberIsDarkTheme(viewModel: AppViewModel = koinInject()): Boolean {
     val isSystemDarkTheme = isSystemInDarkTheme()
@@ -82,4 +81,3 @@ private fun rememberIsDarkTheme(viewModel: AppViewModel = koinInject()): Boolean
     }
     return isDarkTheme
 }
-

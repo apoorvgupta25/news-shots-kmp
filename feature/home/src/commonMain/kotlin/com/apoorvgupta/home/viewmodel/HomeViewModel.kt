@@ -52,7 +52,6 @@ class HomeViewModel(
     private fun updateAppTheme() {
         val current = currentState.homeViewState as HomeViewStates.LoadedData
         viewModelScope.launch {
-
             val targetTheme =
                 when (current.data.currentTheme) {
                     AppThemeOptions.LIGHT -> AppThemeOptions.DARK
@@ -67,13 +66,12 @@ class HomeViewModel(
             loadAppThemeUseCase.invoke().collect {
                 emitHomeData(
                     homeDataModel = current.data.copy(
-                        currentTheme = it
-                    )
+                        currentTheme = it,
+                    ),
                 )
             }
         }
     }
-
 
     private fun getHomeData() {
         emitHomeData(HomeDataModel(status = DataStatus.Loading))
@@ -102,7 +100,7 @@ class HomeViewModel(
             DataStatus.Error,
             DataStatus.Offline,
             DataStatus.Empty,
-                -> {
+            -> {
                 HomeViewStates.ErrorData(
                     showLoader = false,
                     data = homeDataModel,

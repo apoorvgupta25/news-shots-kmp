@@ -12,8 +12,7 @@ import com.apoorvgupta.domain.usecase.datastore.UpdateAppThemeUseCase
  * @author Apoorv Gupta
  */
 class UpdateAppThemeUseCaseImpl(
-    private val appThemeRepo: AppThemeRepo
+    private val appThemeRepo: AppThemeRepo,
 ) : UpdateAppThemeUseCase {
-    override suspend operator fun invoke(theme: AppThemeOptions) =
-        appThemeRepo.updateAppTheme(theme)
+    override suspend operator fun invoke(theme: AppThemeOptions) = appThemeRepo.updateAppTheme(theme)
 }

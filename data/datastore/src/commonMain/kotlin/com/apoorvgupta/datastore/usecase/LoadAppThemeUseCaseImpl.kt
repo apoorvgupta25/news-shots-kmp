@@ -12,6 +12,6 @@ import kotlinx.coroutines.flow.Flow
  *
  * @author Apoorv Gupta
  */
-class LoadAppThemeUseCaseImpl(private val appThemeRepo: AppThemeRepo): LoadAppThemeUseCase {
+class LoadAppThemeUseCaseImpl(private val appThemeRepo: AppThemeRepo) : LoadAppThemeUseCase {
     override operator fun invoke(): Flow<AppThemeOptions> = appThemeRepo.loadAppTheme()
 }

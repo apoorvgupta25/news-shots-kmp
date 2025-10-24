@@ -1,7 +1,7 @@
 package com.apoorvgupta.datastore.di
 
-import com.apoorvgupta.datastore.repo.AppThemeRepoImpl
 import com.apoorvgupta.datastore.mapper.AppThemeOptionsMapper
+import com.apoorvgupta.datastore.repo.AppThemeRepoImpl
 import com.apoorvgupta.datastore.usecase.LoadAppThemeUseCaseImpl
 import com.apoorvgupta.datastore.usecase.UpdateAppThemeUseCaseImpl
 import com.apoorvgupta.domain.repo.AppThemeRepo

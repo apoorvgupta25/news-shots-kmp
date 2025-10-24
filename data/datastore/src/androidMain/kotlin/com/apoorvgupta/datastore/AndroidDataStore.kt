@@ -18,6 +18,6 @@ internal class AndroidDataStore(private val context: Context) {
      * @return the [DataStore] instance
      */
     fun getDataStore(): DataStore<Preferences> = getDataStore(
-        producePath = { context.filesDir.resolve("datastore/$dataStoreFileName").absolutePath },
+        producePath = { context.filesDir.resolve("datastore/$DATASTORE_FILENAME").absolutePath },
     )
 }

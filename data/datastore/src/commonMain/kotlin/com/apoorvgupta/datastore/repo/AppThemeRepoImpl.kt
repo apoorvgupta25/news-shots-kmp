@@ -25,13 +25,12 @@ internal class AppThemeRepoImpl(
         }
     }
 
-    override fun loadAppTheme(): Flow<DomainThemeOptions> =
-        dataStore.data.map { preferences ->
-            val id = preferences[APP_THEME_OPTION] ?: DataStoreThemeOptions.SYSTEM.id
-            val result =
-                DataStoreThemeOptions.entries.find { it.id == id } ?: DataStoreThemeOptions.SYSTEM
-            mapper.toRepo(result)
-        }
+    override fun loadAppTheme(): Flow<DomainThemeOptions> = dataStore.data.map { preferences ->
+        val id = preferences[APP_THEME_OPTION] ?: DataStoreThemeOptions.SYSTEM.id
+        val result =
+            DataStoreThemeOptions.entries.find { it.id == id } ?: DataStoreThemeOptions.SYSTEM
+        mapper.toRepo(result)
+    }
 
     private companion object {
         val APP_THEME_OPTION = intPreferencesKey("newsshots_theme_option")

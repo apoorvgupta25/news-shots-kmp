@@ -21,15 +21,14 @@ private val lock = SynchronizedObject()
  * @return the [DataStore] instance
  */
 @OptIn(InternalCoroutinesApi::class)
-fun getDataStore(producePath: () -> String): DataStore<Preferences> =
-    synchronized(lock) {
-        if (::dataStore.isInitialized) {
-            dataStore
-        } else {
-            PreferenceDataStoreFactory
-                .createWithPath(produceFile = { producePath().toPath() })
-                .also { dataStore = it }
-        }
+fun getDataStore(producePath: () -> String): DataStore<Preferences> = synchronized(lock) {
+    if (::dataStore.isInitialized) {
+        dataStore
+    } else {
+        PreferenceDataStoreFactory
+            .createWithPath(produceFile = { producePath().toPath() })
+            .also { dataStore = it }
     }
+}
 
-internal const val dataStoreFileName = "alkaa_settings.preferences_pb"
+internal const val DATASTORE_FILENAME = "alkaa_settings.preferences_pb"
