@@ -6,7 +6,7 @@ plugins {
 kotlin {
 
     androidLibrary {
-        namespace = "com.apoorvgupta.server"
+        namespace = "com.apoorvgupta.network"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
@@ -17,7 +17,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "serverKit"
+            baseName = "networkKit"
         }
     }
 
