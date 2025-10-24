@@ -22,8 +22,6 @@ import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.bind
 import org.koin.dsl.module
 
-expect val platformModule: Module
-
 val capabilitiesModule = module {
     single { HttpClientFactory.create(get()) }
 
@@ -36,4 +34,8 @@ val capabilitiesModule = module {
     singleOf(::GetSearchedNewsShotsUseCaseImpl).bind<GetSearchedNewsShotsUseCase>()
     singleOf(::GetNewsShotsByCategoryUseCaseImpl).bind<GetNewsShotsByCategoryUseCase>()
     singleOf(::GetAllNewsShotsUseCaseImpl).bind<GetAllNewsShotsUseCase>()
+
+    includes(platformModule)
 }
+
+internal expect val platformModule: Module

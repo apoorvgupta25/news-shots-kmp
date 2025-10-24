@@ -3,6 +3,7 @@ package com.apoorvgupta.home.intent
 import com.apoorvgupta.core.base.NavEffect
 import com.apoorvgupta.core.base.UserIntent
 import com.apoorvgupta.core.base.ViewState
+import com.apoorvgupta.domain.model.AppThemeOptions
 import com.apoorvgupta.home.model.HomeDataModel
 
 /**
@@ -12,6 +13,7 @@ import com.apoorvgupta.home.model.HomeDataModel
  */
 sealed class HomeIntent : UserIntent {
     data object LoadHomeScreen : HomeIntent()
+    data object ToggleAppTheme : HomeIntent()
     data class NavigateToNewsShotsListing(val categoryName: String) : HomeIntent()
     data class NavigateToIndividualNewsShots(val postLink: String) : HomeIntent()
 }

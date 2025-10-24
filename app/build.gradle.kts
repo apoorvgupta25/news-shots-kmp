@@ -38,6 +38,9 @@ kotlin {
             // Projects
             implementation(projects.core)
             implementation(projects.capabilities)
+            implementation(projects.domain)
+            implementation(projects.data.datastore)
+
             implementation(projects.feature.home)
             implementation(projects.feature.details)
             implementation(projects.feature.listing)

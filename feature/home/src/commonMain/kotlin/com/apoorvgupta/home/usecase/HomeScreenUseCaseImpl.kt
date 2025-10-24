@@ -5,12 +5,15 @@ import com.apoorvgupta.core.model.ErrorModel
 import com.apoorvgupta.core.model.onError
 import com.apoorvgupta.core.model.onSuccess
 import com.apoorvgupta.core.utils.getValueOrEmpty
+import com.apoorvgupta.domain.model.AppThemeOptions
 import com.apoorvgupta.domain.model.Category
 import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.domain.usecase.GetAllCategoriesUseCase
 import com.apoorvgupta.domain.usecase.GetRecentNewsShotsUseCase
+import com.apoorvgupta.domain.usecase.datastore.LoadAppThemeUseCase
 import com.apoorvgupta.home.model.HomeContent
 import com.apoorvgupta.home.model.HomeDataModel
+import kotlinx.coroutines.flow.first
 
 /**
  * @author Apoorv Gupta
@@ -18,6 +21,7 @@ import com.apoorvgupta.home.model.HomeDataModel
 class HomeScreenUseCaseImpl(
     private val getRecentNewsShotsUseCase: GetRecentNewsShotsUseCase,
     private val getAllCategoriesUseCase: GetAllCategoriesUseCase,
+    private val loadAppThemeUseCase: LoadAppThemeUseCase,
 ) : HomeScreenUseCase {
 
     var homeDataModel = HomeDataModel()
@@ -27,7 +31,8 @@ class HomeScreenUseCaseImpl(
             .onSuccess { newsshots ->
                 getAllCategoriesUseCase.getAllCategories()
                     .onSuccess { categories ->
-                        homeDataModel = getHomeData(newsshots, categories)
+                        homeDataModel =
+                            getHomeData(newsshots, categories, loadAppThemeUseCase.invoke().first())
                     }
                     .onError { err, code ->
                         homeDataModel = emitHomeError(
@@ -39,7 +44,8 @@ class HomeScreenUseCaseImpl(
             .onError { err, code ->
                 getAllCategoriesUseCase.getAllCategories()
                     .onSuccess { categories ->
-                        homeDataModel = getHomeData(null, categories)
+                        homeDataModel =
+                            getHomeData(null, categories, loadAppThemeUseCase.invoke().first())
                     }
                     .onError { err, code ->
                         homeDataModel = emitHomeError(
@@ -55,6 +61,7 @@ class HomeScreenUseCaseImpl(
     private fun getHomeData(
         newsShotsList: List<NewsShots>?,
         categoriesList: List<Category>?,
+        currentTheme: AppThemeOptions,
     ): HomeDataModel = HomeDataModel(
         status = DataStatus.Success,
         homeContent = HomeContent(
@@ -62,6 +69,7 @@ class HomeScreenUseCaseImpl(
             subHeadingText = "Get daily news in 3 mins",
             articlesLabel = "Latest articles",
         ),
+        currentTheme = currentTheme,
         newsShotsList = newsShotsList.getValueOrEmpty(),
         categoriesList = categoriesList.getValueOrEmpty(),
     )

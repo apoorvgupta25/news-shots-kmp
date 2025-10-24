@@ -3,6 +3,7 @@ package com.apoorvgupta.home.model
 import com.apoorvgupta.core.model.DataStatus
 import com.apoorvgupta.core.model.ErrorModel
 import com.apoorvgupta.core.utils.emptyValue
+import com.apoorvgupta.domain.model.AppThemeOptions
 import com.apoorvgupta.domain.model.Category
 import com.apoorvgupta.domain.model.NewsShots
 
@@ -19,6 +20,7 @@ data class HomeDataModel(
     val status: DataStatus = DataStatus.Empty,
     val errorModel: ErrorModel = ErrorModel(),
     val homeContent: HomeContent = HomeContent(),
+    val currentTheme: AppThemeOptions = AppThemeOptions.SYSTEM,
     val newsShotsList: List<NewsShots> = emptyList(),
     val categoriesList: List<Category> = emptyList(),
 )
