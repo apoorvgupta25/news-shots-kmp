@@ -3,12 +3,16 @@ package com.apoorvgupta.home.viewmodel
 import androidx.lifecycle.viewModelScope
 import com.apoorvgupta.core.base.BaseViewModel
 import com.apoorvgupta.core.model.DataStatus
+import com.apoorvgupta.domain.model.AppThemeOptions
+import com.apoorvgupta.domain.usecase.datastore.LoadAppThemeUseCase
+import com.apoorvgupta.domain.usecase.datastore.UpdateAppThemeUseCase
 import com.apoorvgupta.home.intent.HomeIntent
 import com.apoorvgupta.home.intent.HomeNavEffect
 import com.apoorvgupta.home.intent.HomeViewState
 import com.apoorvgupta.home.intent.HomeViewStates
 import com.apoorvgupta.home.model.HomeDataModel
 import com.apoorvgupta.home.usecase.HomeScreenUseCase
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 /**
@@ -19,6 +23,8 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel(
     private val homeScreenUseCase: HomeScreenUseCase,
+    private val updateAppThemeUseCase: UpdateAppThemeUseCase,
+    private val loadAppThemeUseCase: LoadAppThemeUseCase,
 ) : BaseViewModel<HomeIntent, HomeViewState, HomeNavEffect>() {
 
     override fun createInitialState(): HomeViewState = HomeViewState(HomeViewStates.UnInitialized)
@@ -27,6 +33,10 @@ class HomeViewModel(
         when (intent) {
             HomeIntent.LoadHomeScreen -> {
                 getHomeData()
+            }
+
+            HomeIntent.ToggleAppTheme -> {
+                updateAppTheme()
             }
 
             is HomeIntent.NavigateToNewsShotsListing -> {
@@ -38,6 +48,32 @@ class HomeViewModel(
             }
         }
     }
+
+    private fun updateAppTheme() {
+        val current = currentState.homeViewState as HomeViewStates.LoadedData
+        viewModelScope.launch {
+
+            val targetTheme =
+                when (current.data.currentTheme) {
+                    AppThemeOptions.LIGHT -> AppThemeOptions.DARK
+                    AppThemeOptions.DARK -> AppThemeOptions.SYSTEM
+                    AppThemeOptions.SYSTEM -> AppThemeOptions.LIGHT
+                }
+
+            updateAppThemeUseCase(targetTheme)
+        }
+
+        viewModelScope.launch {
+            loadAppThemeUseCase.invoke().collect {
+                emitHomeData(
+                    homeDataModel = current.data.copy(
+                        currentTheme = it
+                    )
+                )
+            }
+        }
+    }
+
 
     private fun getHomeData() {
         emitHomeData(HomeDataModel(status = DataStatus.Loading))
@@ -66,7 +102,7 @@ class HomeViewModel(
             DataStatus.Error,
             DataStatus.Offline,
             DataStatus.Empty,
-            -> {
+                -> {
                 HomeViewStates.ErrorData(
                     showLoader = false,
                     data = homeDataModel,

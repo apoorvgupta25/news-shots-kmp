@@ -15,11 +15,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.apoorvgupta.core.utils.emptyValue
+import com.apoorvgupta.domain.model.AppThemeOptions
 import com.apoorvgupta.newsshotskmp.capabilities.Constants
 import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
 import newsshotskmp.capabilities.generated.resources.Res
 import newsshotskmp.capabilities.generated.resources.ic_dark_mode
 import newsshotskmp.capabilities.generated.resources.ic_light_mode
+import newsshotskmp.capabilities.generated.resources.ic_system_dark_mode
+import newsshotskmp.capabilities.generated.resources.ic_system_light_mode
 import org.jetbrains.compose.resources.painterResource
 
 /**
@@ -30,6 +33,7 @@ import org.jetbrains.compose.resources.painterResource
 fun HeadLine(
     headText: String = String.emptyValue(),
     subHeadingText: String = String.emptyValue(),
+    currentTheme: AppThemeOptions = AppThemeOptions.SYSTEM,
     onHeadClick: () -> Unit = {},
     onModeIconClick: (() -> Unit)? = null,
     onBackClick: (() -> Unit)? = null,
@@ -64,7 +68,13 @@ fun HeadLine(
 
         if (onModeIconClick != null) {
             Image(
-                painter = painterResource(if (isSystemInDarkTheme()) Res.drawable.ic_dark_mode else Res.drawable.ic_light_mode),
+                painter = painterResource(
+                    when (currentTheme) {
+                        AppThemeOptions.LIGHT -> Res.drawable.ic_light_mode
+                        AppThemeOptions.DARK -> Res.drawable.ic_dark_mode
+                        AppThemeOptions.SYSTEM -> if (isSystemInDarkTheme()) Res.drawable.ic_system_dark_mode else  Res.drawable.ic_system_light_mode
+                    }
+                ),
                 contentDescription = String.emptyValue(),
                 modifier = Modifier
                     .size(Dimensions.IconSize.xml_icon_size)

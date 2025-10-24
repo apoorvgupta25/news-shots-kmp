@@ -24,10 +24,12 @@ fun HomeHeaderSection(
         HeadLine(
             headText = state.data.homeContent.headingText,
             subHeadingText = state.data.homeContent.subHeadingText,
+            currentTheme = state.data.currentTheme,
             onHeadClick = {
                 userIntent.invoke(HomeIntent.NavigateToNewsShotsListing(Constants.DAILY))
             },
             onModeIconClick = {
+                userIntent.invoke(HomeIntent.ToggleAppTheme)
             },
         )
 
