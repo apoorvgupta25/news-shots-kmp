@@ -139,13 +139,14 @@ object DraftJsUtils {
 
                 else -> {
                     when {
-                        style.startsWith(DraftJsConstants.COLOR_RGB) -> {
+                        // removing RGB color to update text color according to theme
+                        /*style.startsWith(DraftJsConstants.COLOR_RGB) -> {
                             builder.addStyle(
                                 style = StyleUtils.getFontColorStyle(style),
                                 start = range.first,
                                 end = range.last,
                             )
-                        }
+                        }*/
 
                         /*
                         style.startsWith(DraftJsConstants.BGCOLOR_RGB) -> {
