@@ -11,23 +11,13 @@ kotlin {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
 
-    val xcfName = "coreKit"
-
-    iosX64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosArm64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosSimulatorArm64 {
-        binaries.framework {
-            baseName = xcfName
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "coreKit"
         }
     }
 
@@ -41,14 +31,6 @@ kotlin {
 
             // Koin
             api(libs.koin.core)
-        }
-
-        androidMain.dependencies {
-
-        }
-
-        iosMain.dependencies {
-
         }
     }
 }

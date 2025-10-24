@@ -7,7 +7,7 @@ plugins {
 }
 
 kotlin {
-    
+
     androidLibrary {
         namespace = "com.apoorvgupta.newsshotskmp.capabilities"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
@@ -17,23 +17,13 @@ kotlin {
         androidResources.enable = true
     }
 
-    val xcfName = "capabilitiesKit"
-
-    iosX64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosArm64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosSimulatorArm64 {
-        binaries.framework {
-            baseName = xcfName
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "capabilitiesKit"
         }
     }
 

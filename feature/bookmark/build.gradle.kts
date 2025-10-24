@@ -11,37 +11,17 @@ kotlin {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
 
-    val xcfName = "feature-bookmarkKit"
-
-    iosX64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosArm64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosSimulatorArm64 {
-        binaries.framework {
-            baseName = xcfName
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "bookmarkKit"
         }
     }
 
     sourceSets {
-        commonMain.dependencies {
 
-        }
-
-        androidMain.dependencies {
-
-        }
-
-        iosMain.dependencies {
-
-        }
     }
 }
