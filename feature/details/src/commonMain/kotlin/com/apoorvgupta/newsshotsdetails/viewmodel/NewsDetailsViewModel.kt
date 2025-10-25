@@ -1,22 +1,22 @@
 package com.apoorvgupta.newsshotsdetails.viewmodel
 
-import androidx.lifecycle.viewModelScope
 import com.apoorvgupta.core.base.BaseViewModel
 import com.apoorvgupta.core.model.DataStatus
 import com.apoorvgupta.core.utils.emptyValue
+import com.apoorvgupta.coroutines.AppCoroutineScope
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsIntent
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsNavEffect
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewState
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewStates
 import com.apoorvgupta.newsshotsdetails.model.NewsDetailsDataModel
 import com.apoorvgupta.newsshotsdetails.usecase.NewsDetailsScreenUseCase
-import kotlinx.coroutines.launch
 
 /**
  * @author Apoorv Gupta
  */
 class NewsDetailsViewModel(
     private val newsDetailsScreenUseCase: NewsDetailsScreenUseCase,
+    private val appCoroutineScope: AppCoroutineScope,
 ) : BaseViewModel<NewsDetailsIntent, NewsDetailsViewState, NewsDetailsNavEffect>() {
 
     private var postLink: String = String.emptyValue()
@@ -53,7 +53,7 @@ class NewsDetailsViewModel(
 
     private fun getNewsDetails(postLink: String) {
         emitDetailsData(NewsDetailsDataModel(status = DataStatus.Loading))
-        viewModelScope.launch {
+        appCoroutineScope.launch {
             emitDetailsData(newsDetailsScreenUseCase.getNewsDetailsContentData(postLink = postLink))
         }
     }
