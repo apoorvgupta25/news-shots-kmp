@@ -40,6 +40,7 @@ kotlin {
             implementation(projects.capabilities)
             implementation(projects.domain)
             implementation(projects.data.datastore)
+            implementation(projects.data.network)
 
             implementation(projects.feature.home)
             implementation(projects.feature.details)

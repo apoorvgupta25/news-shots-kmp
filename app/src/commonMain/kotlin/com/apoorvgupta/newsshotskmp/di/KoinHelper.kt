@@ -3,8 +3,8 @@ package com.apoorvgupta.newsshotskmp.di
 import com.apoorvgupta.core.di.coreModule
 import com.apoorvgupta.datastore.di.dataStoreModule
 import com.apoorvgupta.home.di.homeModule
+import com.apoorvgupta.network.di.networkModule
 import com.apoorvgupta.newsshotsdetails.di.detailsModule
-import com.apoorvgupta.newsshotskmp.capabilities.di.capabilitiesModule
 import com.apoorvgupta.newsshotslisting.di.listingModule
 import org.koin.core.context.startKoin
 import org.koin.dsl.KoinAppDeclaration
@@ -25,7 +25,7 @@ fun initKoin(config: KoinAppDeclaration? = null) {
 internal val modules = listOf(
     appModule,
     coreModule,
-    capabilitiesModule,
+    networkModule,
     homeModule,
     detailsModule,
     listingModule,

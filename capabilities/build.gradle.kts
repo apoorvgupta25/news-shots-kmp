@@ -47,24 +47,9 @@ kotlin {
                 // Koin
                 api(libs.koin.core)
 
-                // Ktor
-                implementation(libs.bundles.ktor)
-
                 // Coil
                 implementation(libs.bundles.coil)
 
-                // Pagination
-                implementation(libs.androidx.pagination)
-            }
-
-            androidMain.dependencies {
-                implementation(libs.koin.android)
-                implementation(libs.koin.androidx.compose)
-                implementation(libs.ktor.client.okhttp)
-            }
-
-            iosMain.dependencies {
-                implementation(libs.ktor.client.darwin)
             }
         }
     }

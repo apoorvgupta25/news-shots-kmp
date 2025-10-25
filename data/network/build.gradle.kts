@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.android.kotlin.multiplatform.library)
+    alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 kotlin {
@@ -23,10 +24,25 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            // Projects
             implementation(projects.core)
+            implementation(projects.domain)
 
-            // Ktor Json serialization
-            implementation(libs.ktor.serialization.kotlinx.json)
+            // Ktor
+            implementation(libs.bundles.ktor)
+
+            // Pagination
+            implementation(libs.androidx.pagination)
+        }
+
+        androidMain.dependencies {
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
+            implementation(libs.ktor.client.okhttp)
+        }
+
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
