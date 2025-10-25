@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.newsshots
+package com.apoorvgupta.designsystem.reusableComponents.newsshots
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -22,9 +22,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import coil3.compose.AsyncImage
 import com.apoorvgupta.core.utils.emptyValue
 import com.apoorvgupta.domain.model.NewsShots
-import com.apoorvgupta.newsshotskmp.designsystem.Constants
-import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.noRippleClickable
-import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
+import com.apoorvgupta.designsystem.Constants
+import com.apoorvgupta.designsystem.reusableComponents.noRippleClickable
+import com.apoorvgupta.designsystem.theme.Dimensions
 import newsshotskmp.library.designsystem.generated.resources.Res
 import newsshotskmp.library.designsystem.generated.resources.ic_bookmark_unselected
 import org.jetbrains.compose.resources.painterResource

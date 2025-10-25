@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.navigation.ui
+package com.apoorvgupta.designsystem.navigation.ui
 
 import org.jetbrains.compose.resources.DrawableResource
 

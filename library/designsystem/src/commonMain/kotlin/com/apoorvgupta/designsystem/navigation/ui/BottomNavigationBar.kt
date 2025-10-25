@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.navigation.ui
+package com.apoorvgupta.designsystem.navigation.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -30,9 +30,9 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.apoorvgupta.core.utils.emptyValue
-import com.apoorvgupta.newsshotskmp.designsystem.navigation.Destinations
-import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
-import com.apoorvgupta.newsshotskmp.designsystem.theme.shadowBackgroundColor
+import com.apoorvgupta.designsystem.navigation.Destinations
+import com.apoorvgupta.designsystem.theme.Dimensions
+import com.apoorvgupta.designsystem.theme.shadowBackgroundColor
 import newsshotskmp.library.designsystem.generated.resources.Res
 import newsshotskmp.library.designsystem.generated.resources.ic_bookmark_selected
 import newsshotskmp.library.designsystem.generated.resources.ic_bookmark_unselected

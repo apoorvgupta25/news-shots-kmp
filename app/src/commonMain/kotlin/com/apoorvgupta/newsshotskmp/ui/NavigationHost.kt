@@ -9,7 +9,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.navigation
-import com.apoorvgupta.newsshotskmp.designsystem.navigation.Destinations
+import com.apoorvgupta.designsystem.navigation.Destinations
 
 /**
  * NavigationHost composable function.

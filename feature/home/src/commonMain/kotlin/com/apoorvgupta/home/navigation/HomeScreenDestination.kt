@@ -10,8 +10,8 @@ import com.apoorvgupta.home.intent.HomeViewStates
 import com.apoorvgupta.home.view.HomeScreenErrorContent
 import com.apoorvgupta.home.view.HomeScreenLoadedContent
 import com.apoorvgupta.home.viewmodel.HomeViewModel
-import com.apoorvgupta.newsshotskmp.designsystem.navigation.Destinations
-import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.loader.CircularProgressBarComponent
+import com.apoorvgupta.designsystem.navigation.Destinations
+import com.apoorvgupta.designsystem.reusableComponents.loader.CircularProgressBarComponent
 import kotlinx.coroutines.flow.Flow
 
 /**

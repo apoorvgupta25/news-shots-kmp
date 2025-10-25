@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem
+package com.apoorvgupta.designsystem
 
 /**
  * Object containing constants used in the application.

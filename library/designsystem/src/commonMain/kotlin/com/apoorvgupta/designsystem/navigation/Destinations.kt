@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.navigation
+package com.apoorvgupta.designsystem.navigation
 
 import kotlinx.serialization.Serializable
 

@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.theme
+package com.apoorvgupta.designsystem.theme
 
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp

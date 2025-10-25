@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.theme
+package com.apoorvgupta.designsystem.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes

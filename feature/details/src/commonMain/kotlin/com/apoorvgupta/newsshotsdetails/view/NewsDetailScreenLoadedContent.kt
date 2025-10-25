@@ -18,11 +18,11 @@ import coil3.compose.AsyncImage
 import com.apoorvgupta.draftjskmp.view.DraftJSView
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsIntent
 import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewStates
-import com.apoorvgupta.newsshotskmp.designsystem.Constants
-import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.BackArrowNavigation
-import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.pulltorefresh.AppPullToRefresh
-import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
-import com.apoorvgupta.newsshotskmp.designsystem.theme.linkTextColor
+import com.apoorvgupta.designsystem.Constants
+import com.apoorvgupta.designsystem.reusableComponents.BackArrowNavigation
+import com.apoorvgupta.designsystem.reusableComponents.pulltorefresh.AppPullToRefresh
+import com.apoorvgupta.designsystem.theme.Dimensions
+import com.apoorvgupta.designsystem.theme.linkTextColor
 
 /**
  * @author Apoorv Gupta

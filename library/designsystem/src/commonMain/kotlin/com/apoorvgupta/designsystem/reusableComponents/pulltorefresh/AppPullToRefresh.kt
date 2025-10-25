@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.pulltorefresh
+package com.apoorvgupta.designsystem.reusableComponents.pulltorefresh
 
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.material3.ExperimentalMaterial3Api

@@ -9,8 +9,8 @@ import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewStates
 import com.apoorvgupta.newsshotsdetails.view.NewsDetailScreenErrorContent
 import com.apoorvgupta.newsshotsdetails.view.NewsDetailScreenLoadedContent
 import com.apoorvgupta.newsshotsdetails.viewmodel.NewsDetailsViewModel
-import com.apoorvgupta.newsshotskmp.designsystem.navigation.Destinations
-import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.loader.CircularProgressBarComponent
+import com.apoorvgupta.designsystem.navigation.Destinations
+import com.apoorvgupta.designsystem.reusableComponents.loader.CircularProgressBarComponent
 import kotlinx.coroutines.flow.Flow
 
 /**

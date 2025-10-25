@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.button
+package com.apoorvgupta.designsystem.reusableComponents.button
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Spacer
@@ -15,10 +15,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
-import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
-import com.apoorvgupta.newsshotskmp.designsystem.theme.buttonTextStyle
-import com.apoorvgupta.newsshotskmp.designsystem.theme.disabledBackgroundColor
-import com.apoorvgupta.newsshotskmp.designsystem.theme.disabledTextColor
+import com.apoorvgupta.designsystem.theme.Dimensions
+import com.apoorvgupta.designsystem.theme.buttonTextStyle
+import com.apoorvgupta.designsystem.theme.disabledBackgroundColor
+import com.apoorvgupta.designsystem.theme.disabledTextColor
 
 /**
  * Composable function to handle the Buttons through out the application

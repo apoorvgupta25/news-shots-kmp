@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.errorscreen
+package com.apoorvgupta.designsystem.reusableComponents.errorscreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.pulltorefresh.AppPullToRefresh
+import com.apoorvgupta.designsystem.reusableComponents.pulltorefresh.AppPullToRefresh
 
 /**
  * @author Apoorv Gupta

@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.loader
+package com.apoorvgupta.designsystem.reusableComponents.loader
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
+import com.apoorvgupta.designsystem.theme.Dimensions
 
 /**
  * Composable function that displays a circular progress bar component.

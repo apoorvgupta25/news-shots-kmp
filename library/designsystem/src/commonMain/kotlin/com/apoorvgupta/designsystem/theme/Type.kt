@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.theme
+package com.apoorvgupta.designsystem.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable

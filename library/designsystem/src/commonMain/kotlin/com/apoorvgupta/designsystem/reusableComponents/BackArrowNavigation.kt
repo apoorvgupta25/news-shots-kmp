@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.reusableComponents
+package com.apoorvgupta.designsystem.reusableComponents
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -11,7 +11,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
-import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
+import com.apoorvgupta.designsystem.theme.Dimensions
 import newsshotskmp.library.designsystem.generated.resources.Res
 import newsshotskmp.library.designsystem.generated.resources.ic_back_arrow
 import org.jetbrains.compose.resources.painterResource

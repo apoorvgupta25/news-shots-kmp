@@ -1,4 +1,4 @@
-package com.apoorvgupta.newsshotskmp.designsystem.reusableComponents
+package com.apoorvgupta.designsystem.reusableComponents
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -15,8 +15,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.apoorvgupta.core.utils.emptyValue
 import com.apoorvgupta.domain.model.AppThemeOptions
-import com.apoorvgupta.newsshotskmp.designsystem.Constants
-import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
+import com.apoorvgupta.designsystem.Constants
+import com.apoorvgupta.designsystem.theme.Dimensions
 import newsshotskmp.library.designsystem.generated.resources.Res
 import newsshotskmp.library.designsystem.generated.resources.ic_dark_mode
 import newsshotskmp.library.designsystem.generated.resources.ic_light_mode

@@ -8,7 +8,7 @@ import com.apoorvgupta.core.utils.emptyValue
 import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.domain.usecase.GetAllNewsShotsUseCase
 import com.apoorvgupta.domain.usecase.GetNewsShotsByCategoryUseCase
-import com.apoorvgupta.newsshotskmp.designsystem.Constants.DAILY
+import com.apoorvgupta.designsystem.Constants.DAILY
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingIntent
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingNavEffect
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingViewState

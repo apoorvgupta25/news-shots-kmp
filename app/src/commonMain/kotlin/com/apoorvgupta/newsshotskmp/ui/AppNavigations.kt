@@ -14,7 +14,7 @@ import com.apoorvgupta.home.navigation.HomeScreenDestination
 import com.apoorvgupta.home.viewmodel.HomeViewModel
 import com.apoorvgupta.newsshotsdetails.navigation.NewsDetailsScreenDestination
 import com.apoorvgupta.newsshotsdetails.viewmodel.NewsDetailsViewModel
-import com.apoorvgupta.newsshotskmp.designsystem.navigation.Destinations
+import com.apoorvgupta.designsystem.navigation.Destinations
 import com.apoorvgupta.newsshotslisting.navigation.NewsShotsListingScreenDestination
 import com.apoorvgupta.newsshotslisting.viewmodel.NewsShotsListingViewModel
 import org.koin.compose.viewmodel.koinViewModel
