@@ -6,7 +6,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.apoorvgupta.home.intent.HomeViewStates
-import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
+import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
 
 /**
  * @author Apoorv Gupta

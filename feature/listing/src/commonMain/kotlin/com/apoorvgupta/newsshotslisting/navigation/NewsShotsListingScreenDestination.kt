@@ -3,8 +3,8 @@ package com.apoorvgupta.newsshotslisting.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.navigation.NavController
-import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.loader.CircularProgressBarComponent
+import com.apoorvgupta.newsshotskmp.designsystem.navigation.Destinations
+import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.loader.CircularProgressBarComponent
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingIntent
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingNavEffect
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingViewStates

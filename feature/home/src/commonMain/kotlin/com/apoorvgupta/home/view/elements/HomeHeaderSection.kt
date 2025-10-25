@@ -7,9 +7,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.apoorvgupta.home.intent.HomeIntent
 import com.apoorvgupta.home.intent.HomeViewStates
-import com.apoorvgupta.newsshotskmp.capabilities.Constants
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.HeadLine
-import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
+import com.apoorvgupta.newsshotskmp.designsystem.Constants
+import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.HeadLine
+import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
 
 /**
  * @author Apoorv Gupta

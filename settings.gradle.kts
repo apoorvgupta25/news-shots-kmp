@@ -30,7 +30,6 @@ dependencyResolutionManagement {
 
 include(":app")
 include(":core")
-include(":capabilities")
 include(":data:datastore")
 include(":data:database")
 include(":data:network")
@@ -41,3 +40,4 @@ include(":feature:listing")
 include(":feature:bookmark")
 include(":feature:search")
 include(":draftjskmp")
+include(":library:designsystem")

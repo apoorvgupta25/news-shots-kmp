@@ -2,7 +2,6 @@ package com.apoorvgupta.newsshotskmp.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -15,7 +14,7 @@ import com.apoorvgupta.home.navigation.HomeScreenDestination
 import com.apoorvgupta.home.viewmodel.HomeViewModel
 import com.apoorvgupta.newsshotsdetails.navigation.NewsDetailsScreenDestination
 import com.apoorvgupta.newsshotsdetails.viewmodel.NewsDetailsViewModel
-import com.apoorvgupta.newsshotskmp.capabilities.view.navigation.Destinations
+import com.apoorvgupta.newsshotskmp.designsystem.navigation.Destinations
 import com.apoorvgupta.newsshotslisting.navigation.NewsShotsListingScreenDestination
 import com.apoorvgupta.newsshotslisting.viewmodel.NewsShotsListingViewModel
 import org.koin.compose.viewmodel.koinViewModel

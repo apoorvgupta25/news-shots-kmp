@@ -12,9 +12,9 @@ import androidx.compose.ui.Modifier
 import com.apoorvgupta.home.intent.HomeIntent
 import com.apoorvgupta.home.intent.HomeViewStates
 import com.apoorvgupta.home.view.elements.HomeHeaderSection
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.newsshots.NewsShotsCard
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.pulltorefresh.AppPullToRefresh
-import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
+import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.newsshots.NewsShotsCard
+import com.apoorvgupta.newsshotskmp.designsystem.reusableComponents.pulltorefresh.AppPullToRefresh
+import com.apoorvgupta.newsshotskmp.designsystem.theme.Dimensions
 
 /**
  * @author Apoorv Gupta
