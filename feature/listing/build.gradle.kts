@@ -27,8 +27,10 @@ kotlin {
         commonMain.dependencies {
             // Projects
             implementation(projects.core)
-            implementation(projects.library.designsystem)
             implementation(projects.domain)
+
+            implementation(projects.library.coroutines)
+            implementation(projects.library.designsystem)
 
             // Compose
             implementation(compose.runtime)

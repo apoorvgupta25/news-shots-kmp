@@ -1,8 +1,8 @@
 package com.apoorvgupta.home.viewmodel
 
-import androidx.lifecycle.viewModelScope
 import com.apoorvgupta.core.base.BaseViewModel
 import com.apoorvgupta.core.model.DataStatus
+import com.apoorvgupta.coroutines.AppCoroutineScope
 import com.apoorvgupta.domain.model.AppThemeOptions
 import com.apoorvgupta.domain.usecase.datastore.LoadAppThemeUseCase
 import com.apoorvgupta.domain.usecase.datastore.UpdateAppThemeUseCase
@@ -12,8 +12,6 @@ import com.apoorvgupta.home.intent.HomeViewState
 import com.apoorvgupta.home.intent.HomeViewStates
 import com.apoorvgupta.home.model.HomeDataModel
 import com.apoorvgupta.home.usecase.HomeScreenUseCase
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.launch
 
 /**
  * ViewModel class for the home screen.
@@ -25,6 +23,7 @@ class HomeViewModel(
     private val homeScreenUseCase: HomeScreenUseCase,
     private val updateAppThemeUseCase: UpdateAppThemeUseCase,
     private val loadAppThemeUseCase: LoadAppThemeUseCase,
+    private val appCoroutineScope: AppCoroutineScope,
 ) : BaseViewModel<HomeIntent, HomeViewState, HomeNavEffect>() {
 
     override fun createInitialState(): HomeViewState = HomeViewState(HomeViewStates.UnInitialized)
@@ -51,7 +50,7 @@ class HomeViewModel(
 
     private fun updateAppTheme() {
         val current = currentState.homeViewState as HomeViewStates.LoadedData
-        viewModelScope.launch {
+        appCoroutineScope.launch {
             val targetTheme =
                 when (current.data.currentTheme) {
                     AppThemeOptions.LIGHT -> AppThemeOptions.DARK
@@ -62,7 +61,7 @@ class HomeViewModel(
             updateAppThemeUseCase(targetTheme)
         }
 
-        viewModelScope.launch {
+        appCoroutineScope.launch {
             loadAppThemeUseCase.invoke().collect {
                 emitHomeData(
                     homeDataModel = current.data.copy(
@@ -76,7 +75,7 @@ class HomeViewModel(
     private fun getHomeData() {
         emitHomeData(HomeDataModel(status = DataStatus.Loading))
 
-        viewModelScope.launch {
+        appCoroutineScope.launch {
             emitHomeData(homeScreenUseCase.getHomeScreenContentData())
         }
     }
