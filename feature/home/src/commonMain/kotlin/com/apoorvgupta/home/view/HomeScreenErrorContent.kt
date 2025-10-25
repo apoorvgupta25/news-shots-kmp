@@ -1,9 +1,9 @@
 package com.apoorvgupta.home.view
 
 import androidx.compose.runtime.Composable
+import com.apoorvgupta.designsystem.reusableComponents.errorscreen.AppErrorScreen
 import com.apoorvgupta.home.intent.HomeIntent
 import com.apoorvgupta.home.intent.HomeViewStates
-import com.apoorvgupta.designsystem.reusableComponents.errorscreen.AppErrorScreen
 
 /**
  * @author Apoorv Gupta

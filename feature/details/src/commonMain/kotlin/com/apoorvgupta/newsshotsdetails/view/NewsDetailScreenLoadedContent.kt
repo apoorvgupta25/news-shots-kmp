@@ -15,14 +15,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import coil3.compose.AsyncImage
-import com.apoorvgupta.draftjskmp.view.DraftJSView
-import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsIntent
-import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewStates
 import com.apoorvgupta.designsystem.Constants
 import com.apoorvgupta.designsystem.reusableComponents.BackArrowNavigation
 import com.apoorvgupta.designsystem.reusableComponents.pulltorefresh.AppPullToRefresh
 import com.apoorvgupta.designsystem.theme.Dimensions
 import com.apoorvgupta.designsystem.theme.linkTextColor
+import com.apoorvgupta.draftjskmp.view.DraftJSView
+import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsIntent
+import com.apoorvgupta.newsshotsdetails.intent.NewsDetailsViewStates
 
 /**
  * @author Apoorv Gupta

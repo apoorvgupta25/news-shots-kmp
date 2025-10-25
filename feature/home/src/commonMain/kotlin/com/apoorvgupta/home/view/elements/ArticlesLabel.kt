@@ -5,8 +5,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.apoorvgupta.home.intent.HomeViewStates
 import com.apoorvgupta.designsystem.theme.Dimensions
+import com.apoorvgupta.home.intent.HomeViewStates
 
 /**
  * @author Apoorv Gupta

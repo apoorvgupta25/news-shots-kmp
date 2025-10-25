@@ -14,9 +14,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.apoorvgupta.core.utils.emptyValue
-import com.apoorvgupta.domain.model.AppThemeOptions
 import com.apoorvgupta.designsystem.Constants
 import com.apoorvgupta.designsystem.theme.Dimensions
+import com.apoorvgupta.domain.model.AppThemeOptions
 import newsshotskmp.library.designsystem.generated.resources.Res
 import newsshotskmp.library.designsystem.generated.resources.ic_dark_mode
 import newsshotskmp.library.designsystem.generated.resources.ic_light_mode

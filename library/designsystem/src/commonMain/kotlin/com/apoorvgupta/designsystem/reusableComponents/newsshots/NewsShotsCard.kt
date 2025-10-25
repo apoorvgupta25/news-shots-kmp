@@ -21,10 +21,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextOverflow
 import coil3.compose.AsyncImage
 import com.apoorvgupta.core.utils.emptyValue
-import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.designsystem.Constants
 import com.apoorvgupta.designsystem.reusableComponents.noRippleClickable
 import com.apoorvgupta.designsystem.theme.Dimensions
+import com.apoorvgupta.domain.model.NewsShots
 import newsshotskmp.library.designsystem.generated.resources.Res
 import newsshotskmp.library.designsystem.generated.resources.ic_bookmark_unselected
 import org.jetbrains.compose.resources.painterResource
