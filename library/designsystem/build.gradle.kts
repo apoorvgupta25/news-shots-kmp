@@ -44,9 +44,6 @@ kotlin {
                 // Navigation
                 implementation(libs.jetbrains.compose.navigation)
 
-                // Koin
-                api(libs.koin.core)
-
                 // Coil
                 implementation(libs.bundles.coil)
 

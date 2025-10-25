@@ -35,11 +35,15 @@ private val md_theme_dark_primaryButton = Color(0xFFE3E2DF)
 
 // App Colors
 private val disabled_bg = Color(0xFFD9D9D9)
+private val disabled_bg_dark = Color(0xFF262626)
 private val shadow_bg = Color(0x26000000)
+private val shadow_bg_dark = Color(0x26FFFFFF)
 
 // Text Colors
 private val text_disabled = Color(0xFF707070)
+private val text_disabled_dark = Color(0xFFB0B0B0)
 private val text_link = Color(0xFF1E88E5)
+private val text_link_dark = Color(0xFF90CAF9)
 
 // Light color scheme
 val LightColorScheme =
@@ -73,21 +77,22 @@ val DarkColorScheme =
         surfaceTint = md_theme_dark_background,
     )
 
+// issue with extension colors unable to use AppThemeOptions as it is returned as Flow
 @Composable
 private fun extendedColor(light: Color, dark: Color): Color = if (isSystemInDarkTheme()) dark else light
 
 val ColorScheme.disabledTextColor: Color
     @Composable
-    get() = extendedColor(light = text_disabled, dark = text_disabled)
+    get() = extendedColor(light = text_disabled, dark = text_disabled_dark)
 
 val ColorScheme.linkTextColor: Color
     @Composable
-    get() = extendedColor(light = text_link, dark = text_link)
+    get() = extendedColor(light = text_link, dark = text_link_dark)
 
 val ColorScheme.disabledBackgroundColor: Color
     @Composable
-    get() = extendedColor(light = disabled_bg, dark = disabled_bg)
+    get() = extendedColor(light = disabled_bg, dark = disabled_bg_dark)
 
 val ColorScheme.shadowBackgroundColor: Color
     @Composable
-    get() = extendedColor(light = shadow_bg, dark = shadow_bg)
+    get() = extendedColor(light = shadow_bg, dark = shadow_bg_dark)
