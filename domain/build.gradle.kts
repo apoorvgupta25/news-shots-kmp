@@ -24,7 +24,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(projects.core)
-            implementation(projects.draftjskmp)
+            implementation(projects.library.draftjskmp)
 
             // Ktor Json serialization
             implementation(libs.ktor.serialization.kotlinx.json)

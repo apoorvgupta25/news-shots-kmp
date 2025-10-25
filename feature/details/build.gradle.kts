@@ -29,7 +29,7 @@ kotlin {
             implementation(projects.core)
             implementation(projects.library.designsystem)
             implementation(projects.domain)
-            implementation(projects.draftjskmp)
+            implementation(projects.library.draftjskmp)
 
             // Compose
             implementation(compose.runtime)
