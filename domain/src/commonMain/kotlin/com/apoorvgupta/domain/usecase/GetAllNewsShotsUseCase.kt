@@ -12,5 +12,5 @@ import kotlinx.coroutines.flow.Flow
  * @author Apoorv Gupta
  */
 fun interface GetAllNewsShotsUseCase {
-    fun getAllNewsShots(): Flow<PagingData<NewsShots>>
+    operator fun invoke(): Flow<PagingData<NewsShots>>
 }

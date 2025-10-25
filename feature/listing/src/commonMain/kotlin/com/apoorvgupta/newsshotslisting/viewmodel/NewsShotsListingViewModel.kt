@@ -62,12 +62,12 @@ class NewsShotsListingViewModel(
     private fun getDailyData(categoryName: String) {
         viewModelScope.launch {
             if (categoryName.equals(DAILY, true)) {
-                getAllNewsShotsUseCase.getAllNewsShots().cachedIn(viewModelScope).collect {
+                getAllNewsShotsUseCase().cachedIn(viewModelScope).collect {
                     _newsShotsPaginationResults.value = it
                     emitDailyData(categoryName)
                 }
             } else {
-                getNewsShotsByCategoryUseCase.getNewsShotsByCategory(categoryName = categoryName)
+                getNewsShotsByCategoryUseCase(categoryName = categoryName)
                     .cachedIn(viewModelScope).collect {
                         _newsShotsPaginationResults.value = it
                         emitDailyData(categoryName)

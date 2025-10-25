@@ -8,5 +8,5 @@ import com.apoorvgupta.domain.model.Category
  * @author Apoorv Gupta
  */
 fun interface GetAllCategoriesUseCase {
-    suspend fun getAllCategories(): Result<List<Category>?, DataError.Remote>
+    suspend operator fun invoke(): Result<List<Category>?, DataError.Remote>
 }
