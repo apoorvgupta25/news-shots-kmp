@@ -12,5 +12,5 @@ import kotlinx.coroutines.flow.Flow
  * @author Apoorv Gupta
  */
 fun interface GetNewsShotsByCategoryUseCase {
-    fun getNewsShotsByCategory(categoryName: String): Flow<PagingData<NewsShots>>
+    operator fun invoke(categoryName: String): Flow<PagingData<NewsShots>>
 }

@@ -12,5 +12,5 @@ import com.apoorvgupta.domain.model.NewsShots
  * @author Apoorv Gupta
  */
 fun interface GetRecentNewsShotsUseCase {
-    suspend fun getRecentNewsShots(): Result<List<NewsShots>?, DataError.Remote>
+    suspend operator fun invoke(): Result<List<NewsShots>?, DataError.Remote>
 }

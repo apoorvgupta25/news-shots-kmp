@@ -27,12 +27,12 @@ class HomeScreenUseCaseImpl(
     var homeDataModel = HomeDataModel()
 
     override suspend fun getHomeScreenContentData(): HomeDataModel {
-        getRecentNewsShotsUseCase.getRecentNewsShots()
+        getRecentNewsShotsUseCase()
             .onSuccess { newsshots ->
-                getAllCategoriesUseCase.getAllCategories()
+                getAllCategoriesUseCase()
                     .onSuccess { categories ->
                         homeDataModel =
-                            getHomeData(newsshots, categories, loadAppThemeUseCase.invoke().first())
+                            getHomeData(newsshots, categories, loadAppThemeUseCase().first())
                     }
                     .onError { err, code ->
                         homeDataModel = emitHomeError(
@@ -42,10 +42,10 @@ class HomeScreenUseCaseImpl(
                     }
             }
             .onError { err, code ->
-                getAllCategoriesUseCase.getAllCategories()
+                getAllCategoriesUseCase()
                     .onSuccess { categories ->
                         homeDataModel =
-                            getHomeData(null, categories, loadAppThemeUseCase.invoke().first())
+                            getHomeData(null, categories, loadAppThemeUseCase().first())
                     }
                     .onError { err, code ->
                         homeDataModel = emitHomeError(

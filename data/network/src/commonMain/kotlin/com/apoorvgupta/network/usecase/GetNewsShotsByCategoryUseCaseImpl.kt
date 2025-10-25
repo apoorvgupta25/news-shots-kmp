@@ -21,8 +21,5 @@ class GetNewsShotsByCategoryUseCaseImpl(
      * @param categoryName
      * @return
      */
-    override fun getNewsShotsByCategory(categoryName: String) = newsShotsRepo.getNewsShotsByCategory(categoryName = categoryName)
-//        .transform { response ->
-//        emit(response)
-//    }
+    override operator fun invoke(categoryName: String) = newsShotsRepo.getNewsShotsByCategory(categoryName = categoryName)
 }
