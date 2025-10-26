@@ -27,7 +27,6 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
-import com.apoorvgupta.core.logger.AppLogger
 
 @Composable
 fun <T> CircularReveal(
