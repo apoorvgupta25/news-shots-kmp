@@ -14,10 +14,10 @@ import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalDensity
 import androidx.navigation.compose.rememberNavController
+import com.apoorvgupta.designsystem.animation.CircularReveal
 import com.apoorvgupta.designsystem.navigation.showNavigationBottomBar
 import com.apoorvgupta.designsystem.navigation.ui.BottomNavigationBar
 import com.apoorvgupta.designsystem.theme.AppTheme
-import com.apoorvgupta.designsystem.animation.CircularReveal
 import com.apoorvgupta.designsystem.theme.Dimensions
 import com.apoorvgupta.domain.model.AppThemeOptions
 import com.apoorvgupta.newsshotskmp.ui.NavigationHost
@@ -25,7 +25,6 @@ import org.koin.compose.koinInject
 
 @Composable
 fun App() {
-
     CircularReveal(
         targetState = rememberIsDarkTheme(),
     ) {
@@ -40,7 +39,7 @@ fun App() {
                 object : NestedScrollConnection {
                     override fun onPreScroll(
                         available: Offset,
-                        source: NestedScrollSource
+                        source: NestedScrollSource,
                     ): Offset {
                         val delta = available.y
                         val newOffset = bottomBarOffsetHeightPx.floatValue + delta

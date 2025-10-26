@@ -34,7 +34,7 @@ fun <T> CircularReveal(
     targetState: T,
     modifier: Modifier = Modifier,
     animationSpec: FiniteAnimationSpec<Float> = tween(1000),
-    content: @Composable (T) -> Unit
+    content: @Composable (T) -> Unit,
 ) {
     val items = remember { mutableStateListOf<CircularRevealAnimationItem<T>>() }
     val transitionState = remember { MutableTransitionState(targetState) }
@@ -52,18 +52,19 @@ fun <T> CircularReveal(
             }
         }
         items.clear()
-        AppLogger.d { "themeController1: $keys" }
         keys.mapIndexedTo(items) { index, key ->
             CircularRevealAnimationItem(key) {
                 val progress by transition.animateFloat(
-                    transitionSpec = { animationSpec }, label = ""
+                    transitionSpec = { animationSpec },
+                    label = "",
                 ) {
                     if (index == keys.size - 1) {
                         if (it == key) 1f else 0f
-                    } else 1f
+                    } else {
+                        1f
+                    }
                 }
                 Box(Modifier.circularReveal(progress = progress, offset = offset)) {
-                    AppLogger.d { "themeController2: $keys" }
                     content(key)
                 }
             }
@@ -73,12 +74,14 @@ fun <T> CircularReveal(
         items.removeAll { it.key != transitionState.targetState }
     }
 
-    Box(modifier.pointerInput(Unit) {
-        awaitEachGesture {
-            val position = awaitFirstDown(requireUnconsumed = false).position
-            offset = position
-        }
-    }) {
+    Box(
+        modifier.pointerInput(Unit) {
+            awaitEachGesture {
+                val position = awaitFirstDown(requireUnconsumed = false).position
+                offset = position
+            }
+        },
+    ) {
         items.forEach {
             key(it.key) {
                 it.content()
@@ -89,22 +92,22 @@ fun <T> CircularReveal(
 
 private data class CircularRevealAnimationItem<T>(
     val key: T,
-    val content: @Composable () -> Unit
+    val content: @Composable () -> Unit,
 )
 
 fun Modifier.circularReveal(@FloatRange(from = 0.0, to = 1.0) progress: Float, offset: Offset? = null) = clip(CircularRevealShape(progress, offset))
 
 private class CircularRevealShape(
     @FloatRange(from = 0.0, to = 1.0) private val progress: Float,
-    private val offset: Offset? = null
+    private val offset: Offset? = null,
 ) : Shape {
 
     override fun createOutline(
         size: Size,
         layoutDirection: LayoutDirection,
-        density: Density
-    ): Outline {
-        return Outline.Generic(Path().apply {
+        density: Density,
+    ): Outline = Outline.Generic(
+        Path().apply {
             val centerX = offset?.x ?: (size.width / 2f)
             val centerY = offset?.y ?: (size.height / 2f)
             val radius = size.width.coerceAtLeast(size.height) * 2 * progress
@@ -115,12 +118,9 @@ private class CircularRevealShape(
                     left = centerX - radius,
                     top = centerY - radius,
                     right = centerX + radius,
-                    bottom = centerY + radius
-                )
+                    bottom = centerY + radius,
+                ),
             )
-        })
-    }
+        },
+    )
 }
-
-
-
