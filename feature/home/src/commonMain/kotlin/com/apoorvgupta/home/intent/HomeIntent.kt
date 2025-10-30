@@ -3,7 +3,6 @@ package com.apoorvgupta.home.intent
 import com.apoorvgupta.core.base.NavEffect
 import com.apoorvgupta.core.base.UserIntent
 import com.apoorvgupta.core.base.ViewState
-import com.apoorvgupta.domain.model.AppThemeOptions
 import com.apoorvgupta.home.model.HomeDataModel
 
 /**

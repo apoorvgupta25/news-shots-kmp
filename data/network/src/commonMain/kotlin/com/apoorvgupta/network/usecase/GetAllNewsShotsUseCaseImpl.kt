@@ -11,5 +11,5 @@ class GetAllNewsShotsUseCaseImpl(
     private val newsShotsRepo: NewsShotsRepo,
 ) : GetAllNewsShotsUseCase {
 
-    override fun getAllNewsShots() = newsShotsRepo.getAllNewsShots()
+    override operator fun invoke() = newsShotsRepo.getAllNewsShots()
 }

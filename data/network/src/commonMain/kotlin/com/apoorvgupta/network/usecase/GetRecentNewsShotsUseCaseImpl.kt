@@ -21,7 +21,7 @@ class GetRecentNewsShotsUseCaseImpl(
      *
      * @return
      */
-    override suspend fun getRecentNewsShots() = newsShotsRepo.getRecentNewsShots(
+    override suspend operator fun invoke() = newsShotsRepo.getRecentNewsShots(
         limit = Constants.DAILY_POST_LIMIT,
         sortBy = Constants.DAILY_POST_SORT_BY_CREATED,
     )

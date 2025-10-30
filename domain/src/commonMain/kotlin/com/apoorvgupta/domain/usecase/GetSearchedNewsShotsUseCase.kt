@@ -12,5 +12,5 @@ import com.apoorvgupta.domain.model.NewsShots
  * @author Apoorv Gupta
  */
 fun interface GetSearchedNewsShotsUseCase {
-    suspend fun getSearchedNewsShots(searchKeyword: String): Result<List<NewsShots>?, DataError.Remote>
+    suspend operator fun invoke(searchKeyword: String): Result<List<NewsShots>?, DataError.Remote>
 }

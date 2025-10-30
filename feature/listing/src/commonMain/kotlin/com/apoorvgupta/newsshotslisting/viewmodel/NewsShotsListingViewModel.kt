@@ -5,10 +5,11 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.apoorvgupta.core.base.BaseViewModel
 import com.apoorvgupta.core.utils.emptyValue
+import com.apoorvgupta.coroutines.AppCoroutineScope
+import com.apoorvgupta.designsystem.Constants.DAILY
 import com.apoorvgupta.domain.model.NewsShots
 import com.apoorvgupta.domain.usecase.GetAllNewsShotsUseCase
 import com.apoorvgupta.domain.usecase.GetNewsShotsByCategoryUseCase
-import com.apoorvgupta.newsshotskmp.capabilities.Constants.DAILY
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingIntent
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingNavEffect
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingViewState
@@ -26,6 +27,7 @@ import kotlinx.coroutines.launch
 class NewsShotsListingViewModel(
     private val getAllNewsShotsUseCase: GetAllNewsShotsUseCase,
     private val getNewsShotsByCategoryUseCase: GetNewsShotsByCategoryUseCase,
+    private val appCoroutineScope: AppCoroutineScope,
 ) : BaseViewModel<NewsShotsListingIntent, NewsShotsListingViewState, NewsShotsListingNavEffect>() {
 
     private val _newsShotsPaginationResults: MutableStateFlow<PagingData<NewsShots>> =
@@ -60,14 +62,14 @@ class NewsShotsListingViewModel(
     }
 
     private fun getDailyData(categoryName: String) {
-        viewModelScope.launch {
+        appCoroutineScope.launch {
             if (categoryName.equals(DAILY, true)) {
-                getAllNewsShotsUseCase.getAllNewsShots().cachedIn(viewModelScope).collect {
+                getAllNewsShotsUseCase().cachedIn(viewModelScope).collect {
                     _newsShotsPaginationResults.value = it
                     emitDailyData(categoryName)
                 }
             } else {
-                getNewsShotsByCategoryUseCase.getNewsShotsByCategory(categoryName = categoryName)
+                getNewsShotsByCategoryUseCase(categoryName = categoryName)
                     .cachedIn(viewModelScope).collect {
                         _newsShotsPaginationResults.value = it
                         emitDailyData(categoryName)

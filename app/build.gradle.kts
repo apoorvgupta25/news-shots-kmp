@@ -37,8 +37,11 @@ kotlin {
         commonMain.dependencies {
             // Projects
             implementation(projects.core)
-            implementation(projects.capabilities)
             implementation(projects.domain)
+
+            implementation(projects.library.designsystem)
+            implementation(projects.library.coroutines)
+
             implementation(projects.data.datastore)
             implementation(projects.data.network)
 

@@ -15,5 +15,5 @@ class GetAllCategoriesUseCaseImpl(
      *
      * @return the flow
      */
-    override suspend fun getAllCategories() = newsShotsRepo.getCategories()
+    override suspend operator fun invoke() = newsShotsRepo.getCategories()
 }

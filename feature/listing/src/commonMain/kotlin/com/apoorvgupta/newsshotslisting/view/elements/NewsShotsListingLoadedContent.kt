@@ -12,10 +12,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.paging.compose.LazyPagingItems
+import com.apoorvgupta.designsystem.reusableComponents.HeadLine
+import com.apoorvgupta.designsystem.reusableComponents.newsshots.NewsShotsCard
+import com.apoorvgupta.designsystem.theme.Dimensions
 import com.apoorvgupta.domain.model.NewsShots
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.HeadLine
-import com.apoorvgupta.newsshotskmp.capabilities.view.reusableComponents.newsshots.NewsShotsCard
-import com.apoorvgupta.newsshotskmp.capabilities.view.theme.Dimensions
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingIntent
 import com.apoorvgupta.newsshotslisting.intent.NewsShotsListingViewStates
 

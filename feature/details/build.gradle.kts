@@ -27,9 +27,11 @@ kotlin {
         commonMain.dependencies {
             // Projects
             implementation(projects.core)
-            implementation(projects.capabilities)
             implementation(projects.domain)
-            implementation(projects.draftjskmp)
+
+            implementation(projects.library.coroutines)
+            implementation(projects.library.designsystem)
+            implementation(projects.library.draftjskmp)
 
             // Compose
             implementation(compose.runtime)

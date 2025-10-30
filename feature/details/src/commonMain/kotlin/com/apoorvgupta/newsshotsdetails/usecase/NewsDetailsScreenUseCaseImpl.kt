@@ -18,7 +18,7 @@ class NewsDetailsScreenUseCaseImpl(
     override suspend fun getNewsDetailsContentData(postLink: String): NewsDetailsDataModel {
         lateinit var newsDetailsDataModel: NewsDetailsDataModel
 
-        getIndividualNewsShotsUseCase.getIndividualNewsShots(postLink)
+        getIndividualNewsShotsUseCase(postLink)
             .onSuccess {
                 newsDetailsDataModel = getNewsDetailsData(
                     newsShot = it ?: NewsShots.emptyValue,

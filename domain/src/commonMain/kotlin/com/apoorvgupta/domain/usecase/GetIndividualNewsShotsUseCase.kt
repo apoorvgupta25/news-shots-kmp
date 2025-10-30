@@ -9,5 +9,5 @@ import com.apoorvgupta.domain.model.NewsShots
  */
 
 fun interface GetIndividualNewsShotsUseCase {
-    suspend fun getIndividualNewsShots(postLink: String): Result<NewsShots?, DataError.Remote>
+    suspend operator fun invoke(postLink: String): Result<NewsShots?, DataError.Remote>
 }
