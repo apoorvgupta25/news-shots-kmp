@@ -32,7 +32,7 @@ kotlin {
             // Koin
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
-            api(libs.koin.core)
+            implementation(libs.koin.core)
 
             // Coil
             implementation(libs.bundles.coil)

@@ -16,7 +16,7 @@ kotlin {
             implementation(libs.napier)
 
             // Koin
-            api(libs.koin.core)
+            implementation(libs.koin.core)
         }
     }
 }
