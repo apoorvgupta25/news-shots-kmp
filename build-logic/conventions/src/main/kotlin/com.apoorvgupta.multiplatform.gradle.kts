@@ -5,6 +5,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("com.apoorvgupta.kotlin-quality")
 }
 
 val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
