@@ -1,6 +1,3 @@
-rootProject.name = "NewsshotsKMP"
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-
 pluginManagement {
     repositories {
         google {
@@ -26,21 +23,13 @@ dependencyResolutionManagement {
         }
         mavenCentral()
     }
+
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
 }
 
-includeBuild("build-logic")
 
-include(":app")
-include(":core")
-include(":data:datastore")
-include(":data:database")
-include(":data:network")
-include(":domain")
-include(":feature:home")
-include(":feature:details")
-include(":feature:listing")
-include(":feature:bookmark")
-include(":feature:search")
-include(":library:designsystem")
-include(":library:draftjskmp")
-include(":library:coroutines")
+include(":conventions")

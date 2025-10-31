@@ -1,27 +1,18 @@
+import extension.setFrameworkBaseName
+
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.android.kotlin.multiplatform.library)
+    id("com.apoorvgupta.multiplatform")
 }
 
 kotlin {
 
-    androidLibrary {
-        namespace = "com.apoorvgupta.bookmark"
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
-    }
-
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "bookmarkKit"
-        }
-    }
+    setFrameworkBaseName("bookmarkKit")
 
     sourceSets {
 
     }
+}
+
+android {
+    namespace = "com.apoorvgupta.bookmark"
 }
