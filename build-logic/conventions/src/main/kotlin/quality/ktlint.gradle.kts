@@ -1,6 +1,5 @@
 package quality
 
-import extension.composeRulesKtlint
 import extension.ktlint
 
 val ktlint: Configuration by configurations.creating
@@ -8,7 +7,6 @@ val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().name
 
 dependencies {
     ktlint(libs.ktlint)
-    ktlint.dependencies.add(libs.composeRulesKtlint.get())
 }
 
 tasks {

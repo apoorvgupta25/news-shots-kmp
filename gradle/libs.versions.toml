@@ -65,7 +65,6 @@ coil-mp = { module = "io.coil-kt.coil3:coil", version.ref = "coil3" }
 ktlint = { module = "com.pinterest.ktlint:ktlint-cli", version.ref = "ktlintCli" }
 detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 composerules-detekt = { module = "io.nlopez.compose.rules:detekt", version.ref = "composerules" }
-composerules-ktlint = { module = "io.nlopez.compose.rules:ktlint", version.ref = "composerules" }
 
 # Logging
 napier = { group = "io.github.aakira", name = "napier", version.ref = "napier" }
