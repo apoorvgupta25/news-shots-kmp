@@ -1,26 +1,13 @@
+import extension.setFrameworkBaseName
+
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.android.kotlin.multiplatform.library)
+    id("com.apoorvgupta.multiplatform")
     alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 kotlin {
 
-    androidLibrary {
-        namespace = "com.apoorvgupta.network"
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
-    }
-
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "networkKit"
-        }
-    }
+    setFrameworkBaseName("networkKit")
 
     sourceSets {
         commonMain.dependencies {
@@ -45,4 +32,8 @@ kotlin {
             implementation(libs.ktor.client.darwin)
         }
     }
+}
+
+android {
+    namespace = "com.apoorvgupta.network"
 }

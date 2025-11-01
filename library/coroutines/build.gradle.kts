@@ -1,25 +1,12 @@
+import extension.setFrameworkBaseName
+
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.android.kotlin.multiplatform.library)
+    id("com.apoorvgupta.multiplatform")
 }
 
 kotlin {
 
-    androidLibrary {
-        namespace = "com.apoorvgupta.coroutines"
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
-    }
-
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "coroutinesKit"
-        }
-    }
+    setFrameworkBaseName("coroutinesKit")
 
     sourceSets {
         commonMain.dependencies {
@@ -27,4 +14,8 @@ kotlin {
             implementation(libs.koin.core)
         }
     }
+}
+
+android {
+    namespace = "com.apoorvgupta.coroutines"
 }

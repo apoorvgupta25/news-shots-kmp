@@ -1,27 +1,14 @@
+import extension.setFrameworkBaseName
+
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.android.kotlin.multiplatform.library)
+    id("com.apoorvgupta.multiplatform")
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
 }
 
 kotlin {
 
-    androidLibrary {
-        namespace = "com.apoorvgupta.details"
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
-    }
-
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "detailsKit"
-        }
-    }
+    setFrameworkBaseName("detailsKit")
 
     sourceSets {
         commonMain.dependencies {
@@ -45,11 +32,15 @@ kotlin {
             // Koin
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
-            api(libs.koin.core)
+            implementation(libs.koin.core)
 
             // Coil
             implementation(libs.bundles.coil)
 
         }
     }
+}
+
+android {
+    namespace = "com.apoorvgupta.details"
 }
