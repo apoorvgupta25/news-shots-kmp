@@ -47,11 +47,11 @@ fun HomeScreenLoadedContent(
                 )
             }
 
-            itemsIndexed(state.data.newsShotsList) { index, it ->
+            itemsIndexed(state.data.newsShotsList) { index, newsShot ->
                 NewsShotsCard(
-                    newsShot = it,
+                    newsShot = newsShot,
                     onCardClick = {
-                        userIntent.invoke(HomeIntent.NavigateToIndividualNewsShots(it.link))
+                        userIntent.invoke(HomeIntent.NavigateToIndividualNewsShots(newsShot.link))
                     },
                     onBookmarkClick = {},
                 )
