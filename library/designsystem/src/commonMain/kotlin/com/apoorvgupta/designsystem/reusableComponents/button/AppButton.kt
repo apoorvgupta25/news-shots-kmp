@@ -34,12 +34,9 @@ import com.apoorvgupta.designsystem.theme.disabledTextColor
 @Composable
 fun AppButton(
     modifier: Modifier,
-    buttonTitle: String,
-    isButtonFilled: Boolean = true,
+    appButtonConfig: AppButtonConfig,
     fillColor: Color = MaterialTheme.colorScheme.primary,
     textColor: Color = MaterialTheme.colorScheme.onPrimary,
-    isEnabled: MutableState<Boolean> = mutableStateOf(true),
-    onClickListener: () -> Unit,
 ) {
     Button(
         modifier = modifier,
@@ -47,12 +44,12 @@ fun AppButton(
         border =
         BorderStroke(
             Dimensions.StrokeWidth.xxxs_stroke_width,
-            if (isEnabled.value) fillColor else MaterialTheme.colorScheme.disabledBackgroundColor,
+            if (appButtonConfig.isEnabled.value) fillColor else MaterialTheme.colorScheme.disabledBackgroundColor,
         ),
         elevation = null,
-        enabled = isEnabled.value,
+        enabled = appButtonConfig.isEnabled.value,
         colors =
-        if (isButtonFilled) {
+        if (appButtonConfig.isButtonFilled) {
             ButtonDefaults.buttonColors(
                 disabledContainerColor = MaterialTheme.colorScheme.disabledBackgroundColor,
                 containerColor = fillColor,
@@ -62,14 +59,21 @@ fun AppButton(
         } else {
             ButtonDefaults.buttonColors(containerColor = Color.Transparent)
         },
-        onClick = onClickListener,
+        onClick = appButtonConfig.onClickListener,
     ) {
         Spacer(Modifier.size(Dimensions.StrokeWidth.xxxs_stroke_width))
         Text(
             modifier = Modifier.padding(horizontal = Dimensions.HorizonalDimensions.xs_horizontal_spacing),
-            text = buttonTitle,
+            text = appButtonConfig.buttonTitle,
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.buttonTextStyle.copy(color = textColor),
         )
     }
 }
+
+data class AppButtonConfig(
+    val buttonTitle: String,
+    val isButtonFilled: Boolean = true,
+    val isEnabled: MutableState<Boolean> = mutableStateOf(true),
+    val onClickListener: () -> Unit,
+)

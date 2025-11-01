@@ -31,7 +31,6 @@ private val md_theme_dark_error = Color(0xFFFFB4AB)
 private val md_theme_dark_errorContainer = Color(0xFF93000A)
 private val md_theme_dark_onSurface = Color(0xFF9EABB8)
 private val md_theme_dark_surface = Color(0xFF0D0D0A)
-private val md_theme_dark_primaryButton = Color(0xFFE3E2DF)
 
 // App Colors
 private val disabled_bg = Color(0xFFD9D9D9)

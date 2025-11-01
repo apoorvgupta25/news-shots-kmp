@@ -4,8 +4,8 @@ import androidx.annotation.FloatRange
 import androidx.compose.animation.core.FiniteAnimationSpec
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.rememberTransition
 import androidx.compose.animation.core.tween
-import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.layout.Box
@@ -27,25 +27,28 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
+import com.apoorvgupta.designsystem.Constants
 
+// TODO
+@Suppress("CognitiveComplexMethod", "NestedBlockDepth")
 @Composable
 fun <T> CircularReveal(
     targetState: T,
     modifier: Modifier = Modifier,
-    animationSpec: FiniteAnimationSpec<Float> = tween(1000),
+    animationSpec: FiniteAnimationSpec<Float> = tween(Constants.INT_1000),
     content: @Composable (T) -> Unit,
 ) {
     val items = remember { mutableStateListOf<CircularRevealAnimationItem<T>>() }
     val transitionState = remember { MutableTransitionState(targetState) }
-    val targetChanged = (targetState != transitionState.targetState)
+    val targetChanged = targetState != transitionState.targetState
     var offset: Offset? by remember { mutableStateOf(null) }
     transitionState.targetState = targetState
-    val transition = updateTransition(transitionState, label = "transition")
+    val transition = rememberTransition(transitionState, "transition")
     if (targetChanged || items.isEmpty()) {
         // Only manipulate the list when the state is changed, or in the first run.
         val keys = items.map { it.key }.run {
             if (!contains(targetState)) {
-                toMutableList().also { it.add(targetState) }
+                toMutableList().apply { add(targetState) }
             } else {
                 this
             }
@@ -94,10 +97,14 @@ private data class CircularRevealAnimationItem<T>(
     val content: @Composable () -> Unit,
 )
 
-fun Modifier.circularReveal(@FloatRange(from = 0.0, to = 1.0) progress: Float, offset: Offset? = null) = clip(CircularRevealShape(progress, offset))
+fun Modifier.circularReveal(
+    @FloatRange(from = 0.0, to = 1.0) progress: Float,
+    offset: Offset? = null
+) = clip(CircularRevealShape(progress, offset))
 
+@Suppress("UnnecessaryAnnotationUseSiteTarget", "UnnecessaryParentheses")
 private class CircularRevealShape(
-    @FloatRange(from = 0.0, to = 1.0) private val progress: Float,
+    @param:FloatRange(from = 0.0, to = 1.0) private val progress: Float,
     private val offset: Offset? = null,
 ) : Shape {
 
@@ -107,8 +114,8 @@ private class CircularRevealShape(
         density: Density,
     ): Outline = Outline.Generic(
         Path().apply {
-            val centerX = offset?.x ?: (size.width / 2f)
-            val centerY = offset?.y ?: (size.height / 2f)
+            val centerX = offset?.x ?: (size.width / Constants.FLOAT_2)
+            val centerY = offset?.y ?: (size.height / Constants.FLOAT_2)
             val radius = size.width.coerceAtLeast(size.height) * 2 * progress
 
             // Create circle using Path in KMP
