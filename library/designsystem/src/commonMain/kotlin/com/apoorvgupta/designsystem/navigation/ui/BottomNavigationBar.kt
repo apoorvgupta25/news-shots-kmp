@@ -156,5 +156,8 @@ private fun getBottomBarItem() = listOf(
 )
 
 @Composable
-private fun getTextColor(isCurrentRouteSelected: Boolean) =
-    if (isCurrentRouteSelected) MaterialTheme.colorScheme.onBackground else MaterialTheme.colorScheme.onSurface
+private fun getTextColor(isCurrentRouteSelected: Boolean) = if (isCurrentRouteSelected) {
+    MaterialTheme.colorScheme.onBackground
+} else {
+    MaterialTheme.colorScheme.onSurface
+}
