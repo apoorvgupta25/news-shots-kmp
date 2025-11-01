@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.Flow
  */
 
 @Composable
-fun NewsShotsListingScreenDestination(
+fun NewsShotsListingScreenDest(
     newsShotsListingViewModel: NewsShotsListingViewModel,
     newsShotsListingViewState: NewsShotsListingViewStates,
     navEffect: Flow<NewsShotsListingNavEffect>,
