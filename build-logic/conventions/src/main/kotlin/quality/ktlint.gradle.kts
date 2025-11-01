@@ -10,7 +10,7 @@ dependencies {
 }
 
 tasks {
-    register<JavaExec>("ktlint") {
+    register<JavaExec>("ktlintCheck") {
         description = "Check Kotlin code style."
         classpath = ktlint
         mainClass.set("com.pinterest.ktlint.Main")

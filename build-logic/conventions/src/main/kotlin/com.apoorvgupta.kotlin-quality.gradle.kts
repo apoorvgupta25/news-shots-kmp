@@ -6,7 +6,7 @@ plugins {
 tasks.getByName("check") {
     setDependsOn(
         listOf(
-            tasks.getByName("ktlint"),
+            tasks.getByName("ktlintCheck"),
             tasks.getByName("detekt"),
         ),
     )
