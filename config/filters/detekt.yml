@@ -1,4 +1,6 @@
 complexity:
+  LongMethod:
+    threshold: 80
   TooManyFunctions:
     thresholdInClasses: 20
 
@@ -29,7 +31,6 @@ style:
   DataClassShouldBeImmutable:
     active: false
   MaxLineLength:
-    active: true
     maxLineLength: 120
   BracesOnWhenStatements:
     active: false
