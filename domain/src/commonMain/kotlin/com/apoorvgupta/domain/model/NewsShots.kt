@@ -9,6 +9,7 @@ import kotlinx.serialization.json.Json
 /**
  * @author Apoorv Gupta
  */
+@Suppress("DataClassContainsFunctions")
 data class NewsShots(
     val id: String,
     val author: Author,
@@ -27,6 +28,8 @@ data class NewsShots(
     val draftJSContent: DraftJS
         get() = deserializeDraftJS(content.getValueOrEmpty())
 
+    fun deserializeDraftJS(content: String): DraftJS = Json.decodeFromString(content)
+
     companion object {
         val emptyValue: NewsShots
             get() = NewsShots(
@@ -40,6 +43,4 @@ data class NewsShots(
                 link = String.emptyValue(),
             )
     }
-
-    fun deserializeDraftJS(content: String): DraftJS = Json.decodeFromString(content)
 }

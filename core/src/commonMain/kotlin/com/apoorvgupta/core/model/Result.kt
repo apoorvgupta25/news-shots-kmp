@@ -6,7 +6,10 @@ package com.apoorvgupta.core.model
 
 sealed interface Result<out D, out E : Error> {
     data class Success<out D>(val data: D) : Result<D, Nothing>
-    data class Error<out E : com.apoorvgupta.core.model.Error>(val error: E, val statusCode: Int = -1) : Result<Nothing, E>
+    data class Error<out E : com.apoorvgupta.core.model.Error>(
+        val error: E,
+        val statusCode: Int = -1,
+    ) : Result<Nothing, E>
 }
 
 inline fun <T, E : Error, R> Result<T, E>.map(map: (T) -> R): Result<R, E> = when (this) {
@@ -23,11 +26,13 @@ inline fun <T, E : Error> Result<T, E>.onSuccess(action: (T) -> Unit): Result<T,
         this
     }
 }
+
 inline fun <T, E : Error> Result<T, E>.onError(action: (E, Int) -> Unit): Result<T, E> = when (this) {
     is Result.Error -> {
         action(error, statusCode)
         this
     }
+
     is Result.Success -> this
 }
 

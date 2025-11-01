@@ -15,9 +15,11 @@ object Constants {
     const val FULL_WEIGHT = 1F
 
     const val FLOAT_0_9 = 0.9F
-    const val FLOAT_0_2 = 0.9F
+    const val FLOAT_2 = 2F
     const val FLOAT_10 = 0.9F
     const val FLOAT_1000 = 0.9F
+
+    const val INT_1000 = 1000
 
     const val DAILY = "Daily"
 }

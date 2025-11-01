@@ -17,32 +17,49 @@ import kotlin.coroutines.coroutineContext
 suspend inline fun <reified T> safeCall(
     execute: () -> HttpResponse,
 ): Result<T, DataError.Remote> {
-    val response = try {
-        execute()
+    val result: Result<T, DataError.Remote> = try {
+        val response = execute()
+        responseToResult(response)
     } catch (e: SocketTimeoutException) {
-        return Result.Error(DataError.Remote.REQUEST_TIMEOUT)
+        Result.Error(DataError.Remote.REQUEST_TIMEOUT)
     } catch (e: UnresolvedAddressException) {
-        return Result.Error(DataError.Remote.NO_INTERNET)
+        Result.Error(DataError.Remote.NO_INTERNET)
     } catch (e: Exception) {
         coroutineContext.ensureActive()
-        return Result.Error(DataError.Remote.UNKNOWN)
+        Result.Error(DataError.Remote.UNKNOWN)
     }
 
-    return responseToResult(response)
+    return result
 }
 
 suspend inline fun <reified T> responseToResult(
     response: HttpResponse,
 ): Result<T, DataError.Remote> = when (response.status.value) {
-    in 200..299 -> {
+    in Constants.SUCCESS_RESPONSE_START..Constants.SUCCESS_RESPONSE_END -> {
         try {
-            Result.Success(response.body<T>())
+            Result.Success(data = response.body<T>())
         } catch (e: NoTransformationFoundException) {
-            Result.Error(DataError.Remote.SERIALIZATION, response.status.value)
+            Result.Error(error = DataError.Remote.SERIALIZATION, statusCode = response.status.value)
         }
     }
-    408 -> Result.Error(DataError.Remote.REQUEST_TIMEOUT, response.status.value)
-    429 -> Result.Error(DataError.Remote.TOO_MANY_REQUESTS, response.status.value)
-    in 500..599 -> Result.Error(DataError.Remote.SERVER, response.status.value)
-    else -> Result.Error(DataError.Remote.UNKNOWN, response.status.value)
+
+    Constants.TIMEOUT_RESPONSE -> Result.Error(
+        error = DataError.Remote.REQUEST_TIMEOUT,
+        statusCode = response.status.value,
+    )
+
+    Constants.TOO_MANY_RESPONSE -> Result.Error(
+        error = DataError.Remote.TOO_MANY_REQUESTS,
+        statusCode = response.status.value,
+    )
+
+    in Constants.ERROR_RESPONSE_START..Constants.ERROR_RESPONSE_END -> Result.Error(
+        error = DataError.Remote.SERVER,
+        statusCode = response.status.value,
+    )
+
+    else -> Result.Error(
+        error = DataError.Remote.UNKNOWN,
+        statusCode = response.status.value,
+    )
 }

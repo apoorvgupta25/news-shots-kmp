@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.paging.compose.LazyPagingItems
 import com.apoorvgupta.designsystem.reusableComponents.HeadLine
+import com.apoorvgupta.designsystem.reusableComponents.HeadLineText
 import com.apoorvgupta.designsystem.reusableComponents.newsshots.NewsShotsCard
 import com.apoorvgupta.designsystem.theme.Dimensions
 import com.apoorvgupta.domain.model.NewsShots
@@ -39,7 +40,9 @@ fun NewsShotsListingLoadedContent(
         Spacer(modifier = Modifier.height(Dimensions.VerticalDimensions.s_vertical_spacing))
 
         HeadLine(
-            headText = state.data.headingText,
+            headLineText = HeadLineText(
+                headText = state.data.headingText,
+            ),
             onBackClick = {
                 userIntent.invoke(NewsShotsListingIntent.NavigateToPreviousScreen)
             },

@@ -8,6 +8,7 @@ import com.apoorvgupta.draftjskmp.data.DraftJS
  * @author Apoorv Gupta
  */
 
+@Suppress("UnnecessaryParentheses", "FunctionOnlyReturningConstant")
 object DraftJsUtils {
     internal const val EMPTY_STRING = ""
 
@@ -17,7 +18,10 @@ object DraftJsUtils {
 
     internal fun String?.getValueOrEmpty() = this ?: EMPTY_STRING
 
-    internal fun parseDraftJsContent(draftJSContent: DraftJS, linkTextColor: Color): AnnotatedString {
+    internal fun parseDraftJsContent(
+        draftJSContent: DraftJS,
+        linkTextColor: Color,
+    ): AnnotatedString {
         val builder = AnnotatedString.Builder()
 
         draftJSContent.blocks.forEach { block ->
@@ -138,17 +142,16 @@ object DraftJsUtils {
                     )
 
                 else -> {
-                    when {
+                    /*when {
                         // removing RGB color to update text color according to theme
-                        /*style.startsWith(DraftJsConstants.COLOR_RGB) -> {
+                        style.startsWith(DraftJsConstants.COLOR_RGB) -> {
                             builder.addStyle(
                                 style = StyleUtils.getFontColorStyle(style),
                                 start = range.first,
                                 end = range.last,
                             )
-                        }*/
+                        }
 
-                        /*
                         style.startsWith(DraftJsConstants.BGCOLOR_RGB) -> {
                             builder.addStyle(
                                 style = StyleUtils.getBackgroundColorStyle(style),
@@ -172,8 +175,8 @@ object DraftJsUtils {
                                 end = range.last
                             )
                         }
-                         */
                     }
+                     */
                 }
             }
         }

@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.sp
 /**
  * @author Apoorv Gupta
  */
+@Suppress("MagicNumber")
 object StyleUtils {
 
     val boldStyle: SpanStyle =

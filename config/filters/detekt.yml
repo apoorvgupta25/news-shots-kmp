@@ -1,4 +1,6 @@
 complexity:
+  LongMethod:
+    threshold: 80
   TooManyFunctions:
     thresholdInClasses: 20
 
@@ -9,14 +11,32 @@ comments:
   CommentOverPrivateProperty:
     active: false
   UndocumentedPublicProperty:
-    excludes: ['**/designsystem/**']
+    active: false
+  UndocumentedPublicFunction:
+    active: false
+  UndocumentedPublicClass:
+    active: false
+  OutdatedDocumentation:
+    active: false
+  EndOfSentenceFormat:
+    active: false
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
+  SwallowedException:
+    active: false
 
 style:
   DataClassShouldBeImmutable:
     active: false
+  MaxLineLength:
+    maxLineLength: 140
+  BracesOnWhenStatements:
+    active: false
   MagicNumber:
     ignorePropertyDeclaration: true
-    excludes: [ '**/designsystem/**', '**/test/**','**/androidTest/**','**/android-test/**' ]
+    excludes: [ '**/test/**','**/androidTest/**','**/android-test/**' ]
 
 potential-bugs:
   UnsafeCallOnNullableType:

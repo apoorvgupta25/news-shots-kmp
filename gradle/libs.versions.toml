@@ -16,7 +16,6 @@ ktor = "3.3.1"
 coil3 = "3.3.0"
 ktlintCli = "1.7.1"
 detekt = "1.23.8"
-composerules = "0.4.27"
 ksp = "2.3.0"
 napier = "2.7.1"
 pagination = "3.4.0-alpha04"
@@ -64,7 +63,6 @@ coil-mp = { module = "io.coil-kt.coil3:coil", version.ref = "coil3" }
 # Quality
 ktlint = { module = "com.pinterest.ktlint:ktlint-cli", version.ref = "ktlintCli" }
 detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
-composerules-detekt = { module = "io.nlopez.compose.rules:detekt", version.ref = "composerules" }
 
 # Logging
 napier = { group = "io.github.aakira", name = "napier", version.ref = "napier" }

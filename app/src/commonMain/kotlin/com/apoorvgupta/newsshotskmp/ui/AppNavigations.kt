@@ -15,7 +15,7 @@ import com.apoorvgupta.home.navigation.HomeScreenDestination
 import com.apoorvgupta.home.viewmodel.HomeViewModel
 import com.apoorvgupta.newsshotsdetails.navigation.NewsDetailsScreenDestination
 import com.apoorvgupta.newsshotsdetails.viewmodel.NewsDetailsViewModel
-import com.apoorvgupta.newsshotslisting.navigation.NewsShotsListingScreenDestination
+import com.apoorvgupta.newsshotslisting.navigation.NewsShotsListingScreenDest
 import com.apoorvgupta.newsshotslisting.viewmodel.NewsShotsListingViewModel
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -44,7 +44,7 @@ fun NavGraphBuilder.homeNavigationGraph(
         val effect = viewModel.effect
 
         val arg = it.toRoute<Destinations.NewsShotsListing>()
-        NewsShotsListingScreenDestination(
+        NewsShotsListingScreenDest(
             newsShotsListingViewModel = viewModel,
             newsShotsListingViewState = viewState.newsShotsListingViewState,
             navEffect = effect,

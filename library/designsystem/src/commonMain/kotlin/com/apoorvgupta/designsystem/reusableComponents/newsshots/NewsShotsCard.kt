@@ -55,7 +55,7 @@ fun NewsShotsCard(
     ) {
         Column(
             modifier = Modifier
-                .weight(2f)
+                .weight(Constants.FLOAT_2)
                 .padding(end = Dimensions.HorizonalDimensions.s_horizontal_spacing),
         ) {
             Text(

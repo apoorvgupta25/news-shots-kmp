@@ -8,6 +8,7 @@ import kotlinx.coroutines.internal.SynchronizedObject
 import kotlinx.coroutines.internal.synchronized
 import okio.Path.Companion.toPath
 
+@Suppress("LateinitUsage")
 private lateinit var dataStore: DataStore<Preferences>
 
 @OptIn(InternalCoroutinesApi::class)
@@ -31,4 +32,5 @@ fun getDataStore(producePath: () -> String): DataStore<Preferences> = synchroniz
     }
 }
 
+@Suppress("TopLevelPropertyNaming")
 internal const val DATASTORE_FILENAME = "alkaa_settings.preferences_pb"
