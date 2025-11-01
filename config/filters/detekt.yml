@@ -9,14 +9,33 @@ comments:
   CommentOverPrivateProperty:
     active: false
   UndocumentedPublicProperty:
-    excludes: ['**/designsystem/**']
+    active: false
+  UndocumentedPublicFunction:
+    active: false
+  UndocumentedPublicClass:
+    active: false
+  OutdatedDocumentation:
+    active: false
+  EndOfSentenceFormat:
+    active: false
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
+  SwallowedException:
+    active: false
 
 style:
   DataClassShouldBeImmutable:
     active: false
+  MaxLineLength:
+    active: true
+    maxLineLength: 120
+  BracesOnWhenStatements:
+    active: false
   MagicNumber:
     ignorePropertyDeclaration: true
-    excludes: [ '**/designsystem/**', '**/test/**','**/androidTest/**','**/android-test/**' ]
+    excludes: [ '**/test/**','**/androidTest/**','**/android-test/**' ]
 
 potential-bugs:
   UnsafeCallOnNullableType:

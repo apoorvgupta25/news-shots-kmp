@@ -45,11 +45,12 @@ class RemoteNewsShotsDataSourceImpl(
      *
      * @return
      */
-    override suspend fun getAllCategories(): Result<List<CategoryDto>, DataError.Remote> = safeCall<List<CategoryDto>> {
-        httpClient.get(
-            urlString = appendBaseUrl("api/all/categories"),
-        )
-    }
+    override suspend fun getAllCategories(): Result<List<CategoryDto>, DataError.Remote> =
+        safeCall<List<CategoryDto>> {
+            httpClient.get(
+                urlString = appendBaseUrl("api/all/categories"),
+            )
+        }
 
     /**
      * Get post by category
