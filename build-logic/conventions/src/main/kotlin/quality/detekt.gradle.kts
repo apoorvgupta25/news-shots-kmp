@@ -16,6 +16,15 @@ dependencies {
 configure<DetektExtension> {
     config.setFrom("$rootDir/config/filters/detekt.yml")
     allRules = true
+
+    source.setFrom(
+        files(
+            "src/commonMain/kotlin",
+            "src/androidMain/kotlin",
+            "src/iosMain/kotlin",
+            "src/main/kotlin"
+        )
+    )
 }
 
 tasks.withType<Detekt>().configureEach {
