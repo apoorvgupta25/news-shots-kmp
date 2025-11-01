@@ -20,11 +20,10 @@ class NewsShotsPagingSource(
     private val categoryName: String = String.emptyValue(),
 ) : PagingSource<Int, NewsShots>() {
 
-    override fun getRefreshKey(state: PagingState<Int, NewsShots>) =
-        state.anchorPosition?.let { anchorPosition ->
-            state.closestPageToPosition(anchorPosition)?.prevKey?.plus(Constants.POST_PER_PAGE)
-                ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(Constants.POST_PER_PAGE)
-        }
+    override fun getRefreshKey(state: PagingState<Int, NewsShots>) = state.anchorPosition?.let { anchorPosition ->
+        state.closestPageToPosition(anchorPosition)?.prevKey?.plus(Constants.POST_PER_PAGE)
+            ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(Constants.POST_PER_PAGE)
+    }
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, NewsShots> {
         val page = params.key ?: 0

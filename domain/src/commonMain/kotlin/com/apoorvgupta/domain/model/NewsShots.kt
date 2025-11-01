@@ -43,5 +43,4 @@ data class NewsShots(
                 link = String.emptyValue(),
             )
     }
-
 }

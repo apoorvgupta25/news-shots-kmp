@@ -38,8 +38,7 @@ class NewsShotsListingViewModel(
 
     private var categoryName: String = String.emptyValue()
 
-    override fun createInitialState(): NewsShotsListingViewState =
-        NewsShotsListingViewState(NewsShotsListingViewStates.UnInitialized)
+    override fun createInitialState(): NewsShotsListingViewState = NewsShotsListingViewState(NewsShotsListingViewStates.UnInitialized)
 
     override fun handleIntent(intent: NewsShotsListingIntent) {
         when (intent) {

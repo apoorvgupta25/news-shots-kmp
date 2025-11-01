@@ -45,21 +45,21 @@ suspend inline fun <reified T> responseToResult(
 
     Constants.TIMEOUT_RESPONSE -> Result.Error(
         error = DataError.Remote.REQUEST_TIMEOUT,
-        statusCode = response.status.value
+        statusCode = response.status.value,
     )
 
     Constants.TOO_MANY_RESPONSE -> Result.Error(
         error = DataError.Remote.TOO_MANY_REQUESTS,
-        statusCode = response.status.value
+        statusCode = response.status.value,
     )
 
     in Constants.ERROR_RESPONSE_START..Constants.ERROR_RESPONSE_END -> Result.Error(
         error = DataError.Remote.SERVER,
-        statusCode = response.status.value
+        statusCode = response.status.value,
     )
 
     else -> Result.Error(
         error = DataError.Remote.UNKNOWN,
-        statusCode = response.status.value
+        statusCode = response.status.value,
     )
 }

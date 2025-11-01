@@ -20,7 +20,7 @@ object DraftJsUtils {
 
     internal fun parseDraftJsContent(
         draftJSContent: DraftJS,
-        linkTextColor: Color
+        linkTextColor: Color,
     ): AnnotatedString {
         val builder = AnnotatedString.Builder()
 
@@ -176,7 +176,7 @@ object DraftJsUtils {
                             )
                         }
                     }
-                         */
+                     */
                 }
             }
         }

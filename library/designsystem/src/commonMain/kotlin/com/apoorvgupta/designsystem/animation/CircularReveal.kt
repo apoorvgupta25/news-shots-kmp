@@ -99,7 +99,7 @@ private data class CircularRevealAnimationItem<T>(
 
 fun Modifier.circularReveal(
     @FloatRange(from = 0.0, to = 1.0) progress: Float,
-    offset: Offset? = null
+    offset: Offset? = null,
 ) = clip(CircularRevealShape(progress, offset))
 
 @Suppress("UnnecessaryAnnotationUseSiteTarget", "UnnecessaryParentheses")

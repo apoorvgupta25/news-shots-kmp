@@ -88,8 +88,7 @@ fun BottomNavigationBar(
                 alwaysShowLabel = true,
                 icon = {
                     Image(
-                        painter =
-                            painterResource(if (isCurrentRouteSelected) item.selectedIcon else item.unselectedIcon),
+                        painter = painterResource(if (isCurrentRouteSelected) item.selectedIcon else item.unselectedIcon),
                         contentDescription = String.emptyValue(),
                         modifier = Modifier.size(Dimensions.IconSize.l_icon_size),
                         colorFilter = ColorFilter.tint(color = getTextColor(isCurrentRouteSelected)),
@@ -97,7 +96,7 @@ fun BottomNavigationBar(
 
                     BottomNavBadge(
                         isCurrentRouteSelected = isCurrentRouteSelected,
-                        bottomNavItem = item
+                        bottomNavItem = item,
                     )
                 },
                 label = {

@@ -44,4 +44,3 @@ fun BottomNavBadge(isCurrentRouteSelected: Boolean, bottomNavItem: BottomNavItem
         }
     }
 }
-

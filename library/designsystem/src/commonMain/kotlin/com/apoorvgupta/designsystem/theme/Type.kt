@@ -1,4 +1,5 @@
 @file:Suppress("UnusedPrivateProperty")
+
 package com.apoorvgupta.designsystem.theme
 
 import androidx.compose.material3.Typography

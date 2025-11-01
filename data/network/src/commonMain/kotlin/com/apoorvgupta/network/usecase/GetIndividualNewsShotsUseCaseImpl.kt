@@ -16,6 +16,5 @@ class GetIndividualNewsShotsUseCaseImpl(
      * @param postLink
      * @return
      */
-    override suspend operator fun invoke(postLink: String) =
-        newsShotsRepo.getIndividualNewsShots(postLink = postLink)
+    override suspend operator fun invoke(postLink: String) = newsShotsRepo.getIndividualNewsShots(postLink = postLink)
 }
