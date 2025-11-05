@@ -8,7 +8,7 @@ on:
       - dependencies
 
 jobs:
-  build-android:
+  code-quality-checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -23,8 +23,23 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Lint Checks
-        run: ./gradlew ktlintCheck
+      - name: Code Quality Checks
+        run: ./gradlew check
+
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
       - name: Build Project
         run: ./gradlew assembleDebug

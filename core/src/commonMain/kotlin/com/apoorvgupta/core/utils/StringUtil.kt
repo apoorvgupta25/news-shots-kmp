@@ -1,6 +1,9 @@
+@file:Suppress("FunctionOnlyReturningConstant")
+
 package com.apoorvgupta.core.utils
 
 // Constants
+@Suppress("TopLevelPropertyNaming")
 private const val EMPTY_STRING = ""
 
 /**

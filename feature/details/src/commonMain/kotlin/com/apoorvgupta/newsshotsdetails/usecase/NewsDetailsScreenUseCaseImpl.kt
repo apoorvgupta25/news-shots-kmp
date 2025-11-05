@@ -11,6 +11,7 @@ import com.apoorvgupta.newsshotsdetails.model.NewsDetailsDataModel
 /**
  * @author Apoorv Gupta
  */
+@Suppress("LateinitUsage")
 class NewsDetailsScreenUseCaseImpl(
     private val getIndividualNewsShotsUseCase: GetIndividualNewsShotsUseCase,
 ) : NewsDetailsScreenUseCase {

@@ -28,6 +28,8 @@ dependencyResolutionManagement {
     }
 }
 
+includeBuild("plugins")
+
 include(":app")
 include(":core")
 include(":data:datastore")

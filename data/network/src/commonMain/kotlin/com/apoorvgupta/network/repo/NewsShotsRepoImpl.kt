@@ -12,7 +12,6 @@ import com.apoorvgupta.network.helper.Constants
 import com.apoorvgupta.network.mappers.toCategory
 import com.apoorvgupta.network.mappers.toNewsShots
 import kotlinx.coroutines.flow.Flow
-import kotlin.collections.map
 
 /**
  * @author Apoorv Gupta
@@ -30,13 +29,17 @@ class NewsShotsRepoImpl(
             dto.map { it.toNewsShots() }
         }
 
-    override suspend fun getIndividualNewsShots(postLink: String) = remoteDataSource.getIndividualPost(postLink).map {
-        it.toNewsShots()
-    }
+    override suspend fun getIndividualNewsShots(postLink: String) = remoteDataSource
+        .getIndividualPost(postLink)
+        .map {
+            it.toNewsShots()
+        }
 
-    override suspend fun getSearchedNewsShots(searchKeyword: String) = remoteDataSource.getSearchedPost(searchKeyword).map { dto ->
-        dto.map { it.toNewsShots() }
-    }
+    override suspend fun getSearchedNewsShots(searchKeyword: String) = remoteDataSource
+        .getSearchedPost(searchKeyword)
+        .map { dto ->
+            dto.map { it.toNewsShots() }
+        }
 
     override suspend fun getCategories() = remoteDataSource.getAllCategories().map { dto ->
         dto.map { it.toCategory() }

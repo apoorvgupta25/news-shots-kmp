@@ -37,8 +37,6 @@ abstract class BaseViewModel<Intent : UserIntent, State : ViewState, Effect : Na
     // Create the initial state of the view.
     private val initialState: State by lazy { createInitialState() }
 
-    abstract fun createInitialState(): State
-
     // Get the current state.
     val currentState: State
         get() = viewState.value
@@ -62,6 +60,8 @@ abstract class BaseViewModel<Intent : UserIntent, State : ViewState, Effect : Na
         // Start listening to the user intents.
         subscribeIntent()
     }
+
+    abstract fun createInitialState(): State
 
     /**
      * Start listening to the user intent flow.

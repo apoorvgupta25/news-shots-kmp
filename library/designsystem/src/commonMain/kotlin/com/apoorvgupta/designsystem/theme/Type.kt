@@ -1,3 +1,5 @@
+@file:Suppress("UnusedPrivateProperty")
+
 package com.apoorvgupta.designsystem.theme
 
 import androidx.compose.material3.Typography
@@ -37,7 +39,7 @@ private val Poppins
         Font(Res.font.poppins_italic),
     )
 
-val Graphik
+private val Graphik
     @Composable
     get() = FontFamily(
         Font(Res.font.graphik_medium, weight = FontWeight.Medium),

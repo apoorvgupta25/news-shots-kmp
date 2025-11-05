@@ -1,6 +1,7 @@
+import extension.setFrameworkBaseName
+
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.android.kotlin.multiplatform.library)
+    id("com.apoorvgupta.multiplatform")
     alias(libs.plugins.jetbrains.kotlin.serialization)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
@@ -8,21 +9,7 @@ plugins {
 
 kotlin {
 
-    androidLibrary {
-        namespace = "com.apoorvgupta.draftjskmp"
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
-    }
-
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "draftjskmpKit"
-        }
-    }
+    setFrameworkBaseName("draftjskmpKit")
 
     sourceSets {
         commonMain.dependencies {
@@ -30,4 +17,8 @@ kotlin {
             implementation(compose.ui)
         }
     }
+}
+
+android {
+    namespace = "com.apoorvgupta.draftjskmp"
 }

@@ -30,8 +30,7 @@ import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun HeadLine(
-    headText: String = String.emptyValue(),
-    subHeadingText: String = String.emptyValue(),
+    headLineText: HeadLineText,
     currentTheme: AppThemeOptions = AppThemeOptions.SYSTEM,
     onHeadClick: () -> Unit = {},
     onModeIconClick: (() -> Unit)? = null,
@@ -51,7 +50,7 @@ fun HeadLine(
 
         // Title
         Text(
-            text = headText,
+            text = headLineText.headText,
             style = MaterialTheme.typography.headlineLarge,
             modifier = Modifier
                 .padding(top = Dimensions.VerticalDimensions.sm_vertical_spacing)
@@ -69,7 +68,11 @@ fun HeadLine(
                     when (currentTheme) {
                         AppThemeOptions.LIGHT -> Res.drawable.ic_light_mode
                         AppThemeOptions.DARK -> Res.drawable.ic_dark_mode
-                        AppThemeOptions.SYSTEM -> if (isSystemInDarkTheme()) Res.drawable.ic_system_dark_mode else Res.drawable.ic_system_light_mode
+                        AppThemeOptions.SYSTEM -> if (isSystemInDarkTheme()) {
+                            Res.drawable.ic_system_dark_mode
+                        } else {
+                            Res.drawable.ic_system_light_mode
+                        }
                     },
                 ),
                 contentDescription = String.emptyValue(),
@@ -81,12 +84,17 @@ fun HeadLine(
             )
         }
     }
-    if (subHeadingText.isNotEmpty()) {
+    if (headLineText.subHeadingText.isNotEmpty()) {
         // SubTitle
         Text(
-            text = subHeadingText,
+            text = headLineText.subHeadingText,
             style = MaterialTheme.typography.labelLarge,
             color = MaterialTheme.colorScheme.onSurface,
         )
     }
 }
+
+data class HeadLineText(
+    val headText: String = String.emptyValue(),
+    val subHeadingText: String = String.emptyValue(),
+)

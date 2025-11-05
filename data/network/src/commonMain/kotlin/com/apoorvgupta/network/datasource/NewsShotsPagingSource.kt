@@ -21,8 +21,8 @@ class NewsShotsPagingSource(
 ) : PagingSource<Int, NewsShots>() {
 
     override fun getRefreshKey(state: PagingState<Int, NewsShots>) = state.anchorPosition?.let { anchorPosition ->
-        state.closestPageToPosition(anchorPosition)?.prevKey?.plus(8)
-            ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(8)
+        state.closestPageToPosition(anchorPosition)?.prevKey?.plus(Constants.POST_PER_PAGE)
+            ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(Constants.POST_PER_PAGE)
     }
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, NewsShots> {
@@ -54,8 +54,8 @@ class NewsShotsPagingSource(
 
             LoadResult.Page(
                 data = successResponse ?: emptyList(),
-                prevKey = if (page == 0) null else page.minus(8),
-                nextKey = if (successResponse.isNullOrEmpty()) null else page.plus(8),
+                prevKey = if (page == 0) null else page.minus(Constants.POST_PER_PAGE),
+                nextKey = if (successResponse.isNullOrEmpty()) null else page.plus(Constants.POST_PER_PAGE),
             )
         } catch (e: Exception) {
             LoadResult.Error(e)

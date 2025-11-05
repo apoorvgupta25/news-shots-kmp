@@ -70,7 +70,8 @@ class NewsShotsListingViewModel(
                 }
             } else {
                 getNewsShotsByCategoryUseCase(categoryName = categoryName)
-                    .cachedIn(viewModelScope).collect {
+                    .cachedIn(viewModelScope)
+                    .collect {
                         _newsShotsPaginationResults.value = it
                         emitDailyData(categoryName)
                     }

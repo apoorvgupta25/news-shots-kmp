@@ -9,6 +9,7 @@ import io.github.aakira.napier.Napier
  *
  * @author Apoorv Gupta
  */
+@Suppress("FunctionMinLength")
 object AppLogger {
 
     /**

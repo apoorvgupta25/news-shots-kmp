@@ -21,5 +21,6 @@ class GetSearchedNewsShotsUseCaseImpl(
      * @param searchKeyword
      * @return
      */
-    override suspend operator fun invoke(searchKeyword: String) = newsShotsRepo.getSearchedNewsShots(searchKeyword = searchKeyword)
+    override suspend operator fun invoke(searchKeyword: String) = newsShotsRepo
+        .getSearchedNewsShots(searchKeyword = searchKeyword)
 }

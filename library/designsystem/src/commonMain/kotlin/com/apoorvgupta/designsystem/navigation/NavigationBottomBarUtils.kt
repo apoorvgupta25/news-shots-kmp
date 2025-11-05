@@ -20,7 +20,7 @@ fun showNavigationBottomBar(navController: NavController): Boolean {
     if (route.isNullOrEmpty()) {
         return false
     }
-    return (route.substringAfterLast(".") in navigationBottomBarDestinationRoutes)
+    return route.substringAfterLast(".") in navigationBottomBarDestinationRoutes
 }
 
 /**

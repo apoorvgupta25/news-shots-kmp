@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.apoorvgupta.designsystem.Constants
 import com.apoorvgupta.designsystem.reusableComponents.HeadLine
+import com.apoorvgupta.designsystem.reusableComponents.HeadLineText
 import com.apoorvgupta.designsystem.theme.Dimensions
 import com.apoorvgupta.home.intent.HomeIntent
 import com.apoorvgupta.home.intent.HomeViewStates
@@ -22,8 +23,10 @@ fun HomeHeaderSection(
     Column {
         // Headline
         HeadLine(
-            headText = state.data.homeContent.headingText,
-            subHeadingText = state.data.homeContent.subHeadingText,
+            headLineText = HeadLineText(
+                headText = state.data.homeContent.headingText,
+                subHeadingText = state.data.homeContent.subHeadingText,
+            ),
             currentTheme = state.data.currentTheme,
             onHeadClick = {
                 userIntent.invoke(HomeIntent.NavigateToNewsShotsListing(Constants.DAILY))
