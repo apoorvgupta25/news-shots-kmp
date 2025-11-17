@@ -6,10 +6,10 @@ import kotlinx.coroutines.flow.Flow
 /**
  * Loads the current app theme.
  *
- * @property appThemeRepo the AppTheme repository
+ * @property LoadAppThemeUseCase the AppTheme Usecase
  *
  * @author Apoorv Gupta
  */
-interface LoadAppThemeUseCase {
+fun interface LoadAppThemeUseCase {
     operator fun invoke(): Flow<AppThemeOptions>
 }

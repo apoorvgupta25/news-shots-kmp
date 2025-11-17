@@ -21,6 +21,7 @@ napier = "2.7.1"
 pagination = "3.4.0-alpha04"
 datastore = "1.1.7"
 kotlinx-coroutines = "1.10.2"
+sonarqube = "7.0.1.6134"
 
 [libraries]
 # Project
@@ -82,6 +83,7 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+sonarqube = { id = "org.sonarqube", version.ref = "sonarqube" }
 
 [bundles]
 ktor = [

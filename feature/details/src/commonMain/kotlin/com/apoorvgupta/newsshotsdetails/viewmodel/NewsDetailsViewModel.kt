@@ -31,6 +31,7 @@ class NewsDetailsViewModel(
             }
 
             is NewsDetailsIntent.ToggleBookMark -> {
+                // Do Nothing.
             }
 
             is NewsDetailsIntent.NavigateToChromeCustomTab -> {
