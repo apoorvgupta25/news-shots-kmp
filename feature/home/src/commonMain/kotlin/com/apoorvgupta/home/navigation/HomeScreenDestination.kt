@@ -25,11 +25,6 @@ fun HomeScreenDestination(
     navEffect: Flow<HomeNavEffect>,
     navController: NavController,
 ) {
-//    BackHandler {
-//        FinishActivityChannel.publish(
-//            true,
-//        )
-//    }
     /**
      * Handles navigation based on [HomeNavEffect].
      *

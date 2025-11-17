@@ -54,7 +54,7 @@ fun NewsShotsListingLoadedContent(
             items(
                 count = newsShotsResults.itemCount,
             ) { index ->
-                newsShotsResults.get(index = index)?.let { newsShot ->
+                newsShotsResults[index]?.let { newsShot ->
                     NewsShotsCard(
                         newsShot = newsShot,
                         onCardClick = {

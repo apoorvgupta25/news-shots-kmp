@@ -142,6 +142,7 @@ object DraftJsUtils {
                     )
 
                 else -> {
+                    // NOSONAR_START
                     /*when {
                         // removing RGB color to update text color according to theme
                         style.startsWith(DraftJsConstants.COLOR_RGB) -> {
@@ -177,6 +178,7 @@ object DraftJsUtils {
                         }
                     }
                      */
+                    // NOSONAR_END
                 }
             }
         }
