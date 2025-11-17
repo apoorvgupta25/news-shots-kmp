@@ -40,7 +40,7 @@ def sonarModules = [
 //        ":data:database",
         ":data:datastore",
         ":data:network",
-        ":feature:bookmark",
+//        ":feature:bookmark",
         ":feature:details",
         ":feature:home",
         ":feature:listing",
