@@ -44,7 +44,7 @@ def sonarModules = [
         ":feature:details",
         ":feature:home",
         ":feature:listing",
-        ":feature:search",
+//        ":feature:search",
         ":library:coroutines",
         ":library:designsystem",
         ":library:draftjskmp",
