@@ -67,7 +67,9 @@ fun HeadLine(
                 painter = painterResource(
                     when (currentTheme) {
                         AppThemeOptions.LIGHT -> Res.drawable.ic_light_mode
+
                         AppThemeOptions.DARK -> Res.drawable.ic_dark_mode
+
                         AppThemeOptions.SYSTEM -> if (isSystemInDarkTheme()) {
                             Res.drawable.ic_system_dark_mode
                         } else {
