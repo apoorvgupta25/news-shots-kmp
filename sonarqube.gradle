@@ -25,6 +25,9 @@ sonarqube {
         property "sonar.projectKey", "newshots-kmp"
         property "sonar.organization", "apoorvgupta25"
         property"sonar.host.url", "https://sonarcloud.io"
+
+        // ignore import checks from sonarqube
+        property "sonar.issue.ignore.allfile", "S1128"
     }
 }
 
