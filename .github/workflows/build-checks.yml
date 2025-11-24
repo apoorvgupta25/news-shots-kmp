@@ -26,11 +26,6 @@ jobs:
       - name: Code Quality Checks
         run: ./gradlew check
 
-      - name: SonarQube Scan
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew sonar -Dsonar.token=$SONAR_TOKEN
-
   build-android:
     runs-on: ubuntu-latest
     steps:
