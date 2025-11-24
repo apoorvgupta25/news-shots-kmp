@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  code-quality-checks:
+  sonarqube-checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
