@@ -1,0 +1,28 @@
+name: Build Check
+
+# Run this upon a pull-request to the main branch.
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sonarqube-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: SonarQube Scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: ./gradlew sonar -Dsonar.token=$SONAR_TOKEN
