@@ -1,0 +1,36 @@
+name: Weekly SonarQube Scan
+
+on:
+  schedule:
+    # Every Monday at 04:30 UTC
+    - cron: '30 4 * * MON'
+
+env:
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  APP_BRANCH: main
+
+jobs:
+  sonarqube:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ env.APP_BRANCH }}
+
+      - name: Setup JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Android Lint Scan
+        run: ./gradlew check
+
+      - name: SonarQube Scan
+        run: ./gradlew sonar -Dsonar.token=$SONAR_TOKEN
