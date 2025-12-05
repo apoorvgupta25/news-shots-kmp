@@ -21,7 +21,7 @@ napier = "2.7.1"
 pagination = "3.4.0-alpha04"
 datastore = "1.2.0"
 kotlinx-coroutines = "1.10.2"
-sonarqube = "7.0.1.6134"
+sonarqube = "7.1.0.6387"
 
 [libraries]
 # Project
