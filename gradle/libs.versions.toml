@@ -19,7 +19,7 @@ detekt = "1.23.8"
 ksp = "2.3.2"
 napier = "2.7.1"
 pagination = "3.4.0-alpha04"
-datastore = "1.1.7"
+datastore = "1.2.0"
 kotlinx-coroutines = "1.10.2"
 sonarqube = "7.0.1.6134"
 
