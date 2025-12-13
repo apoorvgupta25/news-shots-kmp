@@ -11,7 +11,7 @@ jobs:
   code-quality-checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Setup JDK
         uses: actions/setup-java@v5
@@ -29,7 +29,7 @@ jobs:
   build-android:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Setup JDK
         uses: actions/setup-java@v5
@@ -50,7 +50,7 @@ jobs:
   build-ios:
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Setup JDK
         uses: actions/setup-java@v5
