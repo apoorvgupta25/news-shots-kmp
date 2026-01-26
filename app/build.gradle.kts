@@ -1,22 +1,21 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidApplication)
+//    alias(libs.plugins.kotlinMultiplatform)
+//    alias(libs.plugins.android.kotlin.multiplatform.library)
+//    alias(libs.plugins.composeMultiplatform)
+//    alias(libs.plugins.composeCompiler)
+//    alias(libs.plugins.jetbrains.kotlin.serialization)
+//    alias(libs.plugins.ksp)
+//    id("com.apoorvgupta.kotlin-quality")
+
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.jetbrains.kotlin.serialization)
-    alias(libs.plugins.ksp)
-    id("com.apoorvgupta.kotlin-quality")
+    id("com.apoorvgupta.multiplatform")
+
 }
 
 kotlin {
-    androidTarget {
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_17)
-        }
-    }
-
     listOf(
         iosArm64(),
         iosSimulatorArm64()
@@ -29,11 +28,9 @@ kotlin {
 
     sourceSets {
         androidMain.dependencies {
-            implementation(libs.androidx.activity.compose)
 
-            implementation(libs.koin.android)
-            implementation(libs.koin.androidx.compose)
-            implementation(libs.ktor.client.okhttp)
+
+
         }
         commonMain.dependencies {
             // Projects
@@ -66,31 +63,8 @@ kotlin {
 
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.newsshotskmp"
-    compileSdk = libs.versions.android.compileSdk.get().toInt()
-
-    defaultConfig {
-        applicationId = "com.apoorvgupta.newsshotskmp"
-        minSdk = libs.versions.android.minSdk.get().toInt()
-        targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = libs.versions.version.code.get().toInt()
-        versionName = libs.versions.version.name.get()
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = true
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+    androidLibrary {
+        namespace = "com.apoorvgupta.app"
     }
 }

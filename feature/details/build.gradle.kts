@@ -39,8 +39,8 @@ kotlin {
 
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.details"
+    androidLibrary {
+        namespace = "com.apoorvgupta.details"
+    }
 }

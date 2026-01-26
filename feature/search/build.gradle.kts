@@ -11,8 +11,9 @@ kotlin {
     sourceSets {
 
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.search"
+    androidLibrary {
+        namespace = "com.apoorvgupta.search"
+    }
+
 }

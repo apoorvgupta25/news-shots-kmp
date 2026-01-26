@@ -34,11 +34,11 @@ kotlin {
             }
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.designsystem"
+    androidLibrary {
+        namespace = "com.apoorvgupta.designsystem"
 
-    // to share Resources across module
-    androidResources.enable = true
+        // to share Resources across module
+        androidResources.enable = true
+    }
 }

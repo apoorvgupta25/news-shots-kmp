@@ -14,8 +14,8 @@ kotlin {
             implementation(libs.koin.core)
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.coroutines"
+    androidLibrary {
+        namespace = "com.apoorvgupta.coroutines"
+    }
 }

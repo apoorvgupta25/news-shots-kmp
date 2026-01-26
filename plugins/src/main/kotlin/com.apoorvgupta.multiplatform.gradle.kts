@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
     kotlin("multiplatform")
-    id("com.android.library")
+    id("com.android.kotlin.multiplatform.library")
     id("com.apoorvgupta.kotlin-quality")
 }
 
@@ -14,7 +14,23 @@ val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().name
 kotlin {
     applyDefaultHierarchyTemplate()
 
-    androidTarget {
+    androidLibrary {
+        compileSdk = Integer.parseInt(libs.sdkCompile)
+        minSdk = Integer.parseInt(libs.sdkMin)
+
+        androidResources {
+            enable = true
+        }
+
+        withHostTest {
+            isIncludeAndroidResources = true
+        }
+
+        withDeviceTest {
+            instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+            execution = "ANDROIDX_TEST_ORCHESTRATOR"
+        }
+
         compilerOptions {
             apiVersion.set(KotlinVersion.KOTLIN_2_0)
         }
@@ -25,10 +41,10 @@ kotlin {
     }
 }
 
-android {
-    compileSdk = Integer.parseInt(libs.sdkCompile)
-    defaultConfig {
-        minSdk = Integer.parseInt(libs.sdkMin)
-    }
-}
-
+//android {
+//    compileSdk = Integer.parseInt(libs.sdkCompile)
+//    defaultConfig {
+//        minSdk = Integer.parseInt(libs.sdkMin)
+//    }
+//}
+//

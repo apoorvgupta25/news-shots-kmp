@@ -17,8 +17,8 @@ kotlin {
             implementation(compose.ui)
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.draftjskmp"
+    androidLibrary {
+        namespace = "com.apoorvgupta.draftjskmp"
+    }
 }
