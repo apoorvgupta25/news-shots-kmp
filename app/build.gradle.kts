@@ -1,18 +1,9 @@
 
 plugins {
-//    alias(libs.plugins.kotlinMultiplatform)
-//    alias(libs.plugins.android.kotlin.multiplatform.library)
-//    alias(libs.plugins.composeMultiplatform)
-//    alias(libs.plugins.composeCompiler)
-//    alias(libs.plugins.jetbrains.kotlin.serialization)
-//    alias(libs.plugins.ksp)
-//    id("com.apoorvgupta.kotlin-quality")
-
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.jetbrains.kotlin.serialization)
     id("com.apoorvgupta.multiplatform")
-
 }
 
 kotlin {
