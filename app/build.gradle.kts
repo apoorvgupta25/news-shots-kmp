@@ -27,11 +27,6 @@ kotlin {
     }
 
     sourceSets {
-        androidMain.dependencies {
-
-
-
-        }
         commonMain.dependencies {
             // Projects
             implementation(projects.core)

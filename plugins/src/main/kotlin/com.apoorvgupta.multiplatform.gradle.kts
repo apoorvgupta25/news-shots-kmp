@@ -40,11 +40,3 @@ kotlin {
         freeCompilerArgs.add("-Xexpect-actual-classes")
     }
 }
-
-//android {
-//    compileSdk = Integer.parseInt(libs.sdkCompile)
-//    defaultConfig {
-//        minSdk = Integer.parseInt(libs.sdkMin)
-//    }
-//}
-//
