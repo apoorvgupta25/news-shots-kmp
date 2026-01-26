@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeCompiler)
     id("com.apoorvgupta.kotlin-quality")
-
 }
 
 android {
@@ -32,7 +31,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.activity.compose)
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
@@ -40,5 +38,4 @@ dependencies {
 
     implementation(projects.app)
     implementation(projects.core)
-
 }
