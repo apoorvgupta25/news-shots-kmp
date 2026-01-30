@@ -15,8 +15,8 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json)
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.server"
+    androidLibrary {
+        namespace = "com.apoorvgupta.server"
+    }
 }

@@ -20,8 +20,8 @@ kotlin {
             implementation(libs.datastore.preferences.core)
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.datastore"
+    androidLibrary {
+        namespace = "com.apoorvgupta.datastore"
+    }
 }
