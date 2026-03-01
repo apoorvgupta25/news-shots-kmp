@@ -11,8 +11,8 @@ kotlin {
     sourceSets {
 
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.bookmark"
+    androidLibrary {
+        namespace = "com.apoorvgupta.bookmark"
+    }
 }

@@ -19,8 +19,7 @@ kotlin {
             implementation(libs.androidx.pagination)
         }
     }
-}
-
-android {
-    namespace = "com.apoorvgupta.domain"
+    androidLibrary {
+        namespace = "com.apoorvgupta.domain"
+    }
 }

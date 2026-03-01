@@ -37,8 +37,8 @@ kotlin {
             implementation(libs.androidx.pagination)
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.listing"
+    androidLibrary {
+        namespace = "com.apoorvgupta.listing"
+    }
 }

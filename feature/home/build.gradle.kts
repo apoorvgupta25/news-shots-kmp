@@ -34,8 +34,8 @@ kotlin {
             implementation(libs.koin.core)
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.home"
+    androidLibrary {
+        namespace = "com.apoorvgupta.home"
+    }
 }

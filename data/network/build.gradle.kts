@@ -32,8 +32,8 @@ kotlin {
             implementation(libs.ktor.client.darwin)
         }
     }
-}
 
-android {
-    namespace = "com.apoorvgupta.network"
+    androidLibrary {
+        namespace = "com.apoorvgupta.network"
+    }
 }
