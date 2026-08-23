@@ -35,7 +35,7 @@ kotlin {
         }
     }
 
-    androidLibrary {
+    android {
         namespace = "com.apoorvgupta.designsystem"
 
         // to share Resources across module
