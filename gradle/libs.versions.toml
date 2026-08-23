@@ -21,6 +21,11 @@ pagination = "3.5.1"
 datastore = "1.2.1"
 kotlinx-coroutines = "1.11.0"
 sonarqube = "7.4.0.8496"
+compose-runtime = "1.11.1"
+compose-foundation = "1.11.1"
+compose-components-resources = "1.11.1"
+compose-material3 = "1.9.0"
+compose-ui = "1.11.1"
 
 [libraries]
 # Project
@@ -30,6 +35,13 @@ kotlin_gradle_plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", v
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+
+# Compose
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-runtime" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-foundation" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-material3" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-components-resources" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-ui" }
 
 # Navigation
 jetbrains-compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref= "navigationCompose"}

@@ -19,11 +19,12 @@ kotlin {
                 implementation(projects.domain)
 
                 // Compose
-                implementation(compose.runtime)
-                implementation(compose.foundation)
-                implementation(compose.material3)
-                implementation(compose.ui)
-                implementation(compose.components.resources)
+                implementation(libs.compose.runtime)
+                implementation(libs.compose.foundation)
+                implementation(libs.compose.material3)
+                implementation(libs.compose.ui)
+                implementation(libs.compose.components.resources)
+
 
                 // Navigation
                 implementation(libs.jetbrains.compose.navigation)
