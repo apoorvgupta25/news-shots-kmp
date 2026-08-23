@@ -2,7 +2,7 @@ package quality
 
 import extension.ktlint
 
-val ktlint: Configuration by configurations.creating
+val ktlint = configurations.create("ktlint")
 val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
 dependencies {

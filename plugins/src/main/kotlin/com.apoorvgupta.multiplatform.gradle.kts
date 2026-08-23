@@ -14,7 +14,7 @@ val libs: VersionCatalog = extensions.getByType<VersionCatalogsExtension>().name
 kotlin {
     applyDefaultHierarchyTemplate()
 
-    androidLibrary {
+    android {
         compileSdk = Integer.parseInt(libs.sdkCompile)
         minSdk = Integer.parseInt(libs.sdkMin)
 

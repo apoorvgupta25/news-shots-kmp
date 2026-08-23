@@ -20,7 +20,7 @@ kotlin {
         }
     }
 
-    androidLibrary {
+    android {
         namespace = "com.apoorvgupta.core"
     }
 }

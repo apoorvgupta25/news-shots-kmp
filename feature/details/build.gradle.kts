@@ -40,7 +40,7 @@ kotlin {
         }
     }
 
-    androidLibrary {
+    android {
         namespace = "com.apoorvgupta.details"
     }
 }

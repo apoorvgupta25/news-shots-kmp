@@ -33,7 +33,7 @@ kotlin {
         }
     }
 
-    androidLibrary {
+    android {
         namespace = "com.apoorvgupta.network"
     }
 }
