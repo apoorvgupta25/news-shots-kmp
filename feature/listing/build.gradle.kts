@@ -20,10 +20,10 @@ kotlin {
             implementation(projects.library.designsystem)
 
             // Compose
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material3)
-            implementation(compose.ui)
+            implementation(libs.compose.runtime)
+            implementation(libs.compose.foundation)
+            implementation(libs.compose.material3)
+            implementation(libs.compose.ui)
 
             // Navigation
             implementation(libs.jetbrains.compose.navigation)
