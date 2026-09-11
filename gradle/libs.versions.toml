@@ -5,7 +5,7 @@ android-targetSdk = "37"
 version-code = "1"
 version-name = "1.0.0"
 
-agp = "9.3.1"
+agp = "9.4.0"
 androidx-activity = "1.13.0"
 androidx-lifecycle = "2.11.0"
 composeMultiplatform = "1.11.1"
