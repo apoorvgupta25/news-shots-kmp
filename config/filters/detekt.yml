@@ -1,14 +1,12 @@
 complexity:
   LongMethod:
-    threshold: 80
-  TooManyFunctions:
-    thresholdInClasses: 20
+    allowedLines: 80
 
 comments:
-  excludes: [ '**/test/**','**/androidTest/**','**/android-test/**','**/*.Test.kt','**/*.Spec.kt','**/*.Spek.kt' ]
-  CommentOverPrivateFunction:
+  excludes: [ '**/test/**', '**/androidTest/**', '**/android-test/**', '**/*.Test.kt', '**/*.Spec.kt', '**/*.Spek.kt' ]
+  DocumentationOverPrivateFunction:
     active: false
-  CommentOverPrivateProperty:
+  DocumentationOverPrivateProperty:
     active: false
   UndocumentedPublicProperty:
     active: false
@@ -28,27 +26,25 @@ exceptions:
     active: false
 
 style:
-  DataClassShouldBeImmutable:
-    active: false
   MaxLineLength:
     maxLineLength: 140
   BracesOnWhenStatements:
     active: false
   MagicNumber:
-    ignorePropertyDeclaration: true
-    excludes: [ '**/test/**','**/androidTest/**','**/android-test/**' ]
+    active: false
 
 potential-bugs:
   UnsafeCallOnNullableType:
-    excludes: [ '**/test/**','**/androidTest/**','**/android-test/**','**/*.Test.kt','**/*.Spec.kt','**/*.Spek.kt' ]
+    excludes: [ '**/test/**', '**/androidTest/**', '**/android-test/**', '**/*.Test.kt', '**/*.Spec.kt', '**/*.Spek.kt' ]
   UnsafeCast:
-    excludes: [ '**/test/**','**/androidTest/**','**/android-test/**','**/*.Test.kt','**/*.Spec.kt','**/*.Spek.kt' ]
+    excludes: [ '**/test/**', '**/androidTest/**', '**/android-test/**', '**/*.Test.kt', '**/*.Spec.kt', '**/*.Spek.kt' ]
 
 naming:
   TopLevelPropertyNaming:
     constantPattern: '[A-Z][A-Za-z0-9]*'
-    excludes: [ '**/theme/**', '**/test/**','**/androidTest/**','**/android-test/**' ]
-  FunctionMaxLength:
-    excludes: [ '**/test/**','**/androidTest/**','**/android-test/**' ]
+    excludes: [ '**/theme/**', '**/test/**', '**/androidTest/**', '**/android-test/**' ]
+  FunctionNameMaxLength:
+    excludes: [ '**/test/**', '**/androidTest/**', '**/android-test/**' ]
   FunctionNaming:
     ignoreAnnotated: [ 'Composable' ]
+    excludes: [ '**/test/**', '**/androidTest/**', '**/android-test/**' ]

@@ -33,4 +33,4 @@ fun getDataStore(producePath: () -> String): DataStore<Preferences> = synchroniz
 }
 
 @Suppress("TopLevelPropertyNaming")
-internal const val DATASTORE_FILENAME = "alkaa_settings.preferences_pb"
+internal const val DATASTORE_FILENAME = "newsshots_kmp_settings.preferences_pb"
