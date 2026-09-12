@@ -1,8 +1,8 @@
 package quality
 
-import io.gitlab.arturbosch.detekt.Detekt
-import io.gitlab.arturbosch.detekt.DetektPlugin
-import io.gitlab.arturbosch.detekt.extensions.DetektExtension
+import dev.detekt.gradle.Detekt
+import dev.detekt.gradle.plugin.DetektPlugin
+import dev.detekt.gradle.extensions.DetektExtension
 
 apply<DetektPlugin>()
 
