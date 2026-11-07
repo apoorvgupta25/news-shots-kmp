@@ -5,27 +5,23 @@ android-targetSdk = "37"
 version-code = "1"
 version-name = "1.0.0"
 
-agp = "9.4.0"
+agp = "9.4.1"
 androidx-activity = "1.13.0"
 androidx-lifecycle = "2.11.0"
-composeMultiplatform = "1.12.0"
-kotlin = "2.4.10"
+composeMultiplatform = "1.12.2"
+kotlin = "2.4.20"
 navigationCompose = "2.9.2"
 koin = "4.2.2"
-ktor = "3.5.2"
-coil3 = "3.6.1"
+ktor = "3.6.1"
+coil3 = "3.6.3"
 ktlintCli = "1.8.0"
 detekt = "2.0.0-alpha.6"
 napier = "2.7.1"
-pagination = "3.5.1"
+pagination = "3.5.2"
 datastore = "1.2.1"
 kotlinx-coroutines = "1.11.0"
 sonarqube = "7.5.0.8588"
-compose-runtime = "1.12.0"
-compose-foundation = "1.12.0"
-compose-components-resources = "1.12.0"
 compose-material3 = "1.9.0"
-compose-ui = "1.12.0"
 
 [libraries]
 # Project
@@ -37,11 +33,11 @@ androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecyc
 androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 
 # Compose
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-runtime" }
-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-foundation" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
 compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-material3" }
-compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-components-resources" }
-compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-ui" }
 
 # Navigation
 jetbrains-compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref= "navigationCompose"}
