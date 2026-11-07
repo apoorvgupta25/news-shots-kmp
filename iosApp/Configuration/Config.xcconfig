@@ -1,6 +1,6 @@
 TEAM_ID=
 
-PRODUCT_NAME=NewsshotsKMP
+PRODUCT_NAME=Newsshots
 PRODUCT_BUNDLE_IDENTIFIER=com.apoorvgupta.newsshotskmp.NewsshotsKMP$(TEAM_ID)
 
 CURRENT_PROJECT_VERSION=1
