@@ -20,7 +20,7 @@ napier = "2.7.1"
 pagination = "3.5.2"
 datastore = "1.2.1"
 kotlinx-coroutines = "1.11.0"
-sonarqube = "7.5.0.8588"
+sonarqube = "7.6.0.18749"
 compose-material3 = "1.9.0"
 
 [libraries]
